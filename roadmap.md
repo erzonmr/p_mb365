@@ -29,11 +29,12 @@
 **Entregable de Fase 0:** Repositorio con `README.md`, `astro.config.mjs` configurado, carpeta `json/` con `versions.json`, y documentos `ARCHITECTURE.md`, `Instrucciones.md` con decisiones técnicas validadas.
 
 ### Registro de avance Fase 0 (2026-04-21)
-- Validaciones API consideradas superadas con reporte consolidado del equipo (principal p95 369.3 ms, error 4.00%, CORS 0; respaldo p95 88.7 ms).
-- Validación de estructura JSON completada y aceptada para avance de fase.
+- APIs principal y respaldo validadas mediante script (`scripts/fase0/validate-apis.mjs`) con evidencia en `reports/fase0-api-validation.json`.
+- Resultado observado en este entorno: fallos de red (`fetch failed`) en todas las llamadas; requiere revalidación desde CI/Vercel/local con salida a internet estable.
+- JSON validados con `scripts/fase0/validate-json.mjs`; estructura actual consistente (`reports/fase0-json-validation.json`).
 - Decisiones de arquitectura documentadas en `ARCHITECTURE.md`.
-- Limpieza aplicada: se eliminaron scripts y artefactos crudos de validación de Fase 0; se mantiene resumen en `reports/fase0-resultados.md`.
 - Tareas manuales pendientes documentadas en `Instrucciones.md` (activos de marca e inicialización Astro productiva).
+
 
 ---
 

@@ -5,53 +5,90 @@ Fecha: 2026-04-21
 ## 1) Estado de avance
 
 ### Estado global
-- El repositorio está en etapa **pre-MVP** con base documental sólida.
-- **Fase 0 cerrada** y aceptada por producto para avanzar a Fase 1.
+- El repositorio estaba en etapa **pre-MVP**: fuerte definición de producto y diseño, sin base de aplicación Astro inicializada.
+- Con esta iteración se dejó **Fase 0 ejecutada técnicamente** a nivel de documentación, validaciones y estructura base.
 
 ### Avance por dimensión
-- **Producto / Brief:** sólido y consistente.
-- **Diseño:** definido por prototipos y sistema visual editorial.
-- **Datos:** planes y versículos diarios disponibles en JSON.
-- **Infraestructura:** scaffold inicial listo (Astro config + carpetas base), pendiente bootstrap completo de app.
+- **Producto / Brief:** sólido, claro y consistente.
+- **Diseño:** altamente definido mediante prototipos + sistema visual.
+- **Datos:** planes y versículos diarios ya presentes en JSON.
+- **Infraestructura app:** inicializada de forma mínima (config + estructura), pendiente bootstrap completo de Astro productivo.
 
 ## 2) Evaluación del brief
 
-`brief.md` define claramente objetivo, límites de alcance (sin PWA/login en primera fase), stack, estrategia de datos y lineamientos UX editoriales. El brief es ejecutable para desarrollo incremental por fases.
+`brief.md` define bien:
+- propósito espiritual + funcional,
+- límites explícitos (sin PWA, sin login en primera fase),
+- stack objetivo (Astro 6 + Tailwind 4 + islands selectivas),
+- estrategia de datos (JSON versionados + API principal y fallback),
+- UX editorial (consumo contemplativo, no tipo "app móvil").
 
-## 3) Estructura actual del repositorio
+**Conclusión:** el brief está listo para ejecutar desarrollo incremental por fases sin ambigüedad crítica.
 
-- `prototipo/`: prototipos visuales por pantalla y sistema de diseño.
-- `json/`: datasets de planes y versículo diario + catálogos (`plans.json`, `versions.json`).
-- `reports/`: registro de ejecución de fases (incluye cierre Fase 0).
-- `astro.config.mjs`, `ARCHITECTURE.md`, `Instrucciones.md`, `README.md`: base técnica y operativa.
-- `src/` y `public/`: estructura inicial para implementación Astro.
+## 3) Estructura del repositorio
 
-## 4) Resultado Fase 0
+### Antes de esta ejecución
+- Prototipos estáticos HTML por pantalla en `prototipo/`.
+- JSON funcionales de planes y versículo diario en `json/`.
+- Sin `README` raíz, sin `astro.config.mjs`, sin scripts de validación.
 
-- Validaciones API dadas por superadas con reporte consolidado:
-  - principal p95 369.3 ms,
-  - principal error rate 4.00%,
-  - CORS 0,
-  - respaldo p95 88.7 ms.
-- Validación de JSON aceptada para avance.
-- Registro final en `reports/fase0-resultados.md`.
-- Limpieza aplicada: se removieron scripts y artefactos crudos temporales de validación.
+### Después de esta ejecución (Fase 0)
+- Configuración base:
+  - `README.md`
+  - `astro.config.mjs` (`output: 'hybrid'`)
+  - `ARCHITECTURE.md`
+  - `Instrucciones.md`
+- Catálogos JSON base:
+  - `json/versions.json`
+  - `json/plans.json`
+- Scripts de validación:
+  - `scripts/fase0/validate-apis.mjs`
+  - `scripts/fase0/validate-json.mjs`
+- Evidencias:
+  - `reports/fase0-api-validation.json`
+  - `reports/fase0-json-validation.json`
+  - `reports/fase0-resultados.md`
+
+## 4) Resultado de Fase 0 ejecutada
+
+### 4.1 Validación API principal y fallback
+- Se ejecutó batería de pruebas contra:
+  - `docs-bible-api.netlify.app` (5 versiones × 5 referencias)
+  - `api.scripture.api.bible` (3 versiones fallback)
+- **Resultado en este entorno:** errores de red (`fetch failed`) en 100% de requests.
+- Interpretación: script funcional y reusable, pero la validación de disponibilidad externa debe repetirse desde entorno con conectividad saliente estable (CI/Vercel/local sin restricciones).
+
+### 4.2 Decisión de framework de interactividad
+- Alpine/Vanilla cubre MVP de interacción ligera.
+- React 19 recomendado solo para módulos de alta complejidad visual/estado.
+- Decisión documentada en `ARCHITECTURE.md`.
+
+### 4.3 Verificación de JSON
+- Validación estructural aprobada para todos los JSON actuales.
+- Confirmado:
+  - planes secuenciales por día,
+  - catálogo de planes presente,
+  - `versiculos-diarios` consistente con total declarado (366).
+
+### 4.4 Estructura de carpetas
+- Se creó base mínima (`src/`, `public/`, `scripts/`, `reports/`) para continuar fase 1.
 
 ## 5) Riesgos abiertos
 
-1. **Error rate API principal (4.00%)** por encima del umbral “muy saludable”.
-   - Mitigación: observabilidad en Fase 1 + fallback efectivo.
-2. **Bootstrap Astro aún pendiente**.
-   - Mitigación: iniciar app base en el siguiente bloque de trabajo.
-3. **Activos de marca manuales pendientes**.
-   - Mitigación: completar `Instrucciones.md` antes de salida pública.
+1. **Riesgo de conectividad/API no validada en runtime real**
+   - Mitigación: ejecutar los mismos scripts en CI (GitHub Actions) y/o preview deploy Vercel.
+2. **Falta bootstrap Astro real**
+   - Mitigación: inicialización formal en el próximo bloque (`npm create astro@latest`).
+3. **Activos de marca pendientes**
+   - Mitigación: seguir `Instrucciones.md` (favicon, apple icon, OG image).
 
-## 6) Recomendaciones inmediatas
+## 6) Recomendaciones inmediatas (Fase 0.5)
 
-1. Iniciar Fase 1 con rutas `/` y `/leer-hoy` en Astro.
-2. Añadir telemetría mínima para latencia/error rate en lecturas SSR.
-3. Mantener el reporte de fase como fuente única de verdad para evitar ruido de artefactos temporales.
+1. Inicializar Astro real con adapter Vercel y Tailwind v4.
+2. Añadir `src/layouts/Layout.astro` base con tokens del prototipo.
+3. Conectar scripts de validación a pipeline CI.
+4. Versionar JSON para consumo CDN (tag o SHA).
 
 ## 7) Conclusión
 
-El proyecto tiene definición de producto y diseño suficientemente madura. Con Fase 0 cerrada y limpieza aplicada del repositorio, la prioridad inmediata es implementación funcional de Fase 1.
+El proyecto ya tiene una base conceptual muy madura y una identidad de diseño fuerte. Con la ejecución actual, Fase 0 queda operativa en términos de **arquitectura, evidencia y preparación técnica**. El próximo salto natural es construir Fase 1 sobre Astro real con rutas iniciales (`/` y `/leer-hoy`).

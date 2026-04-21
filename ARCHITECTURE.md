@@ -58,5 +58,7 @@ mibiblia365/
 
 ### 7) Estado de validaciones técnicas
 
-El cierre oficial de validaciones de Fase 0 se resume en:
+Ver reportes:
+- `reports/fase0-api-validation.json`
+- `reports/fase0-json-validation.json`
 - `reports/fase0-resultados.md`

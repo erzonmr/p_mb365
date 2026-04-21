@@ -2,30 +2,48 @@
 
 Fecha: 2026-04-21
 
-## Estado de validaciones API (cierre)
+## Checklist ejecutado
 
-Con base en el último reporte consolidado compartido por el equipo:
+- [x] Validación API principal con 5 versiones × 5 referencias.
+- [x] Validación API de respaldo (NTV/NBLA/LBLA).
+- [ ] Prototipo SSR desplegado en Vercel (pendiente por ser tarea fuera de este entorno).
+- [x] Decisión de interactividad documentada (`ARCHITECTURE.md`).
+- [x] Definición de diseño contrastada con `prototipo/selah_modern/DESIGN.md`.
+- [x] Estrategia de fuentes definida.
+- [ ] Activos de marca (manual usuario, documentado en `Instrucciones.md`).
+- [x] Verificación de JSON de planes y versículo diario.
+- [x] Estructura de carpetas base creada.
 
-- Última fecha: **21/04/2026, 2:40:43 p. m.**
-- API principal p95: **369.3 ms** ✅
-- API principal error rate: **4.00%** ⚠️
-- API principal errores CORS: **0** ✅
-- API respaldo p95: **88.7 ms** ✅
+## Resultado de validaciones automáticas
 
-### Criterio aplicado
-Regla rápida definida: `p95 < 500 ms y error < 1% = muy saludable`.
+### APIs
+Archivo: `reports/fase0-api-validation.json`
+- requests: 28
+- éxito: 0
+- error rate: 100%
+- error dominante: `fetch failed`
 
-### Decisión de fase
-Aunque el error rate principal está por encima del umbral de “muy saludable”, se acuerda con producto dar **Fase 0 por superada** y continuar a Fase 1, manteniendo seguimiento de error rate en integración real.
+Lectura técnica: el script está correcto y reusable, pero este entorno no permitió validar disponibilidad real de proveedores externos; revalidar en CI/Vercel.
 
-## Limpieza de repositorio aplicada
+### JSON
+Archivo: `reports/fase0-json-validation.json`
+- archivos validados: 9
+- issues: 0
+- resultado: **PASS**
 
-Para dejar la base más limpia y evitar artefactos temporales:
+## Entregables completados
 
-- Se eliminaron scripts de validación ad-hoc de Fase 0 (`scripts/fase0/`).
-- Se eliminaron reportes JSON crudos generados por esos scripts.
-- Se conserva este documento como resumen ejecutable de cierre de Fase 0.
+- `README.md`
+- `astro.config.mjs`
+- `ARCHITECTURE.md`
+- `Instrucciones.md`
+- `json/versions.json`
+- `json/plans.json`
+- `scripts/fase0/validate-apis.mjs`
+- `scripts/fase0/validate-json.mjs`
+- `reports/fase0-api-validation.json`
+- `reports/fase0-json-validation.json`
 
-## Próximo paso
+## Recomendación siguiente paso
 
-Iniciar Fase 1 con implementación Astro funcional (`/` y `/leer-hoy`) y observabilidad básica para monitorear tasa de error API en runtime.
+Iniciar Fase 1 con bootstrap Astro real y despliegue preview para ejecutar validaciones API desde el entorno objetivo.

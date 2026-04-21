@@ -1,0 +1,54 @@
+{
+  "executedAtUtc": "2026-04-21T20:07:20.706Z",
+  "filesChecked": 9,
+  "summary": [
+    {
+      "file": "plan_180_NT_Salmos.json",
+      "type": "plan",
+      "entries": 180
+    },
+    {
+      "file": "plan_anual.json",
+      "type": "plan",
+      "entries": 365
+    },
+    {
+      "file": "plan_canonico.json",
+      "type": "plan",
+      "entries": 365
+    },
+    {
+      "file": "plan_combinado.json",
+      "type": "plan",
+      "entries": 365
+    },
+    {
+      "file": "plan_cronologico.json",
+      "type": "plan",
+      "entries": 365
+    },
+    {
+      "file": "plan_trimestral.json",
+      "type": "plan",
+      "entries": 90
+    },
+    {
+      "file": "plans.json",
+      "type": "array",
+      "entries": 6
+    },
+    {
+      "file": "versiculos-diarios.json",
+      "type": "daily_verse",
+      "declaredDays": 366,
+      "entries": 366
+    },
+    {
+      "file": "versions.json",
+      "type": "array",
+      "entries": 8
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

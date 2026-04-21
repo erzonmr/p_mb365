@@ -7,7 +7,7 @@ Plataforma web responsive para lectura bíblica anual con enfoque editorial cont
 - ✅ Brief funcional definido (`brief.md`).
 - ✅ Roadmap técnico por fases (`roadmap.md`).
 - ✅ Prototipos visuales en HTML (`prototipo/`).
-- ✅ Cierre de Fase 0 documentado en `reports/fase0-resultados.md`.
+- ✅ Ejecución de Fase 0 documentada en `reports/fase0-resultados.md`.
 
 ## Estructura del repositorio
 
@@ -15,13 +15,16 @@ Plataforma web responsive para lectura bíblica anual con enfoque editorial cont
 - `roadmap.md`: hoja de ruta por fases.
 - `prototipo/`: prototipos visuales y sistema de diseño base.
 - `json/`: datasets de planes de lectura, versículos diarios y catálogos.
-- `reports/`: reportes de avance por fase.
+- `scripts/fase0/`: validaciones técnicas iniciales (APIs y JSON).
+- `reports/`: evidencias y conclusiones de validaciones.
 - `src/` y `public/`: estructura inicial para Astro.
 
-## Resultado de Fase 0
+## Validaciones de Fase 0
 
-Las validaciones API y JSON se consideran completadas para cierre de Fase 0.  
-El resumen oficial quedó en `reports/fase0-resultados.md`.
+```bash
+node scripts/fase0/validate-apis.mjs > reports/fase0-api-validation.json
+node scripts/fase0/validate-json.mjs > reports/fase0-json-validation.json
+```
 
 ## Próximo paso sugerido
 
