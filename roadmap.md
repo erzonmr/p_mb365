@@ -14,7 +14,7 @@
 - [x] **Decisión de interactivity framework:** Evaluar si Alpine.js cubre todos los casos de uso (selectores, búsqueda, toggle tema, notas, calendario) o si React es inevitable para algún componente. Documentar decisión en `ARCHITECTURE.md`.
 - [x] **Definir sistema de diseño:** Paleta, tipografía y componentes ya definidos en `prototipo/DESIGN.md`. Validar que TailwindCSS v4 puede replicar fielmente los tokens del prototipo (colores Material 3, border-radius personalizados, font families).
 - [x] **Estrategia de fuentes:** Cargar Newsreader y Manrope vía Google Fonts con `display=swap` y preconnect. Evaluar self-hosting para CSP futuro.
-- [ ] **Generar activos de marca:** Favicon SVG (`#4b6026`), Apple touch icon, Open Graph image genérica (1200×630) con la estética del prototipo. **Nota:** _Esta será tarea manual para el usuario_. Dejar instrucciones claras para el usuario en `Instrucciones.md`.
+- [x] **Generar activos de marca:** Favicon SVG (`#4b6026`), Apple touch icon, Open Graph image genérica (1200×630) con la estética del prototipo. **Nota:** _Esta será tarea manual para el usuario_. Dejar instrucciones claras para el usuario en `Instrucciones.md`.
 - [x] **Verificación de JSON's:** Analizar y revisar json's de Planes y Versículo Diario que esten bien diseñados y estructurados para el fin que se necesita. 
 - [x] **Crear estructura de carpetas:**
   ```

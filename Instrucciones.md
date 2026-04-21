@@ -11,7 +11,7 @@ Astro 6.1.8 ya está instalado y configurado. No es necesario ejecutar `npm crea
 
 ## Fase 1 (Pendientes manuales)
 
-### 1) Activos de marca (REQUERIDO antes del deploy)
+### ~~1) Activos de marca (REQUERIDO antes del deploy)~~ ✅ (Completado)
 Crear y agregar en `public/`:
 
 - **`favicon.svg`** — SVG con forma de libro abierto o cruz, color principal `#4b6026` (oliva).
