@@ -1,11 +1,24 @@
 {
   "name": "mibiblia365",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
     "validate:apis": "node scripts/fase0/validate-apis.mjs",
     "validate:json": "node scripts/fase0/validate-json.mjs",
     "phase0:run": "node scripts/fase0/validate-apis.mjs > reports/fase0-api-validation.json && node scripts/fase0/validate-json.mjs > reports/fase0-json-validation.json"
+  },
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.5.0",
+    "@astrojs/vercel": "^10.0.4",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@tailwindcss/vite": "^4.2.4",
+    "alpinejs": "^3.15.11",
+    "astro": "^6.1.8",
+    "tailwindcss": "^4.2.4"
   }
 }

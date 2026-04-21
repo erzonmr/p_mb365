@@ -1,0 +1,75 @@
+---
+// Sidebar.astro
+// Panel lateral izquierdo fijo en desktop (≥768px). "El Scriptorio".
+// Oculto en móvil (usa BottomNav en su lugar).
+
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Santuario', key: 'inicio', icon: 'home_max' },
+  { href: '/leer-hoy', label: 'Escritura', key: 'leer', icon: 'book_5' },
+  { href: '/planes', label: 'Caminos', key: 'planes', icon: 'map' },
+  { href: '/mi-espacio', label: 'Mi espacio', key: 'espacio', icon: 'person' },
+];
+---
+
+<aside
+  class="hidden md:flex h-screen w-64 fixed left-0 top-0 bg-surface-container flex-col gap-8 py-24 px-6 z-40 transition-theme"
+  aria-label="Panel de navegación El Scriptorio"
+>
+  <!-- Cabecera del panel -->
+  <div class="mb-4">
+    <h2 class="font-body text-xl font-bold text-on-surface italic">El Scriptorio</h2>
+    <p class="manrope-caps text-[9px] text-secondary mt-1">En Contemplación</p>
+  </div>
+
+  <!-- Navegación principal -->
+  <nav class="flex flex-col gap-2" aria-label="Secciones principales">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class={`flex items-center gap-3 font-label text-sm font-semibold pl-4 py-2 rounded-lg transition-colors duration-300 ${
+          currentPage === item.key
+            ? 'text-on-surface border-l-2 border-secondary bg-surface-container-high'
+            : 'text-secondary pl-4 hover:text-primary hover:bg-surface-container-high border-l-2 border-transparent'
+        }`}
+        aria-current={currentPage === item.key ? 'page' : undefined}
+      >
+        <span
+          class="material-symbols-outlined text-[20px]"
+          style={currentPage === item.key ? "font-variation-settings: 'FILL' 1;" : ''}
+          aria-hidden="true"
+        >{item.icon}</span>
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <!-- Separador semántico -->
+  <div class="h-px bg-outline-variant/15 my-2" role="separator"></div>
+
+  <!-- Acciones rápidas -->
+  <div class="flex flex-col gap-2">
+    <a
+      href="/buscar"
+      class="flex items-center gap-3 font-label text-sm text-secondary pl-4 py-2 hover:text-primary hover:bg-surface-container-high rounded-lg transition-colors duration-300"
+    >
+      <span class="material-symbols-outlined text-[20px]" aria-hidden="true">search</span>
+      Buscar
+    </a>
+  </div>
+
+  <!-- CTA inferior -->
+  <div class="mt-auto">
+    <a
+      href="/leer-hoy"
+      class="block w-full btn-primary text-center py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+    >
+      Leer hoy
+    </a>
+  </div>
+</aside>

@@ -1,0 +1,26 @@
+---
+// ThemeToggle.astro
+// Toggle flotante de tema claro/oscuro.
+// Lógica en src/alpine/index.js → Alpine.data('themeToggle')
+---
+
+<button
+  x-data="themeToggle"
+  x-on:click="toggle()"
+  x-bind:aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+  x-bind:title="isDark ? 'Modo claro' : 'Modo oscuro'"
+  class="fixed top-4 right-4 z-[60] w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors duration-300 shadow-ambient"
+>
+  <span
+    x-show="!isDark"
+    class="material-symbols-outlined text-secondary"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >dark_mode</span>
+  <span
+    x-show="isDark"
+    class="material-symbols-outlined text-primary-fixed"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >light_mode</span>
+</button>

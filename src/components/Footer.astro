@@ -1,0 +1,26 @@
+---
+// Footer.astro
+// Footer minimalista: marca, año, links legales.
+---
+
+<footer class="hidden md:block py-8 px-12 border-t border-outline-variant/15 transition-theme" role="contentinfo">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant">
+    <div class="flex items-center gap-3">
+      <span class="font-body italic text-on-surface">Mi Biblia 365</span>
+      <span class="text-outline-variant/40">·</span>
+      <span class="font-label text-xs text-secondary">El Santuario Editorial</span>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <a href="/acerca" class="manrope-caps text-[9px] text-secondary hover:text-primary transition-colors duration-300">
+        Acerca
+      </a>
+      <a href="/preguntas-frecuentes" class="manrope-caps text-[9px] text-secondary hover:text-primary transition-colors duration-300">
+        FAQ
+      </a>
+      <span class="manrope-caps text-[9px] text-outline-variant">
+        &copy; {new Date().getFullYear()}
+      </span>
+    </div>
+  </div>
+</footer>
