@@ -1,0 +1,11 @@
+{
+  "name": "mibiblia365",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate:apis": "node scripts/fase0/validate-apis.mjs",
+    "validate:json": "node scripts/fase0/validate-json.mjs",
+    "phase0:run": "node scripts/fase0/validate-apis.mjs > reports/fase0-api-validation.json && node scripts/fase0/validate-json.mjs > reports/fase0-json-validation.json"
+  }
+}

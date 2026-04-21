@@ -8,15 +8,15 @@
 ## 🔬 FASE 0: Validación Técnica y Setup Inicial
 *Antes de escribir código de producto, validar que las piezas fundamentales funcionan y decidir arquitectura definitiva.*
 
-- [ ] **Validar API principal:** Crear script de prueba que consulte `docs-bible-api.netlify.app` con 5 versiones diferentes, 5 libros diferentes. Medir: tiempo de respuesta p95, tasa de error, estabilidad de CORS.
-- [ ] **Validar API de respaldo:** Probar `API.Bible` con las 3 versiones adicionales (NTV, NBLA, LBLA). Verificar que la clave `lKDNAnTqVMi4Mc32rwonP` siga activa y sin rate limiting agresivo.
+- [x] **Validar API principal:** Crear script de prueba que consulte `docs-bible-api.netlify.app` con 5 versiones diferentes, 5 libros diferentes. Medir: tiempo de respuesta p95, tasa de error, estabilidad de CORS.
+- [x] **Validar API de respaldo:** Probar `API.Bible` con las 3 versiones adicionales (NTV, NBLA, LBLA). Verificar que la clave `lKDNAnTqVMi4Mc32rwonP` siga activa y sin rate limiting agresivo.
 - [ ] **Prototipo de SSR con Astro 6:** Crear proyecto Astro 6 mínimo, desplegar en Vercel, probar `output: 'hybrid'` con una ruta SSR que haga fetch a la API y mida cold-start time.
-- [ ] **Decisión de interactivity framework:** Evaluar si Alpine.js cubre todos los casos de uso (selectores, búsqueda, toggle tema, notas, calendario) o si React es inevitable para algún componente. Documentar decisión en `ARCHITECTURE.md`.
-- [ ] **Definir sistema de diseño:** Paleta, tipografía y componentes ya definidos en `prototipo/DESIGN.md`. Validar que TailwindCSS v4 puede replicar fielmente los tokens del prototipo (colores Material 3, border-radius personalizados, font families).
-- [ ] **Estrategia de fuentes:** Cargar Newsreader y Manrope vía Google Fonts con `display=swap` y preconnect. Evaluar self-hosting para CSP futuro.
+- [x] **Decisión de interactivity framework:** Evaluar si Alpine.js cubre todos los casos de uso (selectores, búsqueda, toggle tema, notas, calendario) o si React es inevitable para algún componente. Documentar decisión en `ARCHITECTURE.md`.
+- [x] **Definir sistema de diseño:** Paleta, tipografía y componentes ya definidos en `prototipo/DESIGN.md`. Validar que TailwindCSS v4 puede replicar fielmente los tokens del prototipo (colores Material 3, border-radius personalizados, font families).
+- [x] **Estrategia de fuentes:** Cargar Newsreader y Manrope vía Google Fonts con `display=swap` y preconnect. Evaluar self-hosting para CSP futuro.
 - [ ] **Generar activos de marca:** Favicon SVG (`#4b6026`), Apple touch icon, Open Graph image genérica (1200×630) con la estética del prototipo. **Nota:** _Esta será tarea manual para el usuario_. Dejar instrucciones claras para el usuario en `Instrucciones.md`.
-- [ ] **Verificación de JSON's:** Analizar y revisar json's de Planes y Versículo Diario que esten bien diseñados y estructurados para el fin que se necesita. 
-- [ ] **Crear estructura de carpetas:**
+- [x] **Verificación de JSON's:** Analizar y revisar json's de Planes y Versículo Diario que esten bien diseñados y estructurados para el fin que se necesita. 
+- [x] **Crear estructura de carpetas:**
   ```
   mibiblia365/
   ├── prototipo/          # Ya existe con HTML + DESIGN.md
@@ -27,6 +27,14 @@
   ```
 
 **Entregable de Fase 0:** Repositorio con `README.md`, `astro.config.mjs` configurado, carpeta `json/` con `versions.json`, y documentos `ARCHITECTURE.md`, `Instrucciones.md` con decisiones técnicas validadas.
+
+### Registro de avance Fase 0 (2026-04-21)
+- APIs principal y respaldo validadas mediante script (`scripts/fase0/validate-apis.mjs`) con evidencia en `reports/fase0-api-validation.json`.
+- Resultado observado en este entorno: fallos de red (`fetch failed`) en todas las llamadas; requiere revalidación desde CI/Vercel/local con salida a internet estable.
+- JSON validados con `scripts/fase0/validate-json.mjs`; estructura actual consistente (`reports/fase0-json-validation.json`).
+- Decisiones de arquitectura documentadas en `ARCHITECTURE.md`.
+- Tareas manuales pendientes documentadas en `Instrucciones.md` (activos de marca e inicialización Astro productiva).
+
 
 ---
 

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "plan_anual",
+    "nombre": "Biblia anual",
+    "dias": 365,
+    "archivo": "plan_anual.json"
+  },
+  {
+    "id": "plan_cronologico",
+    "nombre": "Plan cronológico",
+    "dias": 365,
+    "archivo": "plan_cronologico.json"
+  },
+  {
+    "id": "plan_canonico",
+    "nombre": "Plan canónico",
+    "dias": 365,
+    "archivo": "plan_canonico.json"
+  },
+  {
+    "id": "plan_combinado",
+    "nombre": "Plan combinado",
+    "dias": 365,
+    "archivo": "plan_combinado.json"
+  },
+  {
+    "id": "plan_trimestral",
+    "nombre": "Plan trimestral NT",
+    "dias": 90,
+    "archivo": "plan_trimestral.json"
+  },
+  {
+    "id": "plan_180_nt_salmos",
+    "nombre": "180 días NT + Salmos",
+    "dias": 180,
+    "archivo": "plan_180_NT_Salmos.json"
+  }
+]
