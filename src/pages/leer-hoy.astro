@@ -1,0 +1,315 @@
+---
+// leer-hoy.astro
+// Página de Lectura Diaria (SSR). Cache CDN 10 minutos.
+// El shell se renderiza en el servidor; Alpine.js hidrata con datos del usuario.
+
+export const prerender = false;
+
+import Layout from '../layouts/Layout.astro';
+import ApiError from '../components/ApiError.astro';
+
+// Cache CDN: 10 minutos (la lectura del día cambia una vez al día)
+Astro.response.headers.set('Cache-Control', 's-maxage=600, stale-while-revalidate=60');
+---
+
+<Layout
+  title="Leer hoy"
+  description="Tu lectura bíblica de hoy. Sigue tu plan de lectura y profundiza en las Escrituras con Mi Biblia 365."
+  currentPage="leer"
+  cdnCache={600}
+>
+  <!-- Componente Alpine.js que gestiona toda la experiencia de lectura -->
+  <div
+    x-data="lecturaHoy"
+    class="min-h-screen"
+  >
+
+    <!-- === ESTADO: CARGANDO === -->
+    <div x-show="estado === 'cargando'" class="max-w-3xl mx-auto px-6 md:px-10 py-8">
+      <!-- Skeleton del título -->
+      <div class="space-y-4 mb-12">
+        <div class="h-4 w-32 bg-surface-container-high rounded animate-pulse"></div>
+        <div class="h-14 w-64 bg-surface-container-high rounded animate-pulse"></div>
+        <div class="h-4 w-48 bg-surface-container-high rounded animate-pulse"></div>
+      </div>
+      <!-- Skeleton del texto -->
+      <div class="space-y-6">
+        {Array.from({ length: 6 }).map(() => (
+          <div class="space-y-2">
+            <div class="h-5 w-full bg-surface-container-high rounded animate-pulse"></div>
+            <div class="h-5 w-5/6 bg-surface-container-high rounded animate-pulse"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- === ESTADO: SIN PLAN === -->
+    <div x-show="estado === 'sin-plan'" x-cloak class="max-w-2xl mx-auto px-6 md:px-10 py-16 text-center">
+      <div class="w-20 h-20 flex items-center justify-center rounded-full bg-surface-container-low mx-auto mb-8">
+        <span class="material-symbols-outlined text-4xl text-secondary" aria-hidden="true">auto_stories</span>
+      </div>
+      <h1 class="font-body text-3xl italic text-on-surface mb-4">Comienza tu viaje</h1>
+      <p class="font-label text-on-surface-variant mb-8 leading-relaxed">
+        Elige un plan de lectura para seguir la Biblia paso a paso. Sin registro, sin complicaciones.
+      </p>
+      <a
+        href="/planes"
+        class="inline-block btn-primary px-8 py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+      >
+        Ver planes disponibles
+      </a>
+    </div>
+
+    <!-- === ESTADO: ERROR DE API === -->
+    <div x-show="estado === 'error'" x-cloak class="max-w-2xl mx-auto px-6 md:px-10 py-8">
+      <div class="flex flex-col items-center justify-center py-12 px-8 text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-surface-container-low mb-8">
+          <span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">auto_stories</span>
+        </div>
+        <h2 class="font-body text-2xl italic text-on-surface mb-3">Texto no disponible</h2>
+        <p class="manrope-caps text-xs text-primary mb-4" x-text="referenciaActual"></p>
+        <p class="font-body text-on-surface-variant leading-relaxed max-w-md mb-8 italic" x-text="mensajeError">
+          No fue posible cargar el texto bíblico en este momento.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <button
+            x-on:click="recargar()"
+            class="btn-primary px-6 py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+          >
+            Intentar de nuevo
+          </button>
+          <a href="/" class="font-label text-sm text-secondary hover:text-primary border-b border-secondary/30 hover:border-primary pb-0.5 transition-all duration-300">
+            Volver al inicio
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- === ESTADO: LECTURA === -->
+    <div x-show="estado === 'lectura'" x-cloak class="max-w-3xl mx-auto px-6 md:px-10 py-8">
+
+      <!-- Barra de progreso de lectura (2px superior, fija) -->
+      <div
+        class="reading-progress-bar"
+        :style="'width: ' + scrollProgress + '%'"
+        role="progressbar"
+        :aria-valuenow="scrollProgress"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-label="Progreso de lectura del capítulo"
+      ></div>
+
+      <!-- Encabezado del capítulo -->
+      <section class="mb-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+          <div class="space-y-1">
+            <!-- Día del plan -->
+            <span class="manrope-caps text-xs text-secondary font-semibold" x-text="etiquetaDia">Día 1</span>
+
+            <!-- Título del capítulo (Newsreader display) -->
+            <h1
+              class="font-body text-5xl md:text-6xl text-on-surface font-light tracking-tight leading-none italic"
+              x-text="referenciaActual"
+            >
+              Cargando...
+            </h1>
+
+            <!-- Subtítulo (Manrope uppercase) -->
+            <p class="font-label text-xs uppercase tracking-[0.2em] text-secondary" x-text="subtituloCapitulo"></p>
+          </div>
+
+          <!-- Controles: selector de versión + tamaño de texto -->
+          <div class="flex items-center gap-3 flex-shrink-0">
+            <!-- Selector de versión -->
+            <div class="relative" x-data="{ open: false }">
+              <button
+                x-on:click="open = !open"
+                class="bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-xl flex items-center gap-2 transition-colors duration-300"
+                :aria-expanded="open"
+                aria-haspopup="listbox"
+                aria-label="Seleccionar versión bíblica"
+              >
+                <span class="font-label text-[10px] font-bold uppercase tracking-widest text-primary" x-text="versionLabel">RVR60</span>
+                <span class="material-symbols-outlined text-sm text-on-surface-variant" aria-hidden="true">expand_more</span>
+              </button>
+
+              <!-- Dropdown de versiones -->
+              <div
+                x-show="open"
+                x-on:click.outside="open = false"
+                x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-1"
+                x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-1"
+                class="absolute right-0 top-full mt-2 w-56 bg-surface-container-lowest rounded-xl shadow-ambient border border-outline-variant/15 z-10 overflow-hidden"
+                role="listbox"
+                aria-label="Versiones bíblicas disponibles"
+              >
+                <template x-for="v in versiones" :key="v.id">
+                  <button
+                    x-on:click="cambiarVersion(v.id); open = false"
+                    class="w-full text-left px-4 py-3 hover:bg-surface-container-low transition-colors duration-200 flex items-center justify-between gap-2"
+                    role="option"
+                    :aria-selected="versionId === v.id"
+                  >
+                    <span class="font-label text-sm text-on-surface" x-text="v.label"></span>
+                    <span
+                      x-show="versionId === v.id"
+                      class="material-symbols-outlined text-primary text-sm"
+                      aria-hidden="true"
+                    >check</span>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <!-- Controles de tamaño de texto -->
+            <div class="flex bg-surface-container p-1 rounded-xl gap-1" role="group" aria-label="Tamaño de texto">
+              <button
+                x-on:click="decreaseFontSize()"
+                class="p-2 hover:text-primary transition-colors duration-300 rounded-lg min-w-[36px] min-h-[36px] flex items-center justify-center"
+                aria-label="Reducir tamaño de texto"
+              >
+                <span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 20;" aria-hidden="true">text_decrease</span>
+              </button>
+              <button
+                x-on:click="increaseFontSize()"
+                class="p-2 hover:text-primary transition-colors duration-300 rounded-lg min-w-[36px] min-h-[36px] flex items-center justify-center"
+                aria-label="Aumentar tamaño de texto"
+              >
+                <span class="material-symbols-outlined" style="font-variation-settings: 'opsz' 24;" aria-hidden="true">text_increase</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Porciones del día (tabs si hay múltiples) -->
+        <div x-show="porciones.length > 1" class="flex gap-2 mb-8 overflow-x-auto pb-1">
+          <template x-for="(porcion, idx) in porciones" :key="porcion">
+            <button
+              x-on:click="seleccionarPorcion(idx)"
+              class="flex-shrink-0 px-4 py-2 rounded-full font-label text-xs transition-colors duration-300"
+              :class="porcionActiva === idx
+                ? 'btn-primary font-semibold'
+                : 'bg-surface-container text-secondary hover:bg-surface-container-high'"
+            >
+              <span x-text="porcion"></span>
+            </button>
+          </template>
+        </div>
+
+        <!-- Texto bíblico -->
+        <article
+          class="text-on-surface font-body leading-[1.8]"
+          :class="{
+            'text-lg md:text-xl': fontSize === 'sm',
+            'text-xl md:text-2xl': fontSize === 'md',
+            'text-2xl md:text-3xl': fontSize === 'lg',
+            'text-3xl md:text-4xl': fontSize === 'xl',
+          }"
+          aria-live="polite"
+          aria-label="Texto bíblico"
+        >
+          <!-- Loading de versículos -->
+          <div x-show="cargandoTexto" class="space-y-4">
+            <template x-for="i in 8" :key="i">
+              <div class="space-y-2">
+                <div class="h-5 w-full bg-surface-container-high rounded animate-pulse"></div>
+                <div class="h-5 w-4/5 bg-surface-container-high rounded animate-pulse"></div>
+              </div>
+            </template>
+          </div>
+
+          <!-- Versículos renderizados -->
+          <div x-show="!cargandoTexto" class="space-y-6">
+            <template x-for="versiculo in versiculos" :key="versiculo.number">
+              <p>
+                <sup
+                  class="text-xs font-label text-secondary mr-2 font-bold select-none"
+                  x-text="versiculo.number"
+                  aria-hidden="true"
+                ></sup><span x-text="versiculo.text"></span>
+              </p>
+            </template>
+          </div>
+        </article>
+
+        <!-- Botón "Marcar como leído" -->
+        <div class="py-12 flex justify-center">
+          <button
+            x-on:click="marcarLeido()"
+            x-show="!diaCompletado"
+            class="group flex items-center gap-4 px-8 py-4 bg-surface-container-low hover:bg-surface-container-high rounded-full transition-all duration-500"
+            aria-label="Marcar este capítulo como leído"
+          >
+            <span class="material-symbols-outlined text-primary group-active:scale-90 transition-transform" aria-hidden="true">
+              check_circle
+            </span>
+            <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-on-surface">Marcar como Leído</span>
+          </button>
+
+          <!-- Confirmación de lectura completada -->
+          <div
+            x-show="diaCompletado"
+            class="flex items-center gap-3 text-primary"
+            role="status"
+          >
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check_circle</span>
+            <span class="font-label text-sm font-semibold uppercase tracking-wide">Leído hoy</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navegación anterior/siguiente capítulo -->
+      <div class="grid grid-cols-2 gap-px bg-outline-variant/10 rounded-xl overflow-hidden mb-16">
+        <button
+          x-on:click="irAPorcionAnterior()"
+          x-bind:disabled="porcionActiva === 0 && diaActual <= 1"
+          class="bg-surface-container-lowest hover:bg-surface p-6 md:p-8 text-left transition-colors duration-500 group disabled:opacity-40"
+          aria-label="Porción anterior"
+        >
+          <span class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-2">Anterior</span>
+          <span class="font-body text-lg italic group-hover:text-primary transition-colors" x-text="porcionAnterior || 'Inicio'">—</span>
+        </button>
+
+        <button
+          x-on:click="irAPorcionSiguiente()"
+          class="bg-surface-container-lowest hover:bg-surface p-6 md:p-8 text-right transition-colors duration-500 group border-l border-outline-variant/10"
+          aria-label="Porción siguiente"
+        >
+          <span class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-2">Siguiente</span>
+          <span class="font-body text-lg italic group-hover:text-primary transition-colors" x-text="porcionSiguiente || 'Fin del plan'">—</span>
+        </button>
+      </div>
+
+      <!-- Sección de contemplación diaria -->
+      <section class="mt-8 grid md:grid-cols-2 gap-8" aria-label="Contemplación y reflexión">
+        <!-- Imagen contemplativa placeholder -->
+        <div class="relative h-56 rounded-xl overflow-hidden bg-surface-container-high flex items-end group">
+          <div class="absolute inset-0 bg-gradient-to-t from-on-surface/50 to-transparent flex flex-col justify-end p-6">
+            <span class="font-label text-[10px] uppercase tracking-[0.3em] text-surface-container-lowest">Contemplación Diaria</span>
+            <h3 class="font-body text-xl text-white italic" x-text="referenciaActual">Cargando...</h3>
+          </div>
+        </div>
+
+        <!-- Diario del Scriptorio -->
+        <div class="bg-surface-container-low p-6 md:p-8 rounded-xl flex flex-col justify-center gap-4">
+          <h4 class="font-label text-[10px] uppercase tracking-[0.3em] text-secondary">Diario del Scriptorio</h4>
+          <p class="font-body text-lg leading-relaxed italic text-on-surface-variant">
+            ¿Qué te habló Dios hoy a través de este pasaje?
+          </p>
+          <button
+            x-on:click="abrirScriptorio()"
+            class="w-fit font-label text-[10px] font-bold uppercase tracking-widest text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-all duration-300"
+            aria-label="Registrar reflexión en el Scriptorio"
+          >
+            Registrar reflexión →
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>

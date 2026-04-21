@@ -1,0 +1,132 @@
+---
+// Layout.astro
+// Layout global: preconnects, fuentes, meta-tags, header, sidebar, bottom nav, footer.
+// Script inline anti-FOUC para tema claro/oscuro.
+
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+import BottomNav from '../components/BottomNav.astro';
+import Footer from '../components/Footer.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  currentPage?: string;
+  /** Máximos de caché SSR en segundos (para rutas dinámicas). 0 = sin caché CDN. */
+  cdnCache?: number;
+}
+
+const {
+  title = 'Mi Biblia 365',
+  description = 'Plataforma de lectura bíblica contemplativa. Lee la Biblia en un año con planes estructurados, seguimiento de progreso y reflexiones devocionales.',
+  ogTitle,
+  ogDescription,
+  ogImage = '/og-default.png',
+  currentPage = '',
+  cdnCache = 0,
+} = Astro.props;
+
+const fullTitle = title === 'Mi Biblia 365' ? title : `${title} · Mi Biblia 365`;
+const canonical = new URL(Astro.url.pathname, Astro.site || 'https://www.mibiblia365.com').toString();
+
+// Header de caché para rutas SSR
+if (cdnCache > 0 && Astro.response) {
+  Astro.response.headers.set('Cache-Control', `s-maxage=${cdnCache}, stale-while-revalidate=30`);
+}
+---
+
+<!doctype html>
+<html lang="es" class="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Anti-FOUC: inicializa tema ANTES del primer render -->
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem('mb365_theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = stored === 'dark' || stored === 'light'
+          ? stored
+          : (prefersDark ? 'dark' : 'light');
+        document.documentElement.className = theme;
+      })();
+    </script>
+
+    <!-- Fuentes: preconnect obligatorio para rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+    />
+    <!-- Material Symbols Outlined para iconografía -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    />
+
+    <!-- Preconnect a APIs externas -->
+    <link rel="dns-prefetch" href="https://docs-bible-api.netlify.app" />
+    <link rel="dns-prefetch" href="https://api.scripture.api.bible" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+    <!-- SEO base -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mi Biblia 365" />
+    <meta property="og:title" content={ogTitle || fullTitle} />
+    <meta property="og:description" content={ogDescription || description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle || fullTitle} />
+    <meta name="twitter:description" content={ogDescription || description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Tema y favicon -->
+    <meta name="theme-color" content="#4b6026" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c1c19" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+  <body class="bg-surface text-on-surface font-body transition-theme">
+    <!-- Toggle de tema -->
+    <ThemeToggle />
+
+    <!-- Header superior fijo -->
+    <Header currentPage={currentPage} />
+
+    <!-- Layout de dos columnas en desktop -->
+    <div class="flex min-h-screen">
+      <!-- Sidebar izquierda (desktop) -->
+      <Sidebar currentPage={currentPage} />
+
+      <!-- Contenido principal -->
+      <main
+        class="flex-1 pt-20 pb-24 md:pb-8 md:pl-72 min-h-screen"
+        id="main-content"
+      >
+        <slot />
+        <Footer />
+      </main>
+    </div>
+
+    <!-- Navegación inferior (móvil) -->
+    <BottomNav currentPage={currentPage} />
+  </body>
+</html>

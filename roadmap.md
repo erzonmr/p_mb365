@@ -41,37 +41,53 @@
 ## 🏗️ FASE 1: Núcleo del Sitio y Lectura Diaria
 *Construir la base del sitio: layout, navegación, sistema de tema, y la página de lectura diaria funcional.*
 
-- [ ] **Layout base Astro:** `src/layouts/Layout.astro` con:
+- [x] **Layout base Astro:** `src/layouts/Layout.astro` con:
   - Header sticky superior (logo "Mi Biblia 365" en Newsreader italic + nav Manrope uppercase).
   - Sidebar izquierda fija en desktop (>768px): "El Scriptorio" con links de navegación.
   - Bottom nav de 4 items en móvil (<768px): Inicio, Leer, Planes, Mi espacio.
   - Footer minimalista.
   - Soporte dark mode vía `class` strategy de Tailwind v4.
-- [ ] **Sistema de tema claro/oscuro:** Script inline en `<head>` que lee `localStorage` antes del primer render (evita FOUC). Toggle flotante en esquina superior derecha. Paleta nocturna: fondo `#1c1c19`, texto `#f0ede8`, acentos `#a8c878`.
-- [ ] **Página Inicio (`/`):** SSG. Portada con:
-  - Versículo diario destacado.
-  - Resumen de progreso (si hay plan activo): racha, porcentaje anual.
+- [x] **Sistema de tema claro/oscuro:** Script inline en `<head>` que lee `localStorage` antes del primer render (evita FOUC). Toggle flotante en esquina superior derecha (`ThemeToggle.astro`). Paleta nocturna: fondo `#1c1c19`, texto `#e6e3de`, acentos oliva.
+- [x] **Página Inicio (`/`):** SSG. Portada con:
+  - Versículo diario destacado (referencia calculada en build-time, texto hidratado desde API vía Alpine.js).
+  - Resumen de progreso: racha, porcentaje anual (Alpine.js + localStorage).
   - Botón "Leer hoy" prominente.
-  - Tarjeta de plan activo con imagen B&W, barra de progreso.
-  - Acceso rápido a planes y Mi espacio.
+  - Tarjeta de plan activo con barra de progreso.
+  - Favoritos recientes y tema del mes.
   - Bento grid de estadísticas rápidas (días seguidos, progreso).
-- [ ] **Página Leer hoy (`/leer-hoy`):** SSR. Detecta plan activo desde localStorage, calcula día del plan, consulta API con la referencia del día. Renderiza:
-  - Título del capítulo en Newsreader display-lg (ej: "Génesis 1").
-  - Subtítulo descriptivo en Manrope uppercase tracking-widest (ej: "El Principio de la Creación").
-  - Selector de versión (dropdown estilo prototipo).
+- [x] **Página Leer hoy (`/leer-hoy`):** SSR con `prerender = false` + Cache CDN `s-maxage=600`. Shell HTML renderizado en servidor; Alpine.js hidrata con datos del usuario desde localStorage. Renderiza:
+  - Título del capítulo en Newsreader display (ej: "Génesis 1").
+  - Selector de versión (dropdown con todas las versiones disponibles).
   - Controles de tamaño de texto (A- / A+).
   - Texto bíblico con versículos numerados en superscript Manrope bold.
-  - Resaltados de escritura con fondo `primary-fixed` `#d2eca2` suave.
   - Botón "Marcar como leído" con gradiente primary → primary-container.
-  - Navegación anterior/siguiente capítulo en grid asimétrico.
-  - Sección de contemplación diaria (imagen + quote).
-  - **Cache CDN:** `s-maxage=600` (10 minutos) ya que la lectura del día cambia solo una vez al día.
-- [ ] **Servicio de API (`bibleService.js`):** Capa de abstracción con proveedor principal + respaldo. Cache en memoria de sesión. Timeout 3s. Reintento 1 vez con API alterna.
-- [ ] **Manejo de errores de API:** Componente `ApiError.astro` con diseño Santuario (parchment, tipografía serif, acento oliva). Botón "Intentar de nuevo" y enlace al inicio.
-- [ ] **Selector de versión bíblica:** Dropdown/selector que lee `json/versions.json` desde jsDelivr. Guarda preferencia en localStorage.
-- [ ] **Meta-tags base:** Título, descripción, Open Graph y Twitter Cards en todas las páginas. Favicon, tema color, apple-touch-icon.
+  - Navegación anterior/siguiente porción en grid asimétrico.
+  - Sección de contemplación diaria (Scriptorio).
+  - Barra de progreso de lectura (2px superior, scroll-driven).
+  - Tabs de porciones del día si hay múltiples.
+- [x] **Servicio de API (`src/lib/bibleService.js`):** Abstracción con proveedor principal (docs-bible-api) + fallback (API.Bible). Caché en memoria de sesión. Timeout 3s. Retry automático con API alternativa. Mapa de libros español → IDs de API.Bible.
+- [x] **Manejo de errores de API:** Componente `src/components/ApiError.astro` con diseño Santuario (pergamino, serif, acento oliva). Botón "Intentar de nuevo" y enlace al inicio.
+- [x] **Selector de versión bíblica:** Dropdown en `/leer-hoy` que lee `versions.json` desde endpoint `/api/versions.json`. Guarda preferencia en localStorage vía `storageService.js`.
+- [x] **Meta-tags base:** Título, descripción, Open Graph y Twitter Cards en todas las páginas vía `Layout.astro`. Favicon, tema color, apple-touch-icon, canonical URL.
+- [x] **Servicios JS adicionales:**
+  - `src/lib/storageService.js`: plan activo, progreso, racha, favoritos, notas, export/import JSON.
+  - `src/lib/versiculoDiario.js`: versículo diario por día del año + tema mensual.
+  - `src/lib/planService.js`: carga de planes desde endpoint `/api/plans/{id}.json`.
+- [x] **Endpoints de datos:**
+  - `src/pages/api/versions.json.js`: sirve catálogo de versiones (SSG, caché 7 días).
+  - `src/pages/api/plans/[plan].json.js`: sirve plan de lectura por ID (SSR, caché 24h).
+- [x] **Alpine.js entrypoint centralizado:** `src/alpine/index.js` con todos los componentes registrados vía `Alpine.data()`.
 
-**Entregable de Fase 1:** Sitio navegable con Inicio y Leer hoy funcionales. El usuario puede seleccionar un plan (hardcoded inicialmente) y leer la lectura del día con la estética del prototipo.
+**Entregable de Fase 1:** Sitio navegable con Inicio y Leer hoy funcionales. El usuario puede seleccionar un plan (hardcoded inicialmente) y leer la lectura del día con la estética del prototipo. Build limpio, sin errores, listo para deploy en Vercel.
+
+### Registro de avance Fase 1 (2026-04-21)
+- **Stack final:** Astro 6.1.8 + TailwindCSS v4.2.4 (PostCSS) + Alpine.js 3.15.11 + @astrojs/vercel 10.0.4.
+- **Decisión técnica:** Se descartó `@tailwindcss/vite` por incompatibilidad con Rolldown (bundler de Vite 8 que usa Astro 6). Se adoptó `@tailwindcss/postcss` como solución estable.
+- **Decisión técnica:** Alpine.js centralizado vía entrypoint `src/alpine/index.js` con `Alpine.data()`. Evita scripts duplicados y garantiza tree-shaking correcto.
+- **Tokens de diseño:** 100% fieles al sistema "El Santuario Editorial" definido en `prototipo/DESIGN.md`. Modo oscuro implementado como overrides CSS del `:root` en selector `.dark`.
+- **Anti-FOUC:** Script inline en `<head>` inicializa tema antes del primer render.
+- **Pendientes manuales (usuario):** Activos de marca (`favicon.svg`, `apple-touch-icon.png`, `og-default.png`) documentados en `Instrucciones.md`.
+- **Build:** ✅ Sin errores. Rutas prerenizadas: `/`, `/api/versions.json`. Rutas SSR: `/leer-hoy`, `/api/plans/[plan].json`.
 
 ---
 

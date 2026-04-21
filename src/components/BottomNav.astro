@@ -1,0 +1,46 @@
+---
+// BottomNav.astro
+// Barra de navegación inferior en móvil (< 768px).
+// 4 ítems: Inicio, Leer, Planes, Mi espacio.
+// Glassmorphism + border-radius superior.
+
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Inicio', key: 'inicio', icon: 'home_max' },
+  { href: '/leer-hoy', label: 'Leer', key: 'leer', icon: 'book_5' },
+  { href: '/planes', label: 'Planes', key: 'planes', icon: 'map' },
+  { href: '/mi-espacio', label: 'Mi espacio', key: 'espacio', icon: 'person' },
+];
+---
+
+<nav
+  class="fixed bottom-0 w-full z-50 rounded-t-xl glass shadow-[0_-12px_32px_rgba(28,28,25,0.04)] md:hidden"
+  aria-label="Navegación móvil"
+>
+  <div class="flex justify-around items-center w-full pt-3 pb-8 px-4">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class={`flex flex-col items-center transition-all duration-300 min-w-[44px] min-h-[44px] justify-center ${
+          currentPage === item.key
+            ? 'text-primary scale-110'
+            : 'text-secondary opacity-60 hover:opacity-100'
+        }`}
+        aria-current={currentPage === item.key ? 'page' : undefined}
+        aria-label={item.label}
+      >
+        <span
+          class="material-symbols-outlined mb-0.5"
+          style={currentPage === item.key ? "font-variation-settings: 'FILL' 1;" : ''}
+          aria-hidden="true"
+        >{item.icon}</span>
+        <span class="manrope-caps text-[9px]">{item.label}</span>
+      </a>
+    ))}
+  </div>
+</nav>

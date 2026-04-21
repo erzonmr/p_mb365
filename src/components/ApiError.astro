@@ -1,0 +1,64 @@
+---
+// ApiError.astro
+// Componente de error de API con estética del Santuario Editorial.
+// Muestra un mensaje de error elegante con opción de reintentar.
+
+interface Props {
+  reference?: string;
+  message?: string;
+  showRetry?: boolean;
+}
+
+const {
+  reference = '',
+  message = 'No fue posible cargar el texto bíblico en este momento.',
+  showRetry = true,
+} = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center py-16 px-8 text-center">
+  <!-- Icono decorativo -->
+  <div class="w-16 h-16 flex items-center justify-center rounded-full bg-surface-container-low mb-8">
+    <span class="material-symbols-outlined text-secondary text-3xl" aria-hidden="true">
+      auto_stories
+    </span>
+  </div>
+
+  <!-- Título -->
+  <h2 class="font-body text-2xl italic text-on-surface mb-3">
+    Texto no disponible
+  </h2>
+
+  <!-- Referencia (si existe) -->
+  {reference && (
+    <p class="manrope-caps text-xs text-primary mb-4">{reference}</p>
+  )}
+
+  <!-- Mensaje de error -->
+  <p class="font-body text-on-surface-variant leading-relaxed max-w-md mb-8 italic">
+    {message}
+  </p>
+
+  <!-- Acciones -->
+  <div class="flex flex-col sm:flex-row items-center gap-4">
+    {showRetry && (
+      <button
+        onclick="window.location.reload()"
+        class="btn-primary px-6 py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+      >
+        Intentar de nuevo
+      </button>
+    )}
+    <a
+      href="/"
+      class="font-label text-sm text-secondary hover:text-primary border-b border-secondary/30 hover:border-primary pb-0.5 transition-all duration-300"
+    >
+      Volver al inicio
+    </a>
+  </div>
+
+  <!-- Nota técnica sutil -->
+  <p class="manrope-caps text-[9px] text-outline mt-12 max-w-xs">
+    Las APIs bíblicas pueden estar temporalmente no disponibles. Tu progreso y notas se mantienen guardados localmente.
+  </p>
+</div>

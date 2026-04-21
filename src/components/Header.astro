@@ -1,0 +1,59 @@
+---
+// Header.astro
+// Barra superior fija: logo Newsreader italic + navegación Manrope uppercase.
+// Glassmorphism: bg/80 + backdrop-blur.
+
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Santuario', key: 'inicio' },
+  { href: '/leer-hoy', label: 'Escritura', key: 'leer' },
+  { href: '/planes', label: 'Caminos', key: 'planes' },
+  { href: '/mi-espacio', label: 'Mi espacio', key: 'espacio' },
+];
+---
+
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-t-2 border-secondary flex justify-between items-center px-6 py-4 transition-theme">
+  <!-- Logo -->
+  <a href="/" class="flex flex-col leading-none group" aria-label="Mi Biblia 365 - Inicio">
+    <span class="font-body text-2xl italic text-on-surface group-hover:text-primary transition-colors duration-300">
+      Mi Biblia 365
+    </span>
+    <span class="manrope-caps text-[9px] text-secondary hidden md:block">El Santuario Editorial</span>
+  </a>
+
+  <!-- Nav desktop -->
+  <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class={`manrope-caps text-[10px] font-bold hover:opacity-70 transition-opacity duration-500 ${
+          currentPage === item.key
+            ? 'text-primary'
+            : 'text-secondary'
+        }`}
+        aria-current={currentPage === item.key ? 'page' : undefined}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+
+  <!-- Acciones rápidas -->
+  <div class="flex items-center gap-3">
+    <a href="/mi-espacio" class="hidden md:block" aria-label="Favoritos y Mi espacio">
+      <span class="material-symbols-outlined text-secondary hover:text-primary transition-colors duration-300 cursor-pointer">
+        bookmark
+      </span>
+    </a>
+    <a href="/mi-espacio" aria-label="Mi espacio">
+      <span class="material-symbols-outlined text-secondary hover:text-primary transition-colors duration-300 cursor-pointer">
+        account_circle
+      </span>
+    </a>
+  </div>
+</header>
