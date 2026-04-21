@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#394d14",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#edffc9",
+                        "secondary-fixed": "#ffddb2",
+                        "on-tertiary-container": "#fff6fb",
+                        "inverse-primary": "#b6d088",
+                        "on-secondary-fixed": "#291800",
+                        "outline": "#78786c",
+                        "on-tertiary-fixed-variant": "#553f58",
+                        "surface-variant": "#e5e2dd",
+                        "secondary-fixed-dim": "#e1c298",
+                        "tertiary": "#68526c",
+                        "primary": "#4b6026",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3ee",
+                        "surface-container-high": "#ebe8e3",
+                        "surface-dim": "#dcdad5",
+                        "on-tertiary-fixed": "#27152b",
+                        "inverse-surface": "#31302d",
+                        "on-surface-variant": "#47473d",
+                        "surface-container-highest": "#e5e2dd",
+                        "primary-container": "#63793c",
+                        "surface": "#fcf9f4",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#b6d088",
+                        "primary-fixed": "#d2eca2",
+                        "on-background": "#1c1c19",
+                        "secondary": "#725a38",
+                        "on-secondary-container": "#775e3c",
+                        "secondary-container": "#fcdaaf",
+                        "on-secondary-fixed-variant": "#594323",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-surface": "#1c1c19",
+                        "tertiary-fixed": "#f7d9f9",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#50652a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f4",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#131f00",
+                        "background": "#fcf9f4",
+                        "surface-container": "#f0ede8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#826a85",
+                        "tertiary-fixed-dim": "#dabedc",
+                        "outline-variant": "#c8c7ba",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Newsreader"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .newsreader-italic { font-family: 'Newsreader', serif; font-style: italic; }
+        .manrope-caps { font-family: 'Manrope', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; }
+        .glass-nav { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen font-body selection:bg-primary-fixed">
+<!-- Barra Superior -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-md border-t-2 border-[#725a38] flex justify-between items-center px-6 py-4">
+<div class="font-['Newsreader'] text-2xl italic text-[#1c1c19] dark:text-[#fcf9f4]">El Santuario</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="font-['Manrope'] font-medium uppercase tracking-widest text-[10px] text-[#725a38] dark:text-[#c8c7ba] hover:opacity-70 transition-opacity duration-500" href="#">Santuario</a>
+<a class="font-['Manrope'] font-medium uppercase tracking-widest text-[10px] text-[#725a38] dark:text-[#c8c7ba] hover:opacity-70 transition-opacity duration-500" href="#">Escritura</a>
+<a class="font-['Manrope'] font-medium uppercase tracking-widest text-[10px] text-[#4b6026] dark:text-[#d2eca2] font-bold" href="#">Caminos</a>
+<a class="font-['Manrope'] font-medium uppercase tracking-widest text-[10px] text-[#725a38] dark:text-[#c8c7ba] hover:opacity-70 transition-opacity duration-500" href="#">Crecimiento</a>
+</nav>
+<div class="flex items-center gap-4 text-[#4b6026]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity duration-500" data-icon="bookmark">bookmark</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity duration-500" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Barra Lateral (Solo Escritorio) -->
+<aside class="hidden md:flex h-screen w-64 fixed left-0 top-0 bg-[#f0ede8] dark:bg-[#1c1c19] flex-col gap-8 py-10 px-6 z-40">
+<div class="mt-12 mb-8">
+<h2 class="font-['Newsreader'] text-xl font-bold text-[#1c1c19] dark:text-[#fcf9f4]">El Scriptorio</h2>
+<p class="font-['Manrope'] text-sm tracking-tight text-[#725a38] opacity-70">En Contemplación</p>
+</div>
+<nav class="flex flex-col gap-4">
+<a class="flex items-center gap-3 text-[#725a38] pl-4 hover:text-[#4b6026] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="temple_hindu">temple_hindu</span>
+<span class="font-['Manrope'] text-sm tracking-tight">Santuario</span>
+</a>
+<a class="flex items-center gap-3 text-[#725a38] pl-4 hover:text-[#4b6026] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Manrope'] text-sm tracking-tight">Escritura</span>
+</a>
+<a class="flex items-center gap-3 text-[#1c1c19] font-semibold border-l-2 border-[#725a38] pl-4" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Manrope'] text-sm tracking-tight">Caminos</span>
+</a>
+<a class="flex items-center gap-3 text-[#725a38] pl-4 hover:text-[#4b6026] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Manrope'] text-sm tracking-tight">Crecimiento</span>
+</a>
+</nav>
+<button class="mt-auto bg-primary text-white py-3 rounded-lg font-headline text-sm tracking-wide shadow-sm hover:opacity-90 transition-all">
+            Nuevo Diario
+        </button>
+</aside>
+<!-- Área de Contenido Principal -->
+<main class="pt-24 pb-32 md:pl-72 px-6 max-w-7xl mx-auto">
+<!-- Sección de Búsqueda -->
+<section class="mb-16 mt-8 max-w-2xl">
+<h1 class="text-5xl md:text-6xl font-body text-on-surface -tracking-[0.02em] mb-8 leading-tight">Caminos de <span class="newsreader-italic">Lectura</span></h1>
+<div class="relative group">
+<input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-headline text-2xl focus:outline-none focus:border-primary transition-all placeholder:text-outline-variant/50" placeholder="Busca un camino sagrado..." type="text"/>
+<span class="absolute right-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+</div>
+</section>
+<!-- Cuadrícula Bento de Categorías -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
+<div class="md:col-span-2 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group cursor-pointer hover:bg-surface-container transition-all">
+<span class="manrope-caps text-[10px] text-secondary font-bold mb-4">Leer en un Año</span>
+<h3 class="text-3xl font-body mb-4">El Viaje Completo</h3>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed opacity-80">Un recorrido diario y exhaustivo por toda la Palabra, con ritmo para la contemplación profunda a lo largo de 365 días.</p>
+<div class="mt-8 flex items-center gap-2 text-primary font-headline text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                    Explorar Plan <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="bg-primary-fixed p-8 rounded-xl flex flex-col justify-between group cursor-pointer hover:bg-primary-fixed-dim transition-all">
+<span class="manrope-caps text-[10px] text-on-primary-fixed-variant font-bold mb-4">Temático</span>
+<h3 class="text-2xl font-body mb-4">Sabiduría y Poesía</h3>
+<p class="text-on-primary-fixed-variant font-body leading-relaxed opacity-80">Medita en los Salmos y Proverbios.</p>
+<div class="mt-6 h-1 w-12 bg-on-primary-fixed-variant/20 rounded-full"></div>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between group cursor-pointer hover:brightness-95 transition-all">
+<span class="manrope-caps text-[10px] text-on-surface-variant font-bold mb-4">Solo Nuevo Testamento</span>
+<h3 class="text-2xl font-body mb-4">Los Evangelios</h3>
+<p class="text-on-surface-variant font-body leading-relaxed opacity-80">90 días con la Vida de Cristo.</p>
+<div class="mt-6 h-1 w-12 bg-on-surface-variant/20 rounded-full"></div>
+</div>
+</section>
+<!-- Galería de Planes -->
+<div class="space-y-12">
+<div class="flex justify-between items-end border-b border-outline-variant/15 pb-4">
+<h2 class="font-headline text-sm font-bold tracking-[0.2em] uppercase text-secondary">Caminos Disponibles</h2>
+<span class="text-xs font-headline text-outline-variant">Mostrando 12 resultados</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16">
+<!-- Tarjeta de Plan 1 -->
+<article class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img alt="Libro sagrado abierto bajo la luz del sol" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="close-up of an old leather bound book open on a wooden table with soft dust motes dancing in morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRJoEoYgkBvj5pXYrQlgK06kDsWVFgnCnbQeqG5iyvy5iPc1emx2nXzDBeONRv41UB7swBnXvYvmnsNF2PPhoYSkme2GqL30nZUtSfnQeDxvdmRb9N-cej1POCIRfV7OaYg6csPXHr9fBRTpqFYA-shF_kJu7WNCSGr1PeWrjeApXXLUCC7dwNf7PSJHiiisiECeBaBTgtuyMbsmbyJTaCwkR2uNfFza6i8Lx7nOzF1YeQtJz7UPNDPpSua3-8CHvYtgZuH4JVGBE"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="manrope-caps text-[10px] font-bold text-primary px-2 py-1 bg-primary-fixed/30 rounded">Cronológico</span>
+<span class="text-xs font-headline text-outline-variant">365 Días</span>
+</div>
+<h3 class="text-2xl font-body mb-3 leading-tight group-hover:text-primary transition-colors">El Camino de Génesis al Apocalipsis</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">Lee los eventos de la Biblia en el orden en que realmente ocurrieron. Una poderosa perspectiva sobre la narrativa histórica de la fe.</p>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-xs font-bold tracking-widest uppercase hover:scale-105 active:scale-95 transition-all">Iniciar Plan</button>
+</div>
+</article>
+<!-- Tarjeta de Plan 2 -->
+<article class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img alt="Amanecer sobre un valle brumoso" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="ethereal sunrise over a misty mountain valley with soft golden and lavender hues and silhouette of a lone tree" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnhXg6x5HGCVHz9iNutmkYQSjosKC7r-RyS5J17auW_ZLhLgtewe4OPVpkRON5pJtq6_33gC3WD8rmkc-ONPKU9Ry_h623YMTRom3T_hXcNCbDdEhUpsmvGe8cxcBF5sxhi-4DXvotqaqu9Rrd954UGATG-Ktb1FpmhGmvLM4xauOIotqsu9jhCeFNekPzceH0h7B6O6u20Z5dwq9DJ5ZuQtvVCiUpE6VlNK2qAP6dC6Knyiw3GNmP6N7EaJjUDYe_FUgzqQhF52k"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="manrope-caps text-[10px] font-bold text-secondary px-2 py-1 bg-secondary-container/30 rounded">Temático</span>
+<span class="text-xs font-headline text-outline-variant">30 Días</span>
+</div>
+<h3 class="text-2xl font-body mb-3 leading-tight group-hover:text-primary transition-colors">Encontrando Paz en la Tormenta</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">Una selección curada de escrituras centrada en la serenidad, la providencia y el consuelo divino en tiempos de incertidumbre.</p>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-xs font-bold tracking-widest uppercase hover:scale-105 active:scale-95 transition-all">Iniciar Plan</button>
+</div>
+</article>
+<!-- Tarjeta de Plan 3 -->
+<article class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 relative bg-surface-container">
+<img alt="Cima de montaña al amanecer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="rugged mountain peak during twilight with deep blue shadows and a sliver of orange on the horizon minimal composition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrI9z981XqOmbG7aot70hW53IC3M5ji4PRMjFERA6U1SKLlgrNTSpV5vpbcahLslWCFAgTtbENYCgZLWpjKLXoLuI0I-_nWKmhbmdr4ZMcaYKSpumLq3y5TP3CsNK4hh0wHkp7-IiAThk_Uuj03PDfzncNzFWNMp3EkdrgGqO73Zab_AwFXVfpg0qxMBI2VHIoDlH_BHHFFn4LiGS8tB8tfM4RJjorHu1tfAztMZ8zqFRo3ZaS2FPIPp-ceBmqBVIl-gU4ss9ui90"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="manrope-caps text-[10px] font-bold text-tertiary px-2 py-1 bg-tertiary-fixed/30 rounded">Solo Nuevo Testamento</span>
+<span class="text-xs font-headline text-outline-variant">15 Días</span>
+</div>
+<h3 class="text-2xl font-body mb-3 leading-tight group-hover:text-primary transition-colors">El Sermón del Monte</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6">Una inmersión profunda en la ética radical y las enseñanzas transformadoras de Jesús en Mateo 5-7.</p>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-xs font-bold tracking-widest uppercase hover:scale-105 active:scale-95 transition-all">Iniciar Plan</button>
+</div>
+</article>
+<!-- Tarjeta de Plan 4 -->
+<article class="flex flex-col md:flex-row gap-8 items-start group">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 relative bg-surface-container-high">
+<div class="w-full h-full flex flex-col items-center justify-center p-6 text-center">
+<span class="material-symbols-outlined text-4xl text-outline-variant mb-2" data-icon="auto_awesome">auto_awesome</span>
+<p class="manrope-caps text-[8px] text-outline-variant font-bold leading-tight">Próximamente</p>
+</div>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-3">
+<span class="manrope-caps text-[10px] font-bold text-outline text-outline-variant px-2 py-1 bg-surface-container-high rounded">Personalizado</span>
+<span class="text-xs font-headline text-outline-variant">Variable</span>
+</div>
+<h3 class="text-2xl font-body mb-3 leading-tight text-outline-variant">Tu Camino Personalizado del Scriptorio</h3>
+<p class="text-on-surface-variant font-body leading-relaxed mb-6 opacity-60">Genera un viaje de lectura basado en tus metas contemplativas personales y el tiempo disponible.</p>
+<button class="border border-outline-variant text-outline-variant px-6 py-2 rounded-lg font-headline text-xs font-bold tracking-widest uppercase cursor-not-allowed">Bloqueado</button>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Barra de Navegación Inferior (Solo Móvil) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-[#ffffff]/90 dark:bg-[#1c1c19]/90 backdrop-blur-2xl rounded-t-xl shadow-[0_-12px_32px_rgba(28,28,25,0.04)] flex justify-around items-center pt-3 pb-safe-bottom px-4">
+<a class="flex flex-col items-center text-[#725a38] dark:text-[#c8c7ba] opacity-60 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-tighter">Inicio</span>
+</a>
+<a class="flex flex-col items-center text-[#725a38] dark:text-[#c8c7ba] opacity-60 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="book_5">book_5</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-tighter">Leer</span>
+</a>
+<a class="flex flex-col items-center text-[#4b6026] dark:text-[#d2eca2] scale-110" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-tighter">Planes</span>
+</a>
+<a class="flex flex-col items-center text-[#725a38] dark:text-[#c8c7ba] opacity-60 hover:opacity-100 transition-all duration-500" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-['Manrope'] text-[10px] font-semibold uppercase tracking-tighter">Estadísticas</span>
+</a>
+</nav>
+</body></html>
