@@ -14,7 +14,8 @@
 - [ ] **Decisión de interactivity framework:** Evaluar si Alpine.js cubre todos los casos de uso (selectores, búsqueda, toggle tema, notas, calendario) o si React es inevitable para algún componente. Documentar decisión en `ARCHITECTURE.md`.
 - [ ] **Definir sistema de diseño:** Paleta, tipografía y componentes ya definidos en `prototipo/DESIGN.md`. Validar que TailwindCSS v4 puede replicar fielmente los tokens del prototipo (colores Material 3, border-radius personalizados, font families).
 - [ ] **Estrategia de fuentes:** Cargar Newsreader y Manrope vía Google Fonts con `display=swap` y preconnect. Evaluar self-hosting para CSP futuro.
-- [ ] **Generar activos de marca:** Favicon SVG (`#4b6026`), Apple touch icon, Open Graph image genérica (1200×630) con la estética del prototipo.
+- [ ] **Generar activos de marca:** Favicon SVG (`#4b6026`), Apple touch icon, Open Graph image genérica (1200×630) con la estética del prototipo. **Nota:** _Esta será tarea manual para el usuario_. Dejar instrucciones claras para el usuario en `Instrucciones.md`.
+- [ ] **Verificación de JSON's:** Analizar y revisar json's de Planes y Versículo Diario que esten bien diseñados y estructurados para el fin que se necesita. 
 - [ ] **Crear estructura de carpetas:**
   ```
   mibiblia365/
@@ -25,7 +26,7 @@
   └── config files
   ```
 
-**Entregable de Fase 0:** Repositorio con `README.md`, `astro.config.mjs` configurado, carpeta `json/` con `versions.json`, y documento `ARCHITECTURE.md` con decisiones técnicas validadas.
+**Entregable de Fase 0:** Repositorio con `README.md`, `astro.config.mjs` configurado, carpeta `json/` con `versions.json`, y documentos `ARCHITECTURE.md`, `Instrucciones.md` con decisiones técnicas validadas.
 
 ---
 
@@ -235,6 +236,8 @@
 7. **Compartir es el comportamiento #1:** Al compartir un pasaje, el usuario copia la URL del navegador. Las URLs deben ser limpias, legibles y estables (`/biblia/rv1960/juan/3` en lugar de query strings). El preview en redes sociales depende de los meta-tags, no del texto renderizado.
 
 8. **Fidelidad al prototipo:** La estética visual (paleta, tipografía, espaciado, componentes, transiciones) debe seguir fielmente `prototipo/DESIGN.md` y los 4 archivos HTML del prototipo. Cualquier desviación debe ser documentada y justificada.
+
+9. **Registro y Documentación:** Después de terminar cada fase se debe dejar registro y documentación de avance en roadmap. 
 
 ---
 
