@@ -1,54 +1,94 @@
-# Análisis del repositorio
+# Análisis integral del proyecto — Mi Biblia 365
 
-## Resumen ejecutivo
-Este repositorio es un **prototipo front-end estático** de una experiencia llamada **"El Santuario"**, enfocada en lectura bíblica contemplativa con una dirección de arte editorial. No hay backend, build system ni gestor de dependencias; cada pantalla vive como HTML independiente con Tailwind cargado desde CDN.
+Fecha: 2026-04-21
 
-## Estructura detectada
-- `dashboard/dashboard.html`: pantalla de inicio.
-- `bible_reader/bible_reader.html`: pantalla de lectura bíblica.
-- `reading_plans/reading_plans.html`: exploración de planes de lectura.
-- `my_progress/my_progress.html`: pantalla de progreso y métricas.
-- `selah_modern/README.md` y `selah_modern/DESIGN.md`: guía de diseño conceptual (ES/EN).
-- Cada vista incluye un `screen.png` como referencia visual del mockup.
+## 1) Estado de avance
 
-## Hallazgos técnicos
-1. **Arquitectura de UI basada en páginas sueltas**
-   - No existe enrutado SPA ni componente compartido compilado.
-   - Hay potencial de duplicación de código entre pantallas (header, sidebar, tokens de color, tipografías).
+### Estado global
+- El repositorio estaba en etapa **pre-MVP**: fuerte definición de producto y diseño, sin base de aplicación Astro inicializada.
+- Con esta iteración se dejó **Fase 0 ejecutada técnicamente** a nivel de documentación, validaciones y estructura base.
 
-2. **Sistema visual consistente, pero embebido**
-   - Se usa una paleta consistente (surface/primary/secondary y variantes) en varias vistas.
-   - La configuración de Tailwind (`tailwind.config`) está embebida por página, lo que complica mantenimiento a mediano plazo.
+### Avance por dimensión
+- **Producto / Brief:** sólido, claro y consistente.
+- **Diseño:** altamente definido mediante prototipos + sistema visual.
+- **Datos:** planes y versículos diarios ya presentes en JSON.
+- **Infraestructura app:** inicializada de forma mínima (config + estructura), pendiente bootstrap completo de Astro productivo.
 
-3. **Dependencias externas en runtime (CDN)**
-   - Tailwind y fuentes de Google se cargan por CDN.
-   - Ventaja: prototipado rápido.
-   - Riesgo: rendimiento/control versionado/entornos offline.
+## 2) Evaluación del brief
 
-4. **Enfoque de producto claro**
-   - El diseño editorial y contemplativo está bien definido en la documentación de diseño.
-   - Hay coherencia entre narrativa de diseño y ejecución visual básica de las pantallas.
+`brief.md` define bien:
+- propósito espiritual + funcional,
+- límites explícitos (sin PWA, sin login en primera fase),
+- stack objetivo (Astro 6 + Tailwind 4 + islands selectivas),
+- estrategia de datos (JSON versionados + API principal y fallback),
+- UX editorial (consumo contemplativo, no tipo "app móvil").
 
-## Riesgos principales
-- **Mantenibilidad:** alta repetición de estilos y estructura HTML.
-- **Escalabilidad:** difícil evolucionar a producto real sin modularización.
-- **Consistencia futura:** sin tokens centralizados, cambios de marca exigen editar múltiples archivos.
-- **Calidad continua:** no hay linting, pruebas automáticas ni validación CI.
+**Conclusión:** el brief está listo para ejecutar desarrollo incremental por fases sin ambigüedad crítica.
 
-## Recomendaciones priorizadas
-### Prioridad alta (1-2 iteraciones)
-1. Centralizar componentes repetidos (header/sidebar/footer) en parciales o framework ligero.
-2. Extraer tokens de diseño a un único origen (archivo CSS variables o config compartida).
-3. Agregar README raíz con instrucciones de ejecución y propósito del repo.
+## 3) Estructura del repositorio
 
-### Prioridad media (3-4 iteraciones)
-4. Migrar de HTML suelto a estructura con Vite + framework (o mínimo Nunjucks/Eleventy) para templating.
-5. Incorporar validaciones de calidad: HTML lint, formato y revisión de accesibilidad.
-6. Unificar manejo de assets (imágenes, iconos, fuentes) en carpetas comunes.
+### Antes de esta ejecución
+- Prototipos estáticos HTML por pantalla en `prototipo/`.
+- JSON funcionales de planes y versículo diario en `json/`.
+- Sin `README` raíz, sin `astro.config.mjs`, sin scripts de validación.
 
-### Prioridad estratégica
-7. Definir roadmap: prototipo visual vs MVP funcional (auth, sincronización de progreso, contenido dinámico).
-8. Diseñar contrato de datos para lectura/progreso/planes, aunque sea mock JSON inicial.
+### Después de esta ejecución (Fase 0)
+- Configuración base:
+  - `README.md`
+  - `astro.config.mjs` (`output: 'hybrid'`)
+  - `ARCHITECTURE.md`
+  - `Instrucciones.md`
+- Catálogos JSON base:
+  - `json/versions.json`
+  - `json/plans.json`
+- Scripts de validación:
+  - `scripts/fase0/validate-apis.mjs`
+  - `scripts/fase0/validate-json.mjs`
+- Evidencias:
+  - `reports/fase0-api-validation.json`
+  - `reports/fase0-json-validation.json`
+  - `reports/fase0-resultados.md`
 
-## Conclusión
-El repositorio está bien encaminado como **demo visual de alto nivel** y comunica con claridad una identidad de producto sólida. Para pasar de demo a base de producto, el siguiente paso crítico es **modularizar UI + centralizar design tokens + formalizar tooling de desarrollo**.
+## 4) Resultado de Fase 0 ejecutada
+
+### 4.1 Validación API principal y fallback
+- Se ejecutó batería de pruebas contra:
+  - `docs-bible-api.netlify.app` (5 versiones × 5 referencias)
+  - `api.scripture.api.bible` (3 versiones fallback)
+- **Resultado en este entorno:** errores de red (`fetch failed`) en 100% de requests.
+- Interpretación: script funcional y reusable, pero la validación de disponibilidad externa debe repetirse desde entorno con conectividad saliente estable (CI/Vercel/local sin restricciones).
+
+### 4.2 Decisión de framework de interactividad
+- Alpine/Vanilla cubre MVP de interacción ligera.
+- React 19 recomendado solo para módulos de alta complejidad visual/estado.
+- Decisión documentada en `ARCHITECTURE.md`.
+
+### 4.3 Verificación de JSON
+- Validación estructural aprobada para todos los JSON actuales.
+- Confirmado:
+  - planes secuenciales por día,
+  - catálogo de planes presente,
+  - `versiculos-diarios` consistente con total declarado (366).
+
+### 4.4 Estructura de carpetas
+- Se creó base mínima (`src/`, `public/`, `scripts/`, `reports/`) para continuar fase 1.
+
+## 5) Riesgos abiertos
+
+1. **Riesgo de conectividad/API no validada en runtime real**
+   - Mitigación: ejecutar los mismos scripts en CI (GitHub Actions) y/o preview deploy Vercel.
+2. **Falta bootstrap Astro real**
+   - Mitigación: inicialización formal en el próximo bloque (`npm create astro@latest`).
+3. **Activos de marca pendientes**
+   - Mitigación: seguir `Instrucciones.md` (favicon, apple icon, OG image).
+
+## 6) Recomendaciones inmediatas (Fase 0.5)
+
+1. Inicializar Astro real con adapter Vercel y Tailwind v4.
+2. Añadir `src/layouts/Layout.astro` base con tokens del prototipo.
+3. Conectar scripts de validación a pipeline CI.
+4. Versionar JSON para consumo CDN (tag o SHA).
+
+## 7) Conclusión
+
+El proyecto ya tiene una base conceptual muy madura y una identidad de diseño fuerte. Con la ejecución actual, Fase 0 queda operativa en términos de **arquitectura, evidencia y preparación técnica**. El próximo salto natural es construir Fase 1 sobre Astro real con rutas iniciales (`/` y `/leer-hoy`).
