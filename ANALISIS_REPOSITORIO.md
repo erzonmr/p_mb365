@@ -1,54 +1,57 @@
-# Análisis del repositorio
+# Análisis integral del proyecto — Mi Biblia 365
 
-## Resumen ejecutivo
-Este repositorio es un **prototipo front-end estático** de una experiencia llamada **"El Santuario"**, enfocada en lectura bíblica contemplativa con una dirección de arte editorial. No hay backend, build system ni gestor de dependencias; cada pantalla vive como HTML independiente con Tailwind cargado desde CDN.
+Fecha: 2026-04-21
 
-## Estructura detectada
-- `dashboard/dashboard.html`: pantalla de inicio.
-- `bible_reader/bible_reader.html`: pantalla de lectura bíblica.
-- `reading_plans/reading_plans.html`: exploración de planes de lectura.
-- `my_progress/my_progress.html`: pantalla de progreso y métricas.
-- `selah_modern/README.md` y `selah_modern/DESIGN.md`: guía de diseño conceptual (ES/EN).
-- Cada vista incluye un `screen.png` como referencia visual del mockup.
+## 1) Estado de avance
 
-## Hallazgos técnicos
-1. **Arquitectura de UI basada en páginas sueltas**
-   - No existe enrutado SPA ni componente compartido compilado.
-   - Hay potencial de duplicación de código entre pantallas (header, sidebar, tokens de color, tipografías).
+### Estado global
+- El repositorio está en etapa **pre-MVP** con base documental sólida.
+- **Fase 0 cerrada** y aceptada por producto para avanzar a Fase 1.
 
-2. **Sistema visual consistente, pero embebido**
-   - Se usa una paleta consistente (surface/primary/secondary y variantes) en varias vistas.
-   - La configuración de Tailwind (`tailwind.config`) está embebida por página, lo que complica mantenimiento a mediano plazo.
+### Avance por dimensión
+- **Producto / Brief:** sólido y consistente.
+- **Diseño:** definido por prototipos y sistema visual editorial.
+- **Datos:** planes y versículos diarios disponibles en JSON.
+- **Infraestructura:** scaffold inicial listo (Astro config + carpetas base), pendiente bootstrap completo de app.
 
-3. **Dependencias externas en runtime (CDN)**
-   - Tailwind y fuentes de Google se cargan por CDN.
-   - Ventaja: prototipado rápido.
-   - Riesgo: rendimiento/control versionado/entornos offline.
+## 2) Evaluación del brief
 
-4. **Enfoque de producto claro**
-   - El diseño editorial y contemplativo está bien definido en la documentación de diseño.
-   - Hay coherencia entre narrativa de diseño y ejecución visual básica de las pantallas.
+`brief.md` define claramente objetivo, límites de alcance (sin PWA/login en primera fase), stack, estrategia de datos y lineamientos UX editoriales. El brief es ejecutable para desarrollo incremental por fases.
 
-## Riesgos principales
-- **Mantenibilidad:** alta repetición de estilos y estructura HTML.
-- **Escalabilidad:** difícil evolucionar a producto real sin modularización.
-- **Consistencia futura:** sin tokens centralizados, cambios de marca exigen editar múltiples archivos.
-- **Calidad continua:** no hay linting, pruebas automáticas ni validación CI.
+## 3) Estructura actual del repositorio
 
-## Recomendaciones priorizadas
-### Prioridad alta (1-2 iteraciones)
-1. Centralizar componentes repetidos (header/sidebar/footer) en parciales o framework ligero.
-2. Extraer tokens de diseño a un único origen (archivo CSS variables o config compartida).
-3. Agregar README raíz con instrucciones de ejecución y propósito del repo.
+- `prototipo/`: prototipos visuales por pantalla y sistema de diseño.
+- `json/`: datasets de planes y versículo diario + catálogos (`plans.json`, `versions.json`).
+- `reports/`: registro de ejecución de fases (incluye cierre Fase 0).
+- `astro.config.mjs`, `ARCHITECTURE.md`, `Instrucciones.md`, `README.md`: base técnica y operativa.
+- `src/` y `public/`: estructura inicial para implementación Astro.
 
-### Prioridad media (3-4 iteraciones)
-4. Migrar de HTML suelto a estructura con Vite + framework (o mínimo Nunjucks/Eleventy) para templating.
-5. Incorporar validaciones de calidad: HTML lint, formato y revisión de accesibilidad.
-6. Unificar manejo de assets (imágenes, iconos, fuentes) en carpetas comunes.
+## 4) Resultado Fase 0
 
-### Prioridad estratégica
-7. Definir roadmap: prototipo visual vs MVP funcional (auth, sincronización de progreso, contenido dinámico).
-8. Diseñar contrato de datos para lectura/progreso/planes, aunque sea mock JSON inicial.
+- Validaciones API dadas por superadas con reporte consolidado:
+  - principal p95 369.3 ms,
+  - principal error rate 4.00%,
+  - CORS 0,
+  - respaldo p95 88.7 ms.
+- Validación de JSON aceptada para avance.
+- Registro final en `reports/fase0-resultados.md`.
+- Limpieza aplicada: se removieron scripts y artefactos crudos temporales de validación.
 
-## Conclusión
-El repositorio está bien encaminado como **demo visual de alto nivel** y comunica con claridad una identidad de producto sólida. Para pasar de demo a base de producto, el siguiente paso crítico es **modularizar UI + centralizar design tokens + formalizar tooling de desarrollo**.
+## 5) Riesgos abiertos
+
+1. **Error rate API principal (4.00%)** por encima del umbral “muy saludable”.
+   - Mitigación: observabilidad en Fase 1 + fallback efectivo.
+2. **Bootstrap Astro aún pendiente**.
+   - Mitigación: iniciar app base en el siguiente bloque de trabajo.
+3. **Activos de marca manuales pendientes**.
+   - Mitigación: completar `Instrucciones.md` antes de salida pública.
+
+## 6) Recomendaciones inmediatas
+
+1. Iniciar Fase 1 con rutas `/` y `/leer-hoy` en Astro.
+2. Añadir telemetría mínima para latencia/error rate en lecturas SSR.
+3. Mantener el reporte de fase como fuente única de verdad para evitar ruido de artefactos temporales.
+
+## 7) Conclusión
+
+El proyecto tiene definición de producto y diseño suficientemente madura. Con Fase 0 cerrada y limpieza aplicada del repositorio, la prioridad inmediata es implementación funcional de Fase 1.
