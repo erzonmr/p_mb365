@@ -8,7 +8,7 @@
 ## 🔬 FASE 0: Validación Técnica y Setup Inicial
 *Antes de escribir código de producto, validar que las piezas fundamentales funcionan y decidir arquitectura definitiva.*
 
-- [ ] **Validar API principal:** Crear script de prueba que consulte `docs-bible-api.netlify.app` con 5 versiones diferentes, 5 libros diferentes, durante 3 días consecutivos. Medir: tiempo de respuesta p95, tasa de error, estabilidad de CORS.
+- [ ] **Validar API principal:** Crear script de prueba que consulte `docs-bible-api.netlify.app` con 5 versiones diferentes, 5 libros diferentes. Medir: tiempo de respuesta p95, tasa de error, estabilidad de CORS.
 - [ ] **Validar API de respaldo:** Probar `API.Bible` con las 3 versiones adicionales (NTV, NBLA, LBLA). Verificar que la clave `lKDNAnTqVMi4Mc32rwonP` siga activa y sin rate limiting agresivo.
 - [ ] **Prototipo de SSR con Astro 6:** Crear proyecto Astro 6 mínimo, desplegar en Vercel, probar `output: 'hybrid'` con una ruta SSR que haga fetch a la API y mida cold-start time.
 - [ ] **Decisión de interactivity framework:** Evaluar si Alpine.js cubre todos los casos de uso (selectores, búsqueda, toggle tema, notas, calendario) o si React es inevitable para algún componente. Documentar decisión en `ARCHITECTURE.md`.
