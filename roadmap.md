@@ -239,6 +239,8 @@
 
 9. **Registro y Documentación:** Después de terminar cada fase se debe dejar registro y documentación de avance en roadmap. 
 
+10. **Sobre `Instrucciones.md`:** Si hay una tarea manual que usuario deba hacer en cualquier fase del proyecto, esto debe quedar claramente registrado y documentado en Instrucciones.md.
+
 ---
 
 *Hoja de ruta técnica. Versión 3.0 — Web Responsive. Abril 2026.*
