@@ -94,7 +94,7 @@
 ## 📊 FASE 2: Planes, Progreso y Datos Personales
 *Implementar la lógica completa de planes, seguimiento de progreso, rachas, favoritos, notas y sistema de logros.*
 
-- [ ] **Carga de planes desde JSON:** `planService.js` que consume `json/plans.json` y los archivos individuales (`json/plan-biblia-anual.json`, etc.) vía jsDelivr. Parseo y normalización de datos.
+- [ ] **Carga de planes desde JSON:** `planService.js` que consume `json/plans.json` y los archivos individuales (`json/plan-biblia-anual.json`, etc.) vía API interna estática (`/api/plans`). Parseo y normalización de datos.
 - [ ] **Página Planes (`/planes`):** SSG. Catálogo de planes con:
   - Bento grid de categorías (Leer en un año, Temático, Solo NT).
   - Tarjetas de planes con imagen B&W que se colorea en hover, título Newsreader, descripción, tags de categoría.
@@ -171,7 +171,7 @@
   - Lighthouse Performance ≥ 95 en todas las páginas SSG.
 - [ ] **Optimización de fuentes:** Cargar Newsreader y Manrope con `&display=swap` y preconnect a `fonts.googleapis.com` y `fonts.gstatic.com`. Evaluar self-hosting para CSP futuro.
 - [ ] **Optimización de imágenes:** Usar componente `<Image />` de Astro para portadas de planes y Open Graph images. Formato WebP/AVIF automático, lazy loading, tamaños responsivos.
-- [ ] **Preconnect y DNS-prefetch:** `docs-bible-api.netlify.app` y `cdn.jsdelivr.net` en el `<head>` global.
+- [ ] **Preconnect y DNS-prefetch:** `docs-bible-api.netlify.app` en el `<head>` global.
 - [ ] **CSP automático (Astro 6):** Activar `csp: true` en `astro.config.mjs`. Astro 6 genera hashes automáticos para inline scripts y styles. Revisar que no bloquee scripts de tema o localStorage.
 - [ ] **Headers de seguridad en Vercel:** Configurar `vercel.json` con:
   - `X-Frame-Options: DENY`
