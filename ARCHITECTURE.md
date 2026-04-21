@@ -30,13 +30,11 @@ Se adopta una capa `bibleService.js` con:
   2. CDN (headers SSR en Vercel Edge).
   3. localStorage (última lectura y estado de usuario MVP).
 
-### 4) JSON externos
+### 4) JSON estáticos
 
-- Los datasets en `json/` se tratarán como fuente versionada estable.
-- Los catálogos iniciales para runtime se exponen como:
-  - `json/versions.json`
-  - `json/plans.json`
-- Distribución final prevista vía jsDelivr apuntando a commit/tag.
+- Los datasets en `json/` se tratarán como fuente versionada estable, alojados en el mismo repositorio.
+- Los catálogos iniciales para runtime se exponen a través de APIs internas de Astro (ej. `/api/versions.json`, `/api/plans/[plan].json`).
+- Distribución final directa desde Vercel (endpoints pre-renderizados o SSR caché).
 
 ### 5) Tipografía y fuentes
 

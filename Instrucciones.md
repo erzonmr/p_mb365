@@ -31,15 +31,6 @@ La clave actual es `lKDNAnTqVMi4Mc32rwonP`. Si deja de responder:
 3. Actualizar en `src/lib/bibleService.js` (línea con `API_BIBLE_KEY`)
 4. En producción Vercel: agregar variable de entorno `API_BIBLE_KEY`
 
-### 3) Publicación de JSON en CDN (Fase futura)
-Cuando hagas el primer release de producción:
-- Crear tag `v1.0.0` en GitHub
-- Los JSON en `json/` quedarán disponibles en jsDelivr:
-  ```
-  https://cdn.jsdelivr.net/gh/erzonmr/p_mb365@v1.0.0/json/plan_anual.json
-  ```
-- Actualizar `src/lib/planService.js` para usar CDN en lugar de `/api/plans/`
-
 ---
 
 ## Fase 5 (Deployment — tareas futuras)

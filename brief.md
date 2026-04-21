@@ -100,7 +100,7 @@ Diseñar una plataforma moderna, clara y espiritual que permita al usuario:
 | Interactividad compleja | React 19 (islands) | Solo para componentes que lo requieran: calendario de plan completo, editor de notas rico, gráficos de progreso. |
 | Hosting | Vercel | Edge Network, SSR nativo, cache-control headers, analytics integrado. |
 | API bíblica externa (principal + respaldo) | Confirmado | docs-bible-api.netlify.app + API.Bible fallback. |
-| Datos JSON externos | Confirmado | Planes, versiones, versículos diarios servidos vía jsDelivr desde carpeta `json/` del repo. |
+| Datos JSON externos | Confirmado | Planes, versiones, versículos diarios servidos vía API interna estática en Vercel. |
 | Solo versiones en español | Confirmado | |
 | Almacenamiento local: localStorage (MVP) | Confirmado | Config + progreso + notas + favoritos. Volumen estimado < 2 MB. |
 | Respaldo en backend real (Supabase) | Fase posterior | Sincronización multi-dispositivo y persistencia en la nube. |
@@ -116,7 +116,7 @@ Diseñar una plataforma moderna, clara y espiritual que permita al usuario:
 | **Vanilla JS / Alpine.js** | Selectores, búsqueda, toggle tema, formularios ligeros, progreso local |
 | **React 19 (islands)** | Calendario interactivo, editor de notas, gráficos de progreso (solo donde sea necesario) |
 | **TailwindCSS v4** | Sistema de diseño editorial, paleta de color, tipografía, responsive |
-| **JSON externos (`json/` + jsDelivr)** | Versiones, planes, versículos diarios, configuración general |
+| **JSON estáticos (`json/` + Vercel)** | Versiones, planes, versículos diarios, configuración general |
 | **localStorage (MVP)** | Configuración ligera (tema, versión, plan activo), progreso, favoritos, notas, reflexiones |
 | **API bíblica** | Texto bíblico dinámico por referencia (principal + respaldo) |
 
@@ -177,12 +177,10 @@ El código debe exponer una capa de abstracción (`bibleService.js`) que permita
 
 ### 8.1 Ubicación
 - **Carpeta `json/` dentro del repositorio del proyecto**.
-- **Servidos vía jsDelivr CDN** para rendimiento global y caché inmutable.
+- **Servidos estáticamente vía API interna (Astro en Vercel)** para rendimiento y acoplamiento óptimo.
 
 ### 8.2 Regla clave
-Los JSON deben considerarse **estables antes de publicarse**, porque jsDelivr cachea los archivos por versión/hash. Para forzar actualización se puede:
-- Usar versión específica del commit (`@main`, `@sha`, o tag).
-- Cambiar el nombre del archivo cuando haya cambios estructurales.
+Al usar los datos estáticamente, cualquier cambio en los JSON requerirá un nuevo despliegue (build) de la aplicación para que se actualice la ruta correspondiente.
 
 ### 8.3 Archivos JSON del proyecto (carpeta `json/`)
 | Archivo | Propósito | Tamaño estimado |
@@ -937,7 +935,7 @@ mibiblia365/
 
 1. **Validar API principal** con una prueba mínima (1 página Astro que consuma RV60 y renderice Juan 3:16 vía SSR, midiendo tiempo de respuesta).
 2. **Crear el repositorio GitHub** con estructura de carpetas definida arriba.
-3. **Subir primer JSON de versiones** (`json/versions.json`) y probar acceso vía jsDelivr.
+3. **Subir primer JSON de versiones** (`json/versions.json`) y probar acceso interno.
 4. **Definir paleta de colores y tipografía** del proyecto (ya definida en `prototipo/DESIGN.md`).
 5. **Crear layout base Astro** con meta-tags, header sticky, sidebar (desktop), bottom nav (móvil), y sistema de tema claro/oscuro.
 6. **Construir `json/plan-biblia-anual.json`** con los 365 días.
