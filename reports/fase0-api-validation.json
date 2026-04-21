@@ -1,19 +1,19 @@
 {
-  "executedAtUtc": "2026-04-21T20:07:20.626Z",
+  "executedAtUtc": "2026-04-21T21:50:47.315Z",
   "primarySummary": {
     "totalRequests": 25,
     "successfulRequests": 0,
     "errorRate": 1,
-    "p95Ms": 25.47,
-    "avgMs": 13.77,
+    "p95Ms": 95.51,
+    "avgMs": 62.5,
     "corsDetected": false
   },
   "fallbackSummary": {
     "totalRequests": 3,
     "successfulRequests": 0,
     "errorRate": 1,
-    "p95Ms": 334.25,
-    "avgMs": 274.46,
+    "p95Ms": 231.22,
+    "avgMs": 125.89,
     "corsDetected": true
   },
   "primary": [
@@ -22,9 +22,9 @@
       "version": "rv1960",
       "reference": "Genesis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 81.544025,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 708.5203230000001,
+      "headers": {},
       "cors": null
     },
     {
@@ -32,9 +32,9 @@
       "version": "rv1960",
       "reference": "Salmos 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 25.46834899999999,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 95.51026300000001,
+      "headers": {},
       "cors": null
     },
     {
@@ -42,9 +42,9 @@
       "version": "rv1960",
       "reference": "Juan 3",
       "ok": false,
-      "status": null,
-      "elapsedMs": 5.783784999999995,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.879143,
+      "headers": {},
       "cors": null
     },
     {
@@ -52,9 +52,9 @@
       "version": "rv1960",
       "reference": "Romanos 8",
       "ok": false,
-      "status": null,
-      "elapsedMs": 5.845335000000006,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 33.97355099999993,
+      "headers": {},
       "cors": null
     },
     {
@@ -62,9 +62,9 @@
       "version": "rv1960",
       "reference": "Apocalipsis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 19.081063999999998,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 32.33251300000006,
+      "headers": {},
       "cors": null
     },
     {
@@ -72,9 +72,9 @@
       "version": "rv1995",
       "reference": "Genesis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 19.513169000000005,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.374221000000034,
+      "headers": {},
       "cors": null
     },
     {
@@ -82,9 +82,9 @@
       "version": "rv1995",
       "reference": "Salmos 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 24.217768000000007,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.389751000000047,
+      "headers": {},
       "cors": null
     },
     {
@@ -92,9 +92,9 @@
       "version": "rv1995",
       "reference": "Juan 3",
       "ok": false,
-      "status": null,
-      "elapsedMs": 5.163482000000016,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.883564000000092,
+      "headers": {},
       "cors": null
     },
     {
@@ -102,9 +102,9 @@
       "version": "rv1995",
       "reference": "Romanos 8",
       "ok": false,
-      "status": null,
-      "elapsedMs": 5.624299000000008,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 34.239909000000125,
+      "headers": {},
       "cors": null
     },
     {
@@ -112,9 +112,9 @@
       "version": "rv1995",
       "reference": "Apocalipsis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 4.160143000000005,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 32.15696099999991,
+      "headers": {},
       "cors": null
     },
     {
@@ -122,9 +122,9 @@
       "version": "nvi",
       "reference": "Genesis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 18.748255,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.203595999999834,
+      "headers": {},
       "cors": null
     },
     {
@@ -132,9 +132,9 @@
       "version": "nvi",
       "reference": "Salmos 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 17.862167999999997,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.05126099999984,
+      "headers": {},
       "cors": null
     },
     {
@@ -142,9 +142,9 @@
       "version": "nvi",
       "reference": "Juan 3",
       "ok": false,
-      "status": null,
-      "elapsedMs": 18.908934000000045,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.56560599999989,
+      "headers": {},
       "cors": null
     },
     {
@@ -152,9 +152,9 @@
       "version": "nvi",
       "reference": "Romanos 8",
       "ok": false,
-      "status": null,
-      "elapsedMs": 20.824464999999975,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.894834000000174,
+      "headers": {},
       "cors": null
     },
     {
@@ -162,9 +162,9 @@
       "version": "nvi",
       "reference": "Apocalipsis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 18.508046999999976,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.63166299999989,
+      "headers": {},
       "cors": null
     },
     {
@@ -172,9 +172,9 @@
       "version": "dhh",
       "reference": "Genesis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 18.67050599999999,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 32.58476100000007,
+      "headers": {},
       "cors": null
     },
     {
@@ -182,9 +182,9 @@
       "version": "dhh",
       "reference": "Salmos 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 4.3682190000000105,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 39.509562999999844,
+      "headers": {},
       "cors": null
     },
     {
@@ -192,9 +192,9 @@
       "version": "dhh",
       "reference": "Juan 3",
       "ok": false,
-      "status": null,
-      "elapsedMs": 4.079439999999977,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.48458299999993,
+      "headers": {},
       "cors": null
     },
     {
@@ -202,9 +202,9 @@
       "version": "dhh",
       "reference": "Romanos 8",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.9096569999999815,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 31.06341599999996,
+      "headers": {},
       "cors": null
     },
     {
@@ -212,9 +212,9 @@
       "version": "dhh",
       "reference": "Apocalipsis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 4.225562000000025,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.633867999999893,
+      "headers": {},
       "cors": null
     },
     {
@@ -222,9 +222,9 @@
       "version": "pdt",
       "reference": "Genesis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.51812799999999,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.300407000000178,
+      "headers": {},
       "cors": null
     },
     {
@@ -232,9 +232,9 @@
       "version": "pdt",
       "reference": "Salmos 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.5134259999999813,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 30.351542999999992,
+      "headers": {},
       "cors": null
     },
     {
@@ -242,9 +242,9 @@
       "version": "pdt",
       "reference": "Juan 3",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.5798560000000066,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 32.833890999999994,
+      "headers": {},
       "cors": null
     },
     {
@@ -252,9 +252,9 @@
       "version": "pdt",
       "reference": "Romanos 8",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.2854220000000396,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 53.76145399999996,
+      "headers": {},
       "cors": null
     },
     {
@@ -262,9 +262,9 @@
       "version": "pdt",
       "reference": "Apocalipsis 1",
       "ok": false,
-      "status": null,
-      "elapsedMs": 3.751735999999994,
-      "error": "fetch failed",
+      "status": 404,
+      "elapsedMs": 32.40185999999994,
+      "headers": {},
       "cors": null
     }
   ],
@@ -275,9 +275,9 @@
       "bibleId": "826f63861180e056-01",
       "endpoint": "books",
       "ok": false,
-      "status": null,
-      "elapsedMs": 334.24512599999997,
-      "error": "fetch failed",
+      "status": 401,
+      "elapsedMs": 231.22255700000005,
+      "headers": {},
       "rateLimit": null
     },
     {
@@ -286,9 +286,9 @@
       "bibleId": "ce11b813f9a27e20-01",
       "endpoint": "books",
       "ok": false,
-      "status": null,
-      "elapsedMs": 235.14771100000007,
-      "error": "fetch failed",
+      "status": 401,
+      "elapsedMs": 102.23512699999992,
+      "headers": {},
       "rateLimit": null
     },
     {
@@ -297,9 +297,9 @@
       "bibleId": "e3f420b9665abaeb-01",
       "endpoint": "books",
       "ok": false,
-      "status": null,
-      "elapsedMs": 253.97584000000006,
-      "error": "fetch failed",
+      "status": 401,
+      "elapsedMs": 44.2254260000002,
+      "headers": {},
       "rateLimit": null
     }
   ]
