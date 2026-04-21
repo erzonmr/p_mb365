@@ -1,0 +1,3306 @@
+{
+  "meta": {
+    "name": "Versículos diarios - Mi Biblia 365",
+    "version": "1.0.0",
+    "totalDays": 366,
+    "defaultVersion": "rv1960",
+    "textSource": "api",
+    "notes": "Este archivo solo incluye referencias y metadatos. El texto del versículo se obtiene mediante API."
+  },
+  "dailyVerses": [
+    {
+      "dayOfYear": 1,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "nuevo_comienzo",
+      "reference": "Jeremías 29:11",
+      "label": "Nuevo comienzo",
+      "highlight": "Dios tiene pensamientos de paz para ti"
+    },
+    {
+      "dayOfYear": 2,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "consagracion",
+      "reference": "Proverbios 16:3",
+      "label": "Encomienda",
+      "highlight": "Pon tus planes en manos del Señor"
+    },
+    {
+      "dayOfYear": 3,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "confianza",
+      "reference": "Salmos 37:5",
+      "label": "Confía",
+      "highlight": "Encomienda tu camino a Jehová"
+    },
+    {
+      "dayOfYear": 4,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "renovacion",
+      "reference": "Isaías 43:19",
+      "label": "Algo nuevo",
+      "highlight": "Dios abre camino en el desierto"
+    },
+    {
+      "dayOfYear": 5,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "proposito_eterno",
+      "reference": "Romanos 8:28",
+      "label": "Propósito eterno",
+      "highlight": "Dios obra para bien"
+    },
+    {
+      "dayOfYear": 6,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "obra_divina",
+      "reference": "Filipenses 1:6",
+      "label": "Buena obra",
+      "highlight": "El Señor terminará lo que comenzó"
+    },
+    {
+      "dayOfYear": 7,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "direccion",
+      "reference": "Proverbios 3:5-6",
+      "label": "Dirección",
+      "highlight": "Reconócelo y Él enderezará tus veredas"
+    },
+    {
+      "dayOfYear": 8,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "direccion",
+      "reference": "Salmos 32:8",
+      "label": "Instrucción",
+      "highlight": "Dios quiere enseñarte el camino"
+    },
+    {
+      "dayOfYear": 9,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "guia",
+      "reference": "Isaías 30:21",
+      "label": "Guía",
+      "highlight": "Tus oídos oirán palabra detrás de ti"
+    },
+    {
+      "dayOfYear": 10,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "misericordia",
+      "reference": "Lamentaciones 3:22-23",
+      "label": "Mañana nueva",
+      "highlight": "Sus misericordias son nuevas cada mañana"
+    },
+    {
+      "dayOfYear": 11,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "identidad",
+      "reference": "Efesios 2:10",
+      "label": "Hechura suya",
+      "highlight": "Fuiste creado para buenas obras"
+    },
+    {
+      "dayOfYear": 12,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "valentia",
+      "reference": "Josué 1:9",
+      "label": "Esfuérzate",
+      "highlight": "No temas, Dios está contigo"
+    },
+    {
+      "dayOfYear": 13,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "deseos",
+      "reference": "Salmos 20:4",
+      "label": "Deseos del corazón",
+      "highlight": "El Señor cumpla tus peticiones"
+    },
+    {
+      "dayOfYear": 14,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "tiempo",
+      "reference": "Eclesiastés 3:1",
+      "label": "Tiempo perfecto",
+      "highlight": "Todo tiene su tiempo debajo del cielo"
+    },
+    {
+      "dayOfYear": 15,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "mente_firme",
+      "reference": "Isaías 26:3",
+      "label": "Mente firme",
+      "highlight": "Dios guarda en completa paz"
+    },
+    {
+      "dayOfYear": 16,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "perseverancia",
+      "reference": "Hebreos 12:1-2",
+      "label": "Corre con paciencia",
+      "highlight": "Puestos los ojos en Jesús"
+    },
+    {
+      "dayOfYear": 17,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "firmeza",
+      "reference": "1 Corintios 15:58",
+      "label": "Firmes",
+      "highlight": "Tu trabajo en el Señor no es en vano"
+    },
+    {
+      "dayOfYear": 18,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "identidad",
+      "reference": "2 Timoteo 1:7",
+      "label": "Espíritu correcto",
+      "highlight": "Dios no te dio espíritu de cobardía"
+    },
+    {
+      "dayOfYear": 19,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "prioridad",
+      "reference": "Mateo 6:33",
+      "label": "Primero el Reino",
+      "highlight": "Busca primero a Dios"
+    },
+    {
+      "dayOfYear": 20,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "sabiduria",
+      "reference": "Salmos 90:12",
+      "label": "Cuenta tus días",
+      "highlight": "Aprende a vivir sabiamente"
+    },
+    {
+      "dayOfYear": 21,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "excelencia",
+      "reference": "Colosenses 3:23",
+      "label": "De corazón",
+      "highlight": "Hazlo para el Señor"
+    },
+    {
+      "dayOfYear": 22,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "constancia",
+      "reference": "Gálatas 6:9",
+      "label": "No desmayes",
+      "highlight": "A su tiempo segarás"
+    },
+    {
+      "dayOfYear": 23,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "sabiduria",
+      "reference": "Santiago 1:5",
+      "label": "Pide sabiduría",
+      "highlight": "Dios la da abundantemente"
+    },
+    {
+      "dayOfYear": 24,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "transformacion",
+      "reference": "Romanos 12:2",
+      "label": "Renueva tu mente",
+      "highlight": "Discierne la voluntad de Dios"
+    },
+    {
+      "dayOfYear": 25,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "palabra",
+      "reference": "Salmos 119:105",
+      "label": "Lámpara",
+      "highlight": "La Palabra alumbrará tu camino"
+    },
+    {
+      "dayOfYear": 26,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "seguridad",
+      "reference": "Isaías 41:10",
+      "label": "No temas",
+      "highlight": "Dios te sostiene"
+    },
+    {
+      "dayOfYear": 27,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "compañia",
+      "reference": "Deuteronomio 31:8",
+      "label": "Va delante",
+      "highlight": "El Señor no te dejará"
+    },
+    {
+      "dayOfYear": 28,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "renovacion",
+      "reference": "2 Corintios 5:17",
+      "label": "Nueva criatura",
+      "highlight": "En Cristo todo puede empezar de nuevo"
+    },
+    {
+      "dayOfYear": 29,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "dependencia",
+      "reference": "Juan 15:5",
+      "label": "Permanece",
+      "highlight": "Separado de Cristo nada puedes hacer"
+    },
+    {
+      "dayOfYear": 30,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "obediencia",
+      "reference": "Salmos 143:10",
+      "label": "Haz tu voluntad",
+      "highlight": "Que Dios te guíe por tierra de rectitud"
+    },
+    {
+      "dayOfYear": 31,
+      "month": 1,
+      "theme": "proposito",
+      "subtheme": "esperanza",
+      "reference": "Apocalipsis 21:5",
+      "label": "Todo nuevo",
+      "highlight": "Dios hace nuevas todas las cosas"
+    },
+    {
+      "dayOfYear": 32,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "amor_divino",
+      "reference": "Juan 3:16",
+      "label": "Amor de Dios",
+      "highlight": "Dios amó al mundo de tal manera"
+    },
+    {
+      "dayOfYear": 33,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "gracia",
+      "reference": "Romanos 5:8",
+      "label": "Amor demostrado",
+      "highlight": "Cristo murió por nosotros"
+    },
+    {
+      "dayOfYear": 34,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "revelacion",
+      "reference": "1 Juan 4:9",
+      "label": "Amor revelado",
+      "highlight": "Dios manifestó su amor enviando a su Hijo"
+    },
+    {
+      "dayOfYear": 35,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "respuesta",
+      "reference": "1 Juan 4:19",
+      "label": "Le amamos",
+      "highlight": "Porque Él nos amó primero"
+    },
+    {
+      "dayOfYear": 36,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "profundidad",
+      "reference": "Efesios 3:17-19",
+      "label": "Amor insondable",
+      "highlight": "Conoce la anchura y profundidad del amor de Cristo"
+    },
+    {
+      "dayOfYear": 37,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "misericordia",
+      "reference": "Salmos 136:1",
+      "label": "Misericordia eterna",
+      "highlight": "Para siempre es su misericordia"
+    },
+    {
+      "dayOfYear": 38,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "gozo",
+      "reference": "Sofonías 3:17",
+      "label": "Canta sobre ti",
+      "highlight": "Dios se gozará sobre ti"
+    },
+    {
+      "dayOfYear": 39,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "pacto",
+      "reference": "Jeremías 31:3",
+      "label": "Amor eterno",
+      "highlight": "Con amor eterno te he amado"
+    },
+    {
+      "dayOfYear": 40,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "caracter",
+      "reference": "1 Corintios 13:4-7",
+      "label": "El amor verdadero",
+      "highlight": "El amor es sufrido y benigno"
+    },
+    {
+      "dayOfYear": 41,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "unidad",
+      "reference": "Colosenses 3:14",
+      "label": "Vínculo perfecto",
+      "highlight": "Vístete de amor"
+    },
+    {
+      "dayOfYear": 42,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "perdon",
+      "reference": "1 Pedro 4:8",
+      "label": "Cubre multitud",
+      "highlight": "El amor cubrirá multitud de pecados"
+    },
+    {
+      "dayOfYear": 43,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "discipulado",
+      "reference": "Juan 13:34-35",
+      "label": "Nuevo mandamiento",
+      "highlight": "Ama como Cristo te amó"
+    },
+    {
+      "dayOfYear": 44,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "afecto",
+      "reference": "Romanos 12:10",
+      "label": "Amor fraternal",
+      "highlight": "Prefiere a tu hermano"
+    },
+    {
+      "dayOfYear": 45,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "estimulo",
+      "reference": "Hebreos 10:24",
+      "label": "Provóquense al amor",
+      "highlight": "Anímense a las buenas obras"
+    },
+    {
+      "dayOfYear": 46,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "abundancia",
+      "reference": "1 Tesalonicenses 3:12",
+      "label": "Abunden en amor",
+      "highlight": "Crezcan en amor unos por otros"
+    },
+    {
+      "dayOfYear": 47,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "comunion",
+      "reference": "Filipenses 2:1-2",
+      "label": "Un mismo sentir",
+      "highlight": "Sean unidos en amor"
+    },
+    {
+      "dayOfYear": 48,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "misericordia",
+      "reference": "Salmos 103:11",
+      "label": "Altura del amor",
+      "highlight": "Grande es su misericordia"
+    },
+    {
+      "dayOfYear": 49,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "perdon",
+      "reference": "Miqueas 7:18",
+      "label": "Dios perdona",
+      "highlight": "Se deleita en misericordia"
+    },
+    {
+      "dayOfYear": 50,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "mansedumbre",
+      "reference": "Efesios 4:2",
+      "label": "Soportándoos en amor",
+      "highlight": "Camina con humildad y paciencia"
+    },
+    {
+      "dayOfYear": 51,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "convivencia",
+      "reference": "Proverbios 10:12",
+      "label": "El amor cubre",
+      "highlight": "El amor cubre todas las faltas"
+    },
+    {
+      "dayOfYear": 52,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "sacrificio",
+      "reference": "1 Juan 3:16",
+      "label": "Amor sacrificial",
+      "highlight": "Cristo puso su vida por nosotros"
+    },
+    {
+      "dayOfYear": 53,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "servicio",
+      "reference": "Gálatas 5:13",
+      "label": "Sirve por amor",
+      "highlight": "Sírvanse por amor los unos a los otros"
+    },
+    {
+      "dayOfYear": 54,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "permanencia",
+      "reference": "Juan 15:9",
+      "label": "Permanezcan en mi amor",
+      "highlight": "Habita en su amor"
+    },
+    {
+      "dayOfYear": 55,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "justicia",
+      "reference": "Romanos 13:10",
+      "label": "Cumplimiento",
+      "highlight": "El amor no hace mal al prójimo"
+    },
+    {
+      "dayOfYear": 56,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "pacto",
+      "reference": "Oseas 2:19",
+      "label": "Desposorio",
+      "highlight": "Dios te toma para sí en misericordia"
+    },
+    {
+      "dayOfYear": 57,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "adoracion",
+      "reference": "Salmos 63:3",
+      "label": "Mejor que la vida",
+      "highlight": "Tu misericordia es mejor que la vida"
+    },
+    {
+      "dayOfYear": 58,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "certeza",
+      "reference": "1 Juan 4:16",
+      "label": "Dios es amor",
+      "highlight": "Permanece en Dios"
+    },
+    {
+      "dayOfYear": 59,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "direccion",
+      "reference": "2 Tesalonicenses 3:5",
+      "label": "Dirigidos al amor",
+      "highlight": "Que el Señor encamine tu corazón"
+    },
+    {
+      "dayOfYear": 60,
+      "month": 2,
+      "theme": "amor",
+      "subtheme": "perseverancia",
+      "reference": "Judas 1:21",
+      "label": "Permanece",
+      "highlight": "Consérvate en el amor de Dios"
+    },
+    {
+      "dayOfYear": 61,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "madurez",
+      "reference": "2 Pedro 3:18",
+      "label": "Crece",
+      "highlight": "Crece en la gracia y conocimiento"
+    },
+    {
+      "dayOfYear": 62,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "arraigo",
+      "reference": "Colosenses 2:6-7",
+      "label": "Arraigados",
+      "highlight": "Edificados en Cristo"
+    },
+    {
+      "dayOfYear": 63,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "palabra",
+      "reference": "Salmos 1:2-3",
+      "label": "Como árbol",
+      "highlight": "Medita en su ley de día y de noche"
+    },
+    {
+      "dayOfYear": 64,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "permanencia",
+      "reference": "Juan 15:4",
+      "label": "Permanece",
+      "highlight": "Lleva fruto permaneciendo en Cristo"
+    },
+    {
+      "dayOfYear": 65,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fruto",
+      "reference": "Gálatas 5:22-23",
+      "label": "Fruto del Espíritu",
+      "highlight": "Deja que el Espíritu forme su carácter"
+    },
+    {
+      "dayOfYear": 66,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "verdad",
+      "reference": "Efesios 4:15",
+      "label": "Crecer en amor",
+      "highlight": "Crece en todo en Cristo"
+    },
+    {
+      "dayOfYear": 67,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "discernimiento",
+      "reference": "Hebreos 5:14",
+      "label": "Madurez",
+      "highlight": "Ejercita tus sentidos espirituales"
+    },
+    {
+      "dayOfYear": 68,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "hambre",
+      "reference": "1 Pedro 2:2",
+      "label": "Desea la leche",
+      "highlight": "Anhela la Palabra para crecer"
+    },
+    {
+      "dayOfYear": 69,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "consagracion",
+      "reference": "Romanos 12:1",
+      "label": "Sacrificio vivo",
+      "highlight": "Entrega tu vida a Dios"
+    },
+    {
+      "dayOfYear": 70,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "transformacion",
+      "reference": "Romanos 12:2",
+      "label": "Mente renovada",
+      "highlight": "Sé transformado por la renovación"
+    },
+    {
+      "dayOfYear": 71,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "obediencia",
+      "reference": "Filipenses 2:12-13",
+      "label": "Ocúpate",
+      "highlight": "Dios produce querer y hacer"
+    },
+    {
+      "dayOfYear": 72,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fruto",
+      "reference": "Colosenses 1:10",
+      "label": "Agradarle",
+      "highlight": "Lleva fruto en toda buena obra"
+    },
+    {
+      "dayOfYear": 73,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "practica",
+      "reference": "Santiago 1:22",
+      "label": "Hacedores",
+      "highlight": "No solo oigas, practica"
+    },
+    {
+      "dayOfYear": 74,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "meditacion",
+      "reference": "Josué 1:8",
+      "label": "Medita",
+      "highlight": "Cuida de hacer conforme a la Palabra"
+    },
+    {
+      "dayOfYear": 75,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "pureza",
+      "reference": "Salmos 119:11",
+      "label": "Guarda la Palabra",
+      "highlight": "Para no pecar contra Dios"
+    },
+    {
+      "dayOfYear": 76,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fortaleza",
+      "reference": "Efesios 6:10",
+      "label": "Fortalécete",
+      "highlight": "En el poder de su fuerza"
+    },
+    {
+      "dayOfYear": 77,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "disciplina",
+      "reference": "1 Timoteo 4:7-8",
+      "label": "Ejercítate",
+      "highlight": "Ejercítate para la piedad"
+    },
+    {
+      "dayOfYear": 78,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "progreso",
+      "reference": "Proverbios 4:18",
+      "label": "Luz creciente",
+      "highlight": "La senda del justo va en aumento"
+    },
+    {
+      "dayOfYear": 79,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "transformacion",
+      "reference": "2 Corintios 3:18",
+      "label": "De gloria en gloria",
+      "highlight": "El Espíritu te transforma"
+    },
+    {
+      "dayOfYear": 80,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "hambre",
+      "reference": "Mateo 5:6",
+      "label": "Sed de justicia",
+      "highlight": "Serás saciado"
+    },
+    {
+      "dayOfYear": 81,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "avance",
+      "reference": "Filipenses 3:13-14",
+      "label": "Prosigo",
+      "highlight": "Sigue hacia la meta"
+    },
+    {
+      "dayOfYear": 82,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fidelidad",
+      "reference": "Hebreos 10:23",
+      "label": "Retén la esperanza",
+      "highlight": "Fiel es el que prometió"
+    },
+    {
+      "dayOfYear": 83,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "cercania",
+      "reference": "Santiago 4:8",
+      "label": "Acércate",
+      "highlight": "Acércate a Dios y Él se acercará"
+    },
+    {
+      "dayOfYear": 84,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "estabilidad",
+      "reference": "Salmos 92:12-14",
+      "label": "Florecerás",
+      "highlight": "Aun en la vejez darás fruto"
+    },
+    {
+      "dayOfYear": 85,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "interior",
+      "reference": "Efesios 3:16",
+      "label": "Fortaleza interior",
+      "highlight": "Fortalecido con poder en el hombre interior"
+    },
+    {
+      "dayOfYear": 86,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "abundancia",
+      "reference": "Colosenses 3:16",
+      "label": "La Palabra more",
+      "highlight": "Habite en abundancia en ti"
+    },
+    {
+      "dayOfYear": 87,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fortaleza",
+      "reference": "1 Juan 2:14",
+      "label": "Fuertes en la Palabra",
+      "highlight": "La Palabra permanece en vosotros"
+    },
+    {
+      "dayOfYear": 88,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "utilidad",
+      "reference": "2 Timoteo 3:16-17",
+      "label": "Útil para perfeccionar",
+      "highlight": "La Escritura equipa para toda buena obra"
+    },
+    {
+      "dayOfYear": 89,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "fundamento",
+      "reference": "Mateo 7:24",
+      "label": "Sobre la roca",
+      "highlight": "Oye y haz su palabra"
+    },
+    {
+      "dayOfYear": 90,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "pasos",
+      "reference": "Salmos 119:133",
+      "label": "Ordena mis pasos",
+      "highlight": "Afirma tus pasos en su palabra"
+    },
+    {
+      "dayOfYear": 91,
+      "month": 3,
+      "theme": "crecimiento",
+      "subtheme": "formacion",
+      "reference": "Hebreos 12:11",
+      "label": "Fruto apacible",
+      "highlight": "La disciplina produce justicia"
+    },
+    {
+      "dayOfYear": 92,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "expiacion",
+      "reference": "Isaías 53:5",
+      "label": "Herido por nosotros",
+      "highlight": "Por su llaga fuimos curados"
+    },
+    {
+      "dayOfYear": 93,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "gracia",
+      "reference": "Romanos 6:23",
+      "label": "Vida eterna",
+      "highlight": "La dádiva de Dios es vida eterna"
+    },
+    {
+      "dayOfYear": 94,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "cruz",
+      "reference": "1 Pedro 2:24",
+      "label": "Llevó nuestros pecados",
+      "highlight": "Fuimos sanados por sus heridas"
+    },
+    {
+      "dayOfYear": 95,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "cordero",
+      "reference": "Juan 1:29",
+      "label": "El Cordero",
+      "highlight": "Quita el pecado del mundo"
+    },
+    {
+      "dayOfYear": 96,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "sustitucion",
+      "reference": "2 Corintios 5:21",
+      "label": "Hecho pecado",
+      "highlight": "Para hacernos justicia de Dios"
+    },
+    {
+      "dayOfYear": 97,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "justificacion",
+      "reference": "Romanos 5:1",
+      "label": "Paz con Dios",
+      "highlight": "Justificados por la fe"
+    },
+    {
+      "dayOfYear": 98,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "esperanza",
+      "reference": "Hebreos 9:28",
+      "label": "Se ofreció una vez",
+      "highlight": "Para llevar los pecados de muchos"
+    },
+    {
+      "dayOfYear": 99,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "limpieza",
+      "reference": "1 Juan 1:7",
+      "label": "Su sangre limpia",
+      "highlight": "Limpia de todo pecado"
+    },
+    {
+      "dayOfYear": 100,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "redencion",
+      "reference": "Efesios 1:7",
+      "label": "Redimidos",
+      "highlight": "Tenemos redención por su sangre"
+    },
+    {
+      "dayOfYear": 101,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "traslado",
+      "reference": "Colosenses 1:13-14",
+      "label": "Del reino de tinieblas",
+      "highlight": "Rescatados por el Hijo"
+    },
+    {
+      "dayOfYear": 102,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "resurreccion",
+      "reference": "Juan 11:25",
+      "label": "Yo soy la resurrección",
+      "highlight": "El que cree vivirá"
+    },
+    {
+      "dayOfYear": 103,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "victoria",
+      "reference": "Mateo 28:6",
+      "label": "Ha resucitado",
+      "highlight": "No está aquí"
+    },
+    {
+      "dayOfYear": 104,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "primicias",
+      "reference": "1 Corintios 15:20",
+      "label": "Primicias",
+      "highlight": "Cristo resucitó de los muertos"
+    },
+    {
+      "dayOfYear": 105,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "vida",
+      "reference": "Romanos 8:11",
+      "label": "Espíritu vivificante",
+      "highlight": "El que levantó a Jesús te dará vida"
+    },
+    {
+      "dayOfYear": 106,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "gracia",
+      "reference": "Hebreos 4:15-16",
+      "label": "Sumo sacerdote",
+      "highlight": "Acércate confiadamente al trono"
+    },
+    {
+      "dayOfYear": 107,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "servicio",
+      "reference": "Marcos 10:45",
+      "label": "Dio su vida",
+      "highlight": "Vino para servir y rescatar"
+    },
+    {
+      "dayOfYear": 108,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "consumacion",
+      "reference": "Juan 19:30",
+      "label": "Consumado es",
+      "highlight": "La obra fue completada"
+    },
+    {
+      "dayOfYear": 109,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "union",
+      "reference": "Gálatas 2:20",
+      "label": "Crucificado con Cristo",
+      "highlight": "Ahora Cristo vive en mí"
+    },
+    {
+      "dayOfYear": 110,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "entrega",
+      "reference": "Romanos 8:32",
+      "label": "No escatimó",
+      "highlight": "También nos dará todas las cosas"
+    },
+    {
+      "dayOfYear": 111,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "poder",
+      "reference": "1 Corintios 1:18",
+      "label": "Palabra de la cruz",
+      "highlight": "Es poder de Dios"
+    },
+    {
+      "dayOfYear": 112,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "humillacion",
+      "reference": "Filipenses 2:8-9",
+      "label": "Se humilló",
+      "highlight": "Dios le exaltó hasta lo sumo"
+    },
+    {
+      "dayOfYear": 113,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "gozo",
+      "reference": "Hebreos 12:2",
+      "label": "Puestos los ojos",
+      "highlight": "Soportó la cruz por el gozo"
+    },
+    {
+      "dayOfYear": 114,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "memoria",
+      "reference": "Lucas 24:6-7",
+      "label": "Acuérdate",
+      "highlight": "Había dicho que resucitaría"
+    },
+    {
+      "dayOfYear": 115,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "justificacion",
+      "reference": "Romanos 4:25",
+      "label": "Entregado y resucitado",
+      "highlight": "Para nuestra justificación"
+    },
+    {
+      "dayOfYear": 116,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "esperanza",
+      "reference": "1 Pedro 1:3",
+      "label": "Esperanza viva",
+      "highlight": "Por la resurrección de Jesucristo"
+    },
+    {
+      "dayOfYear": 117,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "victoria",
+      "reference": "Apocalipsis 1:17-18",
+      "label": "Vivo por los siglos",
+      "highlight": "Tiene las llaves de la muerte"
+    },
+    {
+      "dayOfYear": 118,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "profecia",
+      "reference": "Salmos 22:1",
+      "label": "Sufrimiento anunciado",
+      "highlight": "El Mesías padeció por amor"
+    },
+    {
+      "dayOfYear": 119,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "sustitucion",
+      "reference": "Isaías 53:6",
+      "label": "Cargó nuestro pecado",
+      "highlight": "Jehová cargó en Él el pecado"
+    },
+    {
+      "dayOfYear": 120,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "camino",
+      "reference": "Juan 14:6",
+      "label": "Único camino",
+      "highlight": "Solo en Jesús hay acceso al Padre"
+    },
+    {
+      "dayOfYear": 121,
+      "month": 4,
+      "theme": "cruz",
+      "subtheme": "acceso",
+      "reference": "Hebreos 10:19-22",
+      "label": "Entrada libre",
+      "highlight": "Acércate con corazón sincero"
+    },
+    {
+      "dayOfYear": 122,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "paz_cristo",
+      "reference": "Juan 14:27",
+      "label": "Paz verdadera",
+      "highlight": "Cristo te da su paz"
+    },
+    {
+      "dayOfYear": 123,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "guardia",
+      "reference": "Filipenses 4:7",
+      "label": "Paz que guarda",
+      "highlight": "Guardará tu corazón y tus pensamientos"
+    },
+    {
+      "dayOfYear": 124,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "estabilidad",
+      "reference": "Isaías 26:3",
+      "label": "Completa paz",
+      "highlight": "Confía y descansa en Dios"
+    },
+    {
+      "dayOfYear": 125,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "descanso",
+      "reference": "Mateo 11:28",
+      "label": "Ven a mí",
+      "highlight": "Cristo da descanso al cansado"
+    },
+    {
+      "dayOfYear": 126,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "seguridad",
+      "reference": "Salmos 4:8",
+      "label": "Dormir en paz",
+      "highlight": "Solo Dios te hace vivir confiado"
+    },
+    {
+      "dayOfYear": 127,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "entrega",
+      "reference": "1 Pedro 5:7",
+      "label": "Echa tu ansiedad",
+      "highlight": "Él cuida de ti"
+    },
+    {
+      "dayOfYear": 128,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "quietud",
+      "reference": "Salmos 46:10",
+      "label": "Estad quietos",
+      "highlight": "Reconoce que Él es Dios"
+    },
+    {
+      "dayOfYear": 129,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "animo",
+      "reference": "Juan 16:33",
+      "label": "Confiad",
+      "highlight": "En Cristo hay paz en medio de aflicción"
+    },
+    {
+      "dayOfYear": 130,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "gobierno",
+      "reference": "Colosenses 3:15",
+      "label": "Reine la paz",
+      "highlight": "Que la paz de Cristo gobierne tu corazón"
+    },
+    {
+      "dayOfYear": 131,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "compañia",
+      "reference": "Isaías 41:13",
+      "label": "Yo te ayudo",
+      "highlight": "No temas, Dios toma tu mano"
+    },
+    {
+      "dayOfYear": 132,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "reposo",
+      "reference": "Salmos 23:1-2",
+      "label": "Delicados pastos",
+      "highlight": "El Pastor te hará descansar"
+    },
+    {
+      "dayOfYear": 133,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "presencia",
+      "reference": "Éxodo 33:14",
+      "label": "Mi presencia irá",
+      "highlight": "Y te daré descanso"
+    },
+    {
+      "dayOfYear": 134,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "esperanza",
+      "reference": "Romanos 15:13",
+      "label": "Gozo y paz",
+      "highlight": "El Dios de esperanza te llene"
+    },
+    {
+      "dayOfYear": 135,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "refugio",
+      "reference": "Nahúm 1:7",
+      "label": "Fortaleza en el día malo",
+      "highlight": "Dios conoce a los que confían"
+    },
+    {
+      "dayOfYear": 136,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "experiencia",
+      "reference": "Salmos 34:8",
+      "label": "Gusta y ve",
+      "highlight": "Bienaventurado el que confía"
+    },
+    {
+      "dayOfYear": 137,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "reposo",
+      "reference": "Hebreos 4:9-10",
+      "label": "Reposo para el pueblo",
+      "highlight": "Descansa de tus obras"
+    },
+    {
+      "dayOfYear": 138,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "salud",
+      "reference": "Proverbios 14:30",
+      "label": "Corazón apacible",
+      "highlight": "Es vida para la carne"
+    },
+    {
+      "dayOfYear": 139,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "sustento",
+      "reference": "Salmos 55:22",
+      "label": "Él te sustentará",
+      "highlight": "No dejará caído al justo"
+    },
+    {
+      "dayOfYear": 140,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "justicia",
+      "reference": "Isaías 32:17",
+      "label": "Efecto de la justicia",
+      "highlight": "Paz y reposo perpetuos"
+    },
+    {
+      "dayOfYear": 141,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "fuerza_y_paz",
+      "reference": "Salmos 29:11",
+      "label": "Paz para su pueblo",
+      "highlight": "Jehová bendice con paz"
+    },
+    {
+      "dayOfYear": 142,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "paz_constante",
+      "reference": "2 Tesalonicenses 3:16",
+      "label": "Paz siempre",
+      "highlight": "El Señor de paz esté contigo"
+    },
+    {
+      "dayOfYear": 143,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "sueño",
+      "reference": "Proverbios 3:24",
+      "label": "Dulce sueño",
+      "highlight": "No tendrás temor"
+    },
+    {
+      "dayOfYear": 144,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "autoridad",
+      "reference": "Marcos 4:39",
+      "label": "Paz, enmudece",
+      "highlight": "Cristo calma la tormenta"
+    },
+    {
+      "dayOfYear": 145,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "alma",
+      "reference": "Salmos 131:2",
+      "label": "Alma quieta",
+      "highlight": "Como niño destetado está mi alma"
+    },
+    {
+      "dayOfYear": 146,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "consuelo",
+      "reference": "Isaías 57:19",
+      "label": "Paz al lejano",
+      "highlight": "Dios trae paz y sanidad"
+    },
+    {
+      "dayOfYear": 147,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "vida",
+      "reference": "Romanos 8:6",
+      "label": "Mente espiritual",
+      "highlight": "Es vida y paz"
+    },
+    {
+      "dayOfYear": 148,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "espera",
+      "reference": "Salmos 62:1",
+      "label": "Silencio confiado",
+      "highlight": "En Dios está mi salvación"
+    },
+    {
+      "dayOfYear": 149,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "espera",
+      "reference": "Lamentaciones 3:25-26",
+      "label": "Bueno es esperar",
+      "highlight": "En silencio la salvación de Dios"
+    },
+    {
+      "dayOfYear": 150,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "contentamiento",
+      "reference": "Hebreos 13:5",
+      "label": "No te dejaré",
+      "highlight": "Su presencia da seguridad"
+    },
+    {
+      "dayOfYear": 151,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "envio",
+      "reference": "Juan 20:21",
+      "label": "Paz a vosotros",
+      "highlight": "El Resucitado trae paz"
+    },
+    {
+      "dayOfYear": 152,
+      "month": 5,
+      "theme": "paz",
+      "subtheme": "firmeza",
+      "reference": "Salmos 16:8-9",
+      "label": "No seré conmovido",
+      "highlight": "Mi corazón se alegra en Dios"
+    },
+    {
+      "dayOfYear": 153,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "renuevo",
+      "reference": "Isaías 40:31",
+      "label": "Nuevas fuerzas",
+      "highlight": "Los que esperan en Jehová tendrán nuevas fuerzas"
+    },
+    {
+      "dayOfYear": 154,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "valentia",
+      "reference": "Josué 1:9",
+      "label": "Esfuérzate",
+      "highlight": "Dios está contigo"
+    },
+    {
+      "dayOfYear": 155,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "valor",
+      "reference": "Salmos 27:1",
+      "label": "Mi luz y salvación",
+      "highlight": "¿De quién temeré?"
+    },
+    {
+      "dayOfYear": 156,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "gracia",
+      "reference": "2 Corintios 12:9",
+      "label": "Bástate mi gracia",
+      "highlight": "Su poder se perfecciona en debilidad"
+    },
+    {
+      "dayOfYear": 157,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "armadura",
+      "reference": "Efesios 6:10",
+      "label": "Fortalécete",
+      "highlight": "En el Señor y en su poder"
+    },
+    {
+      "dayOfYear": 158,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "equipamiento",
+      "reference": "Salmos 18:32",
+      "label": "Me ciñe de poder",
+      "highlight": "Dios perfecciona mi camino"
+    },
+    {
+      "dayOfYear": 159,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "capacidad",
+      "reference": "Filipenses 4:13",
+      "label": "Todo lo puedo",
+      "highlight": "En Cristo que me fortalece"
+    },
+    {
+      "dayOfYear": 160,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "gozo",
+      "reference": "Nehemías 8:10",
+      "label": "Gozo que fortalece",
+      "highlight": "El gozo del Señor es tu fuerza"
+    },
+    {
+      "dayOfYear": 161,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "animo",
+      "reference": "Deuteronomio 31:6",
+      "label": "No temas",
+      "highlight": "Él no te dejará"
+    },
+    {
+      "dayOfYear": 162,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "ayuda",
+      "reference": "Salmos 28:7",
+      "label": "Mi escudo",
+      "highlight": "En Él confió mi corazón"
+    },
+    {
+      "dayOfYear": 163,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "sosten",
+      "reference": "Isaías 41:10",
+      "label": "Sostén divino",
+      "highlight": "Te sostendré con mi diestra"
+    },
+    {
+      "dayOfYear": 164,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "socorro",
+      "reference": "Salmos 121:1-2",
+      "label": "Mi socorro",
+      "highlight": "Viene de Jehová"
+    },
+    {
+      "dayOfYear": 165,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "seguridad",
+      "reference": "Romanos 8:31",
+      "label": "Dios por nosotros",
+      "highlight": "¿Quién contra nosotros?"
+    },
+    {
+      "dayOfYear": 166,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "busqueda",
+      "reference": "1 Crónicas 16:11",
+      "label": "Busca su poder",
+      "highlight": "Busca su rostro continuamente"
+    },
+    {
+      "dayOfYear": 167,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "fortaleza",
+      "reference": "2 Samuel 22:33",
+      "label": "Poder perfecto",
+      "highlight": "Dios hace perfecto mi camino"
+    },
+    {
+      "dayOfYear": 168,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "esperanza",
+      "reference": "Salmos 31:24",
+      "label": "Cobrad ánimo",
+      "highlight": "Él fortalece el corazón"
+    },
+    {
+      "dayOfYear": 169,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "animo",
+      "reference": "Isaías 35:3-4",
+      "label": "Manos cansadas",
+      "highlight": "Dios vendrá y os salvará"
+    },
+    {
+      "dayOfYear": 170,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "pies",
+      "reference": "Habacuc 3:19",
+      "label": "Pies de ciervas",
+      "highlight": "Jehová es mi fortaleza"
+    },
+    {
+      "dayOfYear": 171,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "canto",
+      "reference": "Éxodo 15:2",
+      "label": "Mi fortaleza y cántico",
+      "highlight": "Él ha sido mi salvación"
+    },
+    {
+      "dayOfYear": 172,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "auxilio",
+      "reference": "Salmos 46:1",
+      "label": "Pronto auxilio",
+      "highlight": "Refugio y fortaleza"
+    },
+    {
+      "dayOfYear": 173,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "vigilancia",
+      "reference": "1 Corintios 16:13",
+      "label": "Portaos varonilmente",
+      "highlight": "Y esforzaos"
+    },
+    {
+      "dayOfYear": 174,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "consuelo",
+      "reference": "2 Tesalonicenses 2:16-17",
+      "label": "Buen ánimo",
+      "highlight": "Conforte tus corazones"
+    },
+    {
+      "dayOfYear": 175,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "confianza",
+      "reference": "Hebreos 13:6",
+      "label": "No temeré",
+      "highlight": "El Señor es mi ayudador"
+    },
+    {
+      "dayOfYear": 176,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "refugio",
+      "reference": "Proverbios 18:10",
+      "label": "Torre fuerte",
+      "highlight": "El justo correrá a ella"
+    },
+    {
+      "dayOfYear": 177,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "levantate",
+      "reference": "Miqueas 7:8",
+      "label": "Me levantaré",
+      "highlight": "Aunque caiga, Jehová será mi luz"
+    },
+    {
+      "dayOfYear": 178,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "respuesta",
+      "reference": "Salmos 138:3",
+      "label": "Fortaleciste",
+      "highlight": "Con vigor en mi alma"
+    },
+    {
+      "dayOfYear": 179,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "poder",
+      "reference": "Efesios 3:20",
+      "label": "Más abundantemente",
+      "highlight": "Él puede hacer mucho más"
+    },
+    {
+      "dayOfYear": 180,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "presencia",
+      "reference": "2 Timoteo 4:17",
+      "label": "El Señor estuvo conmigo",
+      "highlight": "Y me dio fuerzas"
+    },
+    {
+      "dayOfYear": 181,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "seguridad",
+      "reference": "Isaías 12:2",
+      "label": "Confiaré",
+      "highlight": "Dios es mi fortaleza y canción"
+    },
+    {
+      "dayOfYear": 182,
+      "month": 6,
+      "theme": "fortaleza",
+      "subtheme": "peregrino",
+      "reference": "Salmos 84:5",
+      "label": "Fortaleza en ti",
+      "highlight": "Bienaventurado el que tiene fuerzas en Dios"
+    },
+    {
+      "dayOfYear": 183,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "direccion",
+      "reference": "Proverbios 3:5-6",
+      "label": "Dirección",
+      "highlight": "Él enderezará tus caminos"
+    },
+    {
+      "dayOfYear": 184,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "peticion",
+      "reference": "Santiago 1:5",
+      "label": "Pide sabiduría",
+      "highlight": "Dios da abundantemente"
+    },
+    {
+      "dayOfYear": 185,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "guia",
+      "reference": "Salmos 25:4-5",
+      "label": "Enséñame",
+      "highlight": "Muéstrame tus caminos"
+    },
+    {
+      "dayOfYear": 186,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "fuente",
+      "reference": "Proverbios 2:6",
+      "label": "La da Jehová",
+      "highlight": "De su boca viene sabiduría"
+    },
+    {
+      "dayOfYear": 187,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "instruccion",
+      "reference": "Salmos 32:8",
+      "label": "Te haré entender",
+      "highlight": "Te enseñaré el camino"
+    },
+    {
+      "dayOfYear": 188,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "compañia",
+      "reference": "Isaías 58:11",
+      "label": "Guía continua",
+      "highlight": "Jehová te pastoreará siempre"
+    },
+    {
+      "dayOfYear": 189,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "planes",
+      "reference": "Proverbios 16:9",
+      "label": "Él endereza",
+      "highlight": "Dios ordena tus pasos"
+    },
+    {
+      "dayOfYear": 190,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "criterio",
+      "reference": "Salmos 119:66",
+      "label": "Buen sentido",
+      "highlight": "Enséñame buen juicio"
+    },
+    {
+      "dayOfYear": 191,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "plenitud",
+      "reference": "Colosenses 1:9",
+      "label": "Llenos de sabiduría",
+      "highlight": "Con toda inteligencia espiritual"
+    },
+    {
+      "dayOfYear": 192,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "prudencia",
+      "reference": "Efesios 5:15-17",
+      "label": "Andad sabiamente",
+      "highlight": "Entended la voluntad del Señor"
+    },
+    {
+      "dayOfYear": 193,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "consejo",
+      "reference": "Salmos 73:24",
+      "label": "Me guiarás",
+      "highlight": "Con tu consejo me conducirás"
+    },
+    {
+      "dayOfYear": 194,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "consejo",
+      "reference": "Proverbios 11:14",
+      "label": "Muchos consejeros",
+      "highlight": "En la multitud hay seguridad"
+    },
+    {
+      "dayOfYear": 195,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "utilidad",
+      "reference": "Isaías 48:17",
+      "label": "Te enseña",
+      "highlight": "Por el camino que debes andar"
+    },
+    {
+      "dayOfYear": 196,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "pasos",
+      "reference": "Salmos 37:23",
+      "label": "Pasos afirmados",
+      "highlight": "Por Jehová son ordenados"
+    },
+    {
+      "dayOfYear": 197,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "prioridad",
+      "reference": "Proverbios 4:7",
+      "label": "Adquiere sabiduría",
+      "highlight": "Ante todo adquiere sabiduría"
+    },
+    {
+      "dayOfYear": 198,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "temor",
+      "reference": "Job 28:28",
+      "label": "Sabiduría verdadera",
+      "highlight": "Temer al Señor es sabiduría"
+    },
+    {
+      "dayOfYear": 199,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "claridad",
+      "reference": "Salmos 119:130",
+      "label": "Alumbra",
+      "highlight": "La exposición de tu palabra alumbra"
+    },
+    {
+      "dayOfYear": 200,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "obediencia",
+      "reference": "Lucas 11:28",
+      "label": "Bienaventurados",
+      "highlight": "Los que oyen y guardan"
+    },
+    {
+      "dayOfYear": 201,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "luz",
+      "reference": "Juan 8:12",
+      "label": "Luz del mundo",
+      "highlight": "No andarás en tinieblas"
+    },
+    {
+      "dayOfYear": 202,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "planes",
+      "reference": "Proverbios 15:22",
+      "label": "Confirman propósitos",
+      "highlight": "Con consejo se afirman"
+    },
+    {
+      "dayOfYear": 203,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "adoracion",
+      "reference": "Romanos 11:33",
+      "label": "Profundidad",
+      "highlight": "Insondables sus caminos"
+    },
+    {
+      "dayOfYear": 204,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "peticion",
+      "reference": "1 Reyes 3:9",
+      "label": "Corazón entendido",
+      "highlight": "Para discernir entre bien y mal"
+    },
+    {
+      "dayOfYear": 205,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "deleite",
+      "reference": "Salmos 119:24",
+      "label": "Mis consejeros",
+      "highlight": "Tus testimonios son mis consejeros"
+    },
+    {
+      "dayOfYear": 206,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "soberania",
+      "reference": "Proverbios 19:21",
+      "label": "Permanece su consejo",
+      "highlight": "El consejo del Señor permanecerá"
+    },
+    {
+      "dayOfYear": 207,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "altura",
+      "reference": "Isaías 55:8-9",
+      "label": "Más altos",
+      "highlight": "Sus caminos son superiores"
+    },
+    {
+      "dayOfYear": 208,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "palabra",
+      "reference": "Colosenses 3:15-16",
+      "label": "Morando la Palabra",
+      "highlight": "Te guía en sabiduría"
+    },
+    {
+      "dayOfYear": 209,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "discernimiento",
+      "reference": "Filipenses 1:9-10",
+      "label": "Aprueba lo mejor",
+      "highlight": "Amor con ciencia y discernimiento"
+    },
+    {
+      "dayOfYear": 210,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "dependencia",
+      "reference": "Proverbios 20:24",
+      "label": "Pasos del hombre",
+      "highlight": "De Jehová son los pasos"
+    },
+    {
+      "dayOfYear": 211,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "manana",
+      "reference": "Salmos 143:8",
+      "label": "Hazme oír",
+      "highlight": "Muéstrame el camino"
+    },
+    {
+      "dayOfYear": 212,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "presencia",
+      "reference": "Éxodo 13:21",
+      "label": "Nube y fuego",
+      "highlight": "Dios guía a su pueblo"
+    },
+    {
+      "dayOfYear": 213,
+      "month": 7,
+      "theme": "sabiduria",
+      "subtheme": "espiritu",
+      "reference": "Juan 16:13",
+      "label": "Guía del Espíritu",
+      "highlight": "Él os guiará a toda verdad"
+    },
+    {
+      "dayOfYear": 214,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "clamor",
+      "reference": "Jeremías 33:3",
+      "label": "Clama",
+      "highlight": "Dios responde"
+    },
+    {
+      "dayOfYear": 215,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "constancia",
+      "reference": "1 Tesalonicenses 5:17",
+      "label": "Ora sin cesar",
+      "highlight": "Haz de la oración tu hábito"
+    },
+    {
+      "dayOfYear": 216,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "presentacion",
+      "reference": "Filipenses 4:6",
+      "label": "Presenta todo",
+      "highlight": "Con oración y ruego"
+    },
+    {
+      "dayOfYear": 217,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "persistencia",
+      "reference": "Mateo 7:7",
+      "label": "Pedid",
+      "highlight": "El que pide recibe"
+    },
+    {
+      "dayOfYear": 218,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "fe",
+      "reference": "Marcos 11:24",
+      "label": "Cree al orar",
+      "highlight": "Recibirás lo que pides"
+    },
+    {
+      "dayOfYear": 219,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "permanencia",
+      "reference": "Juan 15:7",
+      "label": "Permanece y pide",
+      "highlight": "Sus palabras hacen fructífera la oración"
+    },
+    {
+      "dayOfYear": 220,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "disciplina",
+      "reference": "Romanos 12:12",
+      "label": "Persevera",
+      "highlight": "Constantes en la oración"
+    },
+    {
+      "dayOfYear": 221,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "vigilancia",
+      "reference": "Colosenses 4:2",
+      "label": "Velad",
+      "highlight": "Perseverando con acción de gracias"
+    },
+    {
+      "dayOfYear": 222,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "cercania",
+      "reference": "Salmos 145:18",
+      "label": "Cercano está",
+      "highlight": "A todos los que le invocan de veras"
+    },
+    {
+      "dayOfYear": 223,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "confianza",
+      "reference": "1 Juan 5:14",
+      "label": "Confianza al pedir",
+      "highlight": "Si pedimos conforme a su voluntad"
+    },
+    {
+      "dayOfYear": 224,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "acceso",
+      "reference": "Hebreos 4:16",
+      "label": "Acerquémonos",
+      "highlight": "Al trono de la gracia"
+    },
+    {
+      "dayOfYear": 225,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "respuesta",
+      "reference": "Salmos 34:17",
+      "label": "Claman los justos",
+      "highlight": "Y Jehová oye"
+    },
+    {
+      "dayOfYear": 226,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "constancia",
+      "reference": "Lucas 18:1",
+      "label": "No desmayar",
+      "highlight": "Es necesario orar siempre"
+    },
+    {
+      "dayOfYear": 227,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "secreto",
+      "reference": "Mateo 6:6",
+      "label": "Padre en secreto",
+      "highlight": "Él ve en lo secreto"
+    },
+    {
+      "dayOfYear": 228,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "gratitud",
+      "reference": "Salmos 66:19-20",
+      "label": "Dios oyó",
+      "highlight": "No apartó su misericordia"
+    },
+    {
+      "dayOfYear": 229,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "intercesion",
+      "reference": "Efesios 6:18",
+      "label": "Orad en todo tiempo",
+      "highlight": "En el Espíritu"
+    },
+    {
+      "dayOfYear": 230,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "eficacia",
+      "reference": "Santiago 5:16",
+      "label": "Oración eficaz",
+      "highlight": "Puede mucho la oración del justo"
+    },
+    {
+      "dayOfYear": 231,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "humillacion",
+      "reference": "2 Crónicas 7:14",
+      "label": "Humíllate y ora",
+      "highlight": "Dios oye y sana la tierra"
+    },
+    {
+      "dayOfYear": 232,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "afliccion",
+      "reference": "Jonás 2:2",
+      "label": "Desde la angustia",
+      "highlight": "Clamé y me oíste"
+    },
+    {
+      "dayOfYear": 233,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "manana",
+      "reference": "Salmos 5:3",
+      "label": "De mañana",
+      "highlight": "Presentaré mi oración"
+    },
+    {
+      "dayOfYear": 234,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "fidelidad",
+      "reference": "Daniel 6:10",
+      "label": "Tres veces al día",
+      "highlight": "Persistió en oración"
+    },
+    {
+      "dayOfYear": 235,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "unidad",
+      "reference": "Hechos 1:14",
+      "label": "Unánimes",
+      "highlight": "Perseveraban en oración"
+    },
+    {
+      "dayOfYear": 236,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "poder",
+      "reference": "Hechos 4:31",
+      "label": "Lugar conmovido",
+      "highlight": "Oraron y fueron llenos del Espíritu"
+    },
+    {
+      "dayOfYear": 237,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "favor",
+      "reference": "Nehemías 1:11",
+      "label": "Haz prosperar",
+      "highlight": "La oración busca favor divino"
+    },
+    {
+      "dayOfYear": 238,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "rendicion",
+      "reference": "Lucas 22:42",
+      "label": "Hágase tu voluntad",
+      "highlight": "La oración se rinde al Padre"
+    },
+    {
+      "dayOfYear": 239,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "adoracion",
+      "reference": "Salmos 141:2",
+      "label": "Suba mi oración",
+      "highlight": "Como incienso delante de ti"
+    },
+    {
+      "dayOfYear": 240,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "vigilancia",
+      "reference": "Mateo 26:41",
+      "label": "Velad y orad",
+      "highlight": "Para no caer en tentación"
+    },
+    {
+      "dayOfYear": 241,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "ayuda",
+      "reference": "Romanos 8:26",
+      "label": "El Espíritu ayuda",
+      "highlight": "Intercede por nosotros"
+    },
+    {
+      "dayOfYear": 242,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "intercesion",
+      "reference": "1 Timoteo 2:1",
+      "label": "Por todos",
+      "highlight": "Ruegos e intercesiones por todos"
+    },
+    {
+      "dayOfYear": 243,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "angustia",
+      "reference": "Salmos 86:7",
+      "label": "En el día de mi angustia",
+      "highlight": "Porque tú me respondes"
+    },
+    {
+      "dayOfYear": 244,
+      "month": 8,
+      "theme": "oracion",
+      "subtheme": "espera",
+      "reference": "Habacuc 2:1",
+      "label": "Esperaré respuesta",
+      "highlight": "Permaneceré atento"
+    },
+    {
+      "dayOfYear": 245,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "exclusividad",
+      "reference": "Hechos 4:12",
+      "label": "Único nombre",
+      "highlight": "Solo en Cristo hay salvación"
+    },
+    {
+      "dayOfYear": 246,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "confesion",
+      "reference": "Romanos 10:9",
+      "label": "Cree y confiesa",
+      "highlight": "Serás salvo"
+    },
+    {
+      "dayOfYear": 247,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "camino",
+      "reference": "Juan 14:6",
+      "label": "Camino al Padre",
+      "highlight": "Jesús es el único camino"
+    },
+    {
+      "dayOfYear": 248,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "mediador",
+      "reference": "1 Timoteo 2:5",
+      "label": "Un mediador",
+      "highlight": "Cristo Jesús"
+    },
+    {
+      "dayOfYear": 249,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "mision",
+      "reference": "Marcos 16:15",
+      "label": "Id por todo el mundo",
+      "highlight": "Predicad el evangelio"
+    },
+    {
+      "dayOfYear": 250,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "gran_comision",
+      "reference": "Mateo 28:19-20",
+      "label": "Haced discípulos",
+      "highlight": "Cristo envía a su Iglesia"
+    },
+    {
+      "dayOfYear": 251,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "poder",
+      "reference": "Romanos 1:16",
+      "label": "No me avergüenzo",
+      "highlight": "El evangelio es poder de Dios"
+    },
+    {
+      "dayOfYear": 252,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "embajador",
+      "reference": "2 Corintios 5:20",
+      "label": "Embajadores",
+      "highlight": "Reconciliaos con Dios"
+    },
+    {
+      "dayOfYear": 253,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "proposito",
+      "reference": "Juan 3:17",
+      "label": "No para condenar",
+      "highlight": "Sino para salvar"
+    },
+    {
+      "dayOfYear": 254,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "busqueda",
+      "reference": "Lucas 19:10",
+      "label": "Vino a buscar",
+      "highlight": "Y a salvar lo perdido"
+    },
+    {
+      "dayOfYear": 255,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "llamado",
+      "reference": "Ezequiel 33:11",
+      "label": "Vuélvete",
+      "highlight": "Dios no quiere la muerte del impío"
+    },
+    {
+      "dayOfYear": 256,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "respuesta",
+      "reference": "Hechos 16:31",
+      "label": "Cree en el Señor",
+      "highlight": "Y serás salvo"
+    },
+    {
+      "dayOfYear": 257,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "gracia",
+      "reference": "Tito 3:5",
+      "label": "No por obras",
+      "highlight": "Sino por su misericordia"
+    },
+    {
+      "dayOfYear": 258,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "gracia",
+      "reference": "Efesios 2:8-9",
+      "label": "Por gracia",
+      "highlight": "No por obras"
+    },
+    {
+      "dayOfYear": 259,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "paciencia",
+      "reference": "2 Pedro 3:9",
+      "label": "No queriendo",
+      "highlight": "Que ninguno perezca"
+    },
+    {
+      "dayOfYear": 260,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "arrepentimiento",
+      "reference": "Isaías 55:6-7",
+      "label": "Buscad a Jehová",
+      "highlight": "Vuélvase al Señor"
+    },
+    {
+      "dayOfYear": 261,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "pecado_y_gracia",
+      "reference": "Romanos 3:23-24",
+      "label": "Todos pecaron",
+      "highlight": "Pero son justificados gratuitamente"
+    },
+    {
+      "dayOfYear": 262,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "adopcion",
+      "reference": "Juan 1:12",
+      "label": "Hijos de Dios",
+      "highlight": "A los que creen en su nombre"
+    },
+    {
+      "dayOfYear": 263,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "perdon",
+      "reference": "Hechos 13:38-39",
+      "label": "Perdón anunciado",
+      "highlight": "Por Él se os anuncia perdón"
+    },
+    {
+      "dayOfYear": 264,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "llamado",
+      "reference": "Apocalipsis 3:20",
+      "label": "Él llama",
+      "highlight": "Abre la puerta"
+    },
+    {
+      "dayOfYear": 265,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "urgencia",
+      "reference": "2 Corintios 6:2",
+      "label": "Hoy es el día",
+      "highlight": "Ahora es tiempo aceptable"
+    },
+    {
+      "dayOfYear": 266,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "proclamacion",
+      "reference": "Salmos 96:3",
+      "label": "Publicad su gloria",
+      "highlight": "Entre las naciones"
+    },
+    {
+      "dayOfYear": 267,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "testimonio",
+      "reference": "Mateo 5:14-16",
+      "label": "Luz del mundo",
+      "highlight": "Que vean tus buenas obras"
+    },
+    {
+      "dayOfYear": 268,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "respuesta",
+      "reference": "1 Pedro 3:15",
+      "label": "Presenta defensa",
+      "highlight": "Con mansedumbre y reverencia"
+    },
+    {
+      "dayOfYear": 269,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "sabiduria",
+      "reference": "Colosenses 4:5-6",
+      "label": "Habla con gracia",
+      "highlight": "Aprovecha bien el tiempo"
+    },
+    {
+      "dayOfYear": 270,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "superabundancia",
+      "reference": "Romanos 5:20",
+      "label": "La gracia abundó",
+      "highlight": "Más que el pecado"
+    },
+    {
+      "dayOfYear": 271,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "vida",
+      "reference": "Juan 5:24",
+      "label": "Tiene vida eterna",
+      "highlight": "Ha pasado de muerte a vida"
+    },
+    {
+      "dayOfYear": 272,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "advertencia",
+      "reference": "Hebreos 2:3",
+      "label": "Gran salvación",
+      "highlight": "No la descuides"
+    },
+    {
+      "dayOfYear": 273,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "gozo",
+      "reference": "Lucas 15:7",
+      "label": "Gozo en el cielo",
+      "highlight": "Por un pecador que se arrepiente"
+    },
+    {
+      "dayOfYear": 274,
+      "month": 9,
+      "theme": "salvacion",
+      "subtheme": "obreros",
+      "reference": "Mateo 9:37-38",
+      "label": "Rogad al Señor",
+      "highlight": "La mies es mucha"
+    },
+    {
+      "dayOfYear": 275,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "definicion",
+      "reference": "Hebreos 11:1",
+      "label": "Fe",
+      "highlight": "La certeza de lo que se espera"
+    },
+    {
+      "dayOfYear": 276,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "posible",
+      "reference": "Marcos 9:23",
+      "label": "Al que cree",
+      "highlight": "Todo le es posible"
+    },
+    {
+      "dayOfYear": 277,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "confianza",
+      "reference": "Proverbios 3:5",
+      "label": "Confía",
+      "highlight": "No te apoyes en tu prudencia"
+    },
+    {
+      "dayOfYear": 278,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "temor",
+      "reference": "Salmos 56:3",
+      "label": "En ti confiaré",
+      "highlight": "Cuando temo, confío"
+    },
+    {
+      "dayOfYear": 279,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "caminar",
+      "reference": "2 Corintios 5:7",
+      "label": "Por fe",
+      "highlight": "No por vista"
+    },
+    {
+      "dayOfYear": 280,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "origen",
+      "reference": "Romanos 10:17",
+      "label": "La fe viene",
+      "highlight": "Por oír la palabra de Dios"
+    },
+    {
+      "dayOfYear": 281,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "seguridad",
+      "reference": "Isaías 12:2",
+      "label": "Confiaré",
+      "highlight": "Y no temeré"
+    },
+    {
+      "dayOfYear": 282,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "estabilidad",
+      "reference": "Salmos 37:3",
+      "label": "Confía y haz el bien",
+      "highlight": "Habitarás seguro"
+    },
+    {
+      "dayOfYear": 283,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "agradar",
+      "reference": "Hebreos 11:6",
+      "label": "Sin fe",
+      "highlight": "Es imposible agradar a Dios"
+    },
+    {
+      "dayOfYear": 284,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "refugio",
+      "reference": "Nahúm 1:7",
+      "label": "Él conoce",
+      "highlight": "A los que en Él confían"
+    },
+    {
+      "dayOfYear": 285,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "perpetua",
+      "reference": "Isaías 26:4",
+      "label": "Confíen perpetuamente",
+      "highlight": "Jehová es fortaleza eterna"
+    },
+    {
+      "dayOfYear": 286,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "firmeza",
+      "reference": "Salmos 125:1",
+      "label": "Como Sion",
+      "highlight": "No será conmovido"
+    },
+    {
+      "dayOfYear": 287,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "conviccion",
+      "reference": "Romanos 4:20-21",
+      "label": "Plenamente convencido",
+      "highlight": "Poderoso para cumplir"
+    },
+    {
+      "dayOfYear": 288,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "oracion",
+      "reference": "Mateo 21:22",
+      "label": "Creyendo",
+      "highlight": "Todo lo que pidáis"
+    },
+    {
+      "dayOfYear": 289,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "refugio",
+      "reference": "Salmos 91:2",
+      "label": "Esperanza",
+      "highlight": "Mi Dios, en quien confiaré"
+    },
+    {
+      "dayOfYear": 290,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "integridad",
+      "reference": "Job 13:15",
+      "label": "Aunque Él me matare",
+      "highlight": "En Él esperaré"
+    },
+    {
+      "dayOfYear": 291,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "espera",
+      "reference": "Miqueas 7:7",
+      "label": "Esperaré",
+      "highlight": "El Dios de mi salvación me oirá"
+    },
+    {
+      "dayOfYear": 292,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "seguridad",
+      "reference": "Salmos 118:8",
+      "label": "Mejor confiar",
+      "highlight": "Que en el hombre"
+    },
+    {
+      "dayOfYear": 293,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "bendicion",
+      "reference": "Jeremías 17:7",
+      "label": "Bendito el que confía",
+      "highlight": "Su esperanza es Jehová"
+    },
+    {
+      "dayOfYear": 294,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "justicia",
+      "reference": "Habacuc 2:4",
+      "label": "El justo por su fe",
+      "highlight": "Vivirá"
+    },
+    {
+      "dayOfYear": 295,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "firmeza",
+      "reference": "Daniel 3:17-18",
+      "label": "Aunque no",
+      "highlight": "Seguiremos fieles"
+    },
+    {
+      "dayOfYear": 296,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "corazon",
+      "reference": "Salmos 112:7",
+      "label": "Corazón firme",
+      "highlight": "Confiado en Jehová"
+    },
+    {
+      "dayOfYear": 297,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "gozo",
+      "reference": "1 Pedro 1:8-9",
+      "label": "Creyendo sin ver",
+      "highlight": "Te gozas con gozo inefable"
+    },
+    {
+      "dayOfYear": 298,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "promesa",
+      "reference": "Lucas 1:37",
+      "label": "Nada es imposible",
+      "highlight": "Para Dios no hay nada imposible"
+    },
+    {
+      "dayOfYear": 299,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "gloria",
+      "reference": "Juan 11:40",
+      "label": "Si crees",
+      "highlight": "Verás la gloria de Dios"
+    },
+    {
+      "dayOfYear": 300,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "esperanza",
+      "reference": "Romanos 15:13",
+      "label": "Abundar en esperanza",
+      "highlight": "Por el poder del Espíritu"
+    },
+    {
+      "dayOfYear": 301,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "espera",
+      "reference": "Salmos 40:1-3",
+      "label": "Pacientemente esperé",
+      "highlight": "Puso luego cántico nuevo"
+    },
+    {
+      "dayOfYear": 302,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "establecimiento",
+      "reference": "2 Crónicas 20:20",
+      "label": "Creed",
+      "highlight": "Y seréis prosperados"
+    },
+    {
+      "dayOfYear": 303,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "mirada",
+      "reference": "Mateo 14:31",
+      "label": "Poca fe",
+      "highlight": "Mantén tus ojos en Cristo"
+    },
+    {
+      "dayOfYear": 304,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "recompensa",
+      "reference": "Hebreos 10:35-36",
+      "label": "No pierdas la confianza",
+      "highlight": "Tiene gran galardón"
+    },
+    {
+      "dayOfYear": 305,
+      "month": 10,
+      "theme": "fe",
+      "subtheme": "esperanza",
+      "reference": "Salmos 27:13-14",
+      "label": "Hubiera yo desmayado",
+      "highlight": "Aguarda a Jehová"
+    },
+    {
+      "dayOfYear": 306,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "accion_de_gracias",
+      "reference": "1 Tesalonicenses 5:18",
+      "label": "Da gracias",
+      "highlight": "En todo"
+    },
+    {
+      "dayOfYear": 307,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "adoracion",
+      "reference": "Salmos 100:4",
+      "label": "Entra agradeciendo",
+      "highlight": "Con alabanza"
+    },
+    {
+      "dayOfYear": 308,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "integridad",
+      "reference": "Colosenses 3:17",
+      "label": "Todo con gratitud",
+      "highlight": "Dando gracias a Dios"
+    },
+    {
+      "dayOfYear": 309,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "memoria",
+      "reference": "Salmos 103:2",
+      "label": "No olvides",
+      "highlight": "Sus beneficios"
+    },
+    {
+      "dayOfYear": 310,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "siempre",
+      "reference": "Efesios 5:20",
+      "label": "Gracias siempre",
+      "highlight": "Por todo al Padre"
+    },
+    {
+      "dayOfYear": 311,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "oracion",
+      "reference": "Filipenses 4:6",
+      "label": "Con acción de gracias",
+      "highlight": "Presenta tus peticiones"
+    },
+    {
+      "dayOfYear": 312,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "bondad",
+      "reference": "Salmos 107:1",
+      "label": "Él es bueno",
+      "highlight": "Para siempre su misericordia"
+    },
+    {
+      "dayOfYear": 313,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "reino",
+      "reference": "Hebreos 12:28",
+      "label": "Gratitud reverente",
+      "highlight": "Sirvamos agradándole"
+    },
+    {
+      "dayOfYear": 314,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "voto",
+      "reference": "Jonás 2:9",
+      "label": "Con voz de alabanza",
+      "highlight": "Ofreceré sacrificio"
+    },
+    {
+      "dayOfYear": 315,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "don",
+      "reference": "2 Corintios 9:15",
+      "label": "Gracias a Dios",
+      "highlight": "Por su don inefable"
+    },
+    {
+      "dayOfYear": 316,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "respuesta",
+      "reference": "Salmos 116:12",
+      "label": "¿Qué pagaré?",
+      "highlight": "Tomaré la copa de salvación"
+    },
+    {
+      "dayOfYear": 317,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "retorno",
+      "reference": "Lucas 17:15-16",
+      "label": "Vuelve a dar gloria",
+      "highlight": "No seas ingrato"
+    },
+    {
+      "dayOfYear": 318,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "abundancia",
+      "reference": "Colosenses 2:7",
+      "label": "Rebosando",
+      "highlight": "En acciones de gracias"
+    },
+    {
+      "dayOfYear": 319,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "alabanza",
+      "reference": "Salmos 95:2",
+      "label": "Lleguemos ante Él",
+      "highlight": "Con alabanza"
+    },
+    {
+      "dayOfYear": 320,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "misericordia",
+      "reference": "Esdras 3:11",
+      "label": "Porque Él es bueno",
+      "highlight": "Su misericordia es para siempre"
+    },
+    {
+      "dayOfYear": 321,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "reconocimiento",
+      "reference": "Daniel 2:23",
+      "label": "Te alabo",
+      "highlight": "Porque me diste sabiduría"
+    },
+    {
+      "dayOfYear": 322,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "bondad",
+      "reference": "1 Crónicas 16:34",
+      "label": "Dad gracias",
+      "highlight": "Porque es bueno"
+    },
+    {
+      "dayOfYear": 323,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "continuidad",
+      "reference": "Salmos 34:1",
+      "label": "Bendeciré",
+      "highlight": "En todo tiempo"
+    },
+    {
+      "dayOfYear": 324,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "gratitud_en_crisis",
+      "reference": "Habacuc 3:17-18",
+      "label": "Con todo me alegraré",
+      "highlight": "En el Dios de mi salvación"
+    },
+    {
+      "dayOfYear": 325,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "advertencia",
+      "reference": "Romanos 1:21",
+      "label": "No fueron agradecidos",
+      "highlight": "La ingratitud oscurece"
+    },
+    {
+      "dayOfYear": 326,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "cambio",
+      "reference": "Salmos 30:11-12",
+      "label": "Luto en danza",
+      "highlight": "Mi alma cantará"
+    },
+    {
+      "dayOfYear": 327,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "testimonio",
+      "reference": "2 Samuel 22:50",
+      "label": "Te alabaré",
+      "highlight": "Entre las naciones"
+    },
+    {
+      "dayOfYear": 328,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "intercesion",
+      "reference": "Efesios 1:16",
+      "label": "No ceso de dar gracias",
+      "highlight": "Haciendo memoria de ti"
+    },
+    {
+      "dayOfYear": 329,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "entereza",
+      "reference": "Salmos 9:1",
+      "label": "Te alabaré de todo corazón",
+      "highlight": "Contaré tus maravillas"
+    },
+    {
+      "dayOfYear": 330,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "vigilancia",
+      "reference": "Colosenses 4:2",
+      "label": "Velen agradecidos",
+      "highlight": "La oración y gratitud juntas"
+    },
+    {
+      "dayOfYear": 331,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "cielo",
+      "reference": "Salmos 136:26",
+      "label": "Alabad al Dios de los cielos",
+      "highlight": "Porque es eterna su misericordia"
+    },
+    {
+      "dayOfYear": 332,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "cielo",
+      "reference": "Apocalipsis 7:12",
+      "label": "Acción de gracias eterna",
+      "highlight": "Sea a nuestro Dios"
+    },
+    {
+      "dayOfYear": 333,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "adoracion",
+      "reference": "1 Crónicas 29:13",
+      "label": "Te damos gracias",
+      "highlight": "Y alabamos tu nombre"
+    },
+    {
+      "dayOfYear": 334,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "respuesta",
+      "reference": "Salmos 28:7",
+      "label": "Mi corazón se gozó",
+      "highlight": "Con mi cántico le alabaré"
+    },
+    {
+      "dayOfYear": 335,
+      "month": 11,
+      "theme": "gratitud",
+      "subtheme": "sacrificio",
+      "reference": "Hebreos 13:15",
+      "label": "Sacrificio de alabanza",
+      "highlight": "Fruto de labios que confiesan su nombre"
+    },
+    {
+      "dayOfYear": 336,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "nacimiento",
+      "reference": "Lucas 2:11",
+      "label": "Ha nacido",
+      "highlight": "El Salvador"
+    },
+    {
+      "dayOfYear": 337,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "encarnacion",
+      "reference": "Mateo 1:23",
+      "label": "Emanuel",
+      "highlight": "Dios con nosotros"
+    },
+    {
+      "dayOfYear": 338,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "promesa",
+      "reference": "Isaías 9:6",
+      "label": "Un niño nos es nacido",
+      "highlight": "Príncipe de paz"
+    },
+    {
+      "dayOfYear": 339,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "encarnacion",
+      "reference": "Juan 1:14",
+      "label": "El Verbo se hizo carne",
+      "highlight": "Habitó entre nosotros"
+    },
+    {
+      "dayOfYear": 340,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "anuncio",
+      "reference": "Lucas 1:30-31",
+      "label": "No temas María",
+      "highlight": "Concebirás al Hijo"
+    },
+    {
+      "dayOfYear": 341,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "poder",
+      "reference": "Lucas 1:37",
+      "label": "Nada imposible",
+      "highlight": "Para Dios"
+    },
+    {
+      "dayOfYear": 342,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "adoracion",
+      "reference": "Lucas 1:46-47",
+      "label": "Engrandece mi alma",
+      "highlight": "Mi espíritu se regocija en Dios"
+    },
+    {
+      "dayOfYear": 343,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "redencion",
+      "reference": "Lucas 1:68-69",
+      "label": "Nos visitó",
+      "highlight": "Y levantó salvación"
+    },
+    {
+      "dayOfYear": 344,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "adoracion",
+      "reference": "Mateo 2:10-11",
+      "label": "Le adoraron",
+      "highlight": "Y le ofrecieron presentes"
+    },
+    {
+      "dayOfYear": 345,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "profecia",
+      "reference": "Miqueas 5:2",
+      "label": "Belén",
+      "highlight": "De ti saldrá el Señor"
+    },
+    {
+      "dayOfYear": 346,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "senal",
+      "reference": "Isaías 7:14",
+      "label": "La virgen concebirá",
+      "highlight": "Y llamará su nombre Emanuel"
+    },
+    {
+      "dayOfYear": 347,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "cumplimiento",
+      "reference": "Gálatas 4:4-5",
+      "label": "Cumplimiento del tiempo",
+      "highlight": "Dios envió a su Hijo"
+    },
+    {
+      "dayOfYear": 348,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "humildad",
+      "reference": "Filipenses 2:6-7",
+      "label": "Se despojó",
+      "highlight": "Tomando forma de siervo"
+    },
+    {
+      "dayOfYear": 349,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "gracia",
+      "reference": "2 Corintios 8:9",
+      "label": "Se hizo pobre",
+      "highlight": "Para enriquecernos"
+    },
+    {
+      "dayOfYear": 350,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "mision",
+      "reference": "Juan 3:17",
+      "label": "No para condenar",
+      "highlight": "Sino para salvar"
+    },
+    {
+      "dayOfYear": 351,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "testimonio",
+      "reference": "1 Juan 4:14",
+      "label": "Salvador del mundo",
+      "highlight": "El Padre envió al Hijo"
+    },
+    {
+      "dayOfYear": 352,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "gracia",
+      "reference": "Tito 2:11",
+      "label": "Gracia manifestada",
+      "highlight": "Trayendo salvación"
+    },
+    {
+      "dayOfYear": 353,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "revelacion",
+      "reference": "Hebreos 1:1-2",
+      "label": "Dios ha hablado",
+      "highlight": "Por el Hijo"
+    },
+    {
+      "dayOfYear": 354,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "imagen",
+      "reference": "Colosenses 1:15",
+      "label": "Imagen del Dios invisible",
+      "highlight": "Cristo revela al Padre"
+    },
+    {
+      "dayOfYear": 355,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "luz",
+      "reference": "Juan 8:12",
+      "label": "Luz del mundo",
+      "highlight": "No andarás en tinieblas"
+    },
+    {
+      "dayOfYear": 356,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "gloria",
+      "reference": "Lucas 2:14",
+      "label": "Gloria a Dios",
+      "highlight": "Y paz en la tierra"
+    },
+    {
+      "dayOfYear": 357,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "gozo",
+      "reference": "Salmos 98:4",
+      "label": "Cantad con júbilo",
+      "highlight": "Toda la tierra"
+    },
+    {
+      "dayOfYear": 358,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "alegria",
+      "reference": "Salmos 96:11-13",
+      "label": "Alégrense cielos y tierra",
+      "highlight": "El Señor viene"
+    },
+    {
+      "dayOfYear": 359,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "preparacion",
+      "reference": "Isaías 40:3-5",
+      "label": "Preparad camino",
+      "highlight": "Se manifestará la gloria"
+    },
+    {
+      "dayOfYear": 360,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "adopcion",
+      "reference": "Juan 1:12",
+      "label": "Recíbele",
+      "highlight": "Te da potestad de ser hijo"
+    },
+    {
+      "dayOfYear": 361,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "majestad",
+      "reference": "Apocalipsis 22:13",
+      "label": "Alfa y Omega",
+      "highlight": "El eterno se hizo visible"
+    },
+    {
+      "dayOfYear": 362,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "consuelo",
+      "reference": "Lucas 2:29-32",
+      "label": "Luz para revelación",
+      "highlight": "Mis ojos vieron tu salvación"
+    },
+    {
+      "dayOfYear": 363,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "salvacion",
+      "reference": "Mateo 1:21",
+      "label": "Llamarás su nombre Jesús",
+      "highlight": "Él salvará a su pueblo"
+    },
+    {
+      "dayOfYear": 364,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "rey",
+      "reference": "Zacarías 9:9",
+      "label": "Tu Rey viene",
+      "highlight": "Justo y salvador"
+    },
+    {
+      "dayOfYear": 365,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "plenitud",
+      "reference": "Juan 1:16",
+      "label": "Gracia sobre gracia",
+      "highlight": "De su plenitud tomamos todos"
+    },
+    {
+      "dayOfYear": 366,
+      "month": 12,
+      "theme": "navidad",
+      "subtheme": "gozo",
+      "reference": "Salmos 126:3",
+      "label": "Grandes cosas",
+      "highlight": "Jehová ha hecho con nosotros"
+    }
+  ]
+}

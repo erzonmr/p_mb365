@@ -1,0 +1,3513 @@
+[
+  {
+    "dia": 1,
+    "porciones": [
+      "Génesis 1",
+      "Génesis 2",
+      "Job 1",
+      "Salmos 1",
+      "Mateo 1"
+    ]
+  },
+  {
+    "dia": 2,
+    "porciones": [
+      "Génesis 3",
+      "Job 2",
+      "Salmos 2",
+      "Mateo 2",
+      "Mateo 3"
+    ]
+  },
+  {
+    "dia": 3,
+    "porciones": [
+      "Génesis 4",
+      "Job 3",
+      "Salmos 3",
+      "Mateo 4"
+    ]
+  },
+  {
+    "dia": 4,
+    "porciones": [
+      "Génesis 5",
+      "Job 4",
+      "Salmos 4",
+      "Mateo 5",
+      "Mateo 6"
+    ]
+  },
+  {
+    "dia": 5,
+    "porciones": [
+      "Génesis 6",
+      "Job 5",
+      "Salmos 5",
+      "Mateo 7"
+    ]
+  },
+  {
+    "dia": 6,
+    "porciones": [
+      "Génesis 7",
+      "Génesis 8",
+      "Job 6",
+      "Salmos 6",
+      "Mateo 8"
+    ]
+  },
+  {
+    "dia": 7,
+    "porciones": [
+      "Génesis 9",
+      "Job 7",
+      "Salmos 7",
+      "Mateo 9",
+      "Mateo 10"
+    ]
+  },
+  {
+    "dia": 8,
+    "porciones": [
+      "Génesis 10",
+      "Job 8",
+      "Salmos 8",
+      "Mateo 11"
+    ]
+  },
+  {
+    "dia": 9,
+    "porciones": [
+      "Génesis 11",
+      "Job 9",
+      "Salmos 9",
+      "Mateo 12",
+      "Mateo 13"
+    ]
+  },
+  {
+    "dia": 10,
+    "porciones": [
+      "Génesis 12",
+      "Job 10",
+      "Salmos 10",
+      "Mateo 14"
+    ]
+  },
+  {
+    "dia": 11,
+    "porciones": [
+      "Génesis 13",
+      "Génesis 14",
+      "Job 11",
+      "Salmos 11",
+      "Mateo 15"
+    ]
+  },
+  {
+    "dia": 12,
+    "porciones": [
+      "Génesis 15",
+      "Job 12",
+      "Salmos 12",
+      "Mateo 16",
+      "Mateo 17"
+    ]
+  },
+  {
+    "dia": 13,
+    "porciones": [
+      "Génesis 16",
+      "Job 13",
+      "Salmos 13",
+      "Mateo 18",
+      "Mateo 19"
+    ]
+  },
+  {
+    "dia": 14,
+    "porciones": [
+      "Génesis 17",
+      "Job 14",
+      "Salmos 14",
+      "Mateo 20"
+    ]
+  },
+  {
+    "dia": 15,
+    "porciones": [
+      "Génesis 18",
+      "Job 15",
+      "Salmos 15",
+      "Mateo 21",
+      "Mateo 22"
+    ]
+  },
+  {
+    "dia": 16,
+    "porciones": [
+      "Génesis 19",
+      "Génesis 20",
+      "Job 16",
+      "Salmos 16",
+      "Mateo 23"
+    ]
+  },
+  {
+    "dia": 17,
+    "porciones": [
+      "Génesis 21",
+      "Job 17",
+      "Salmos 17",
+      "Mateo 24"
+    ]
+  },
+  {
+    "dia": 18,
+    "porciones": [
+      "Génesis 22",
+      "Job 18",
+      "Salmos 18",
+      "Mateo 25",
+      "Mateo 26"
+    ]
+  },
+  {
+    "dia": 19,
+    "porciones": [
+      "Génesis 23",
+      "Job 19",
+      "Salmos 19",
+      "Mateo 27"
+    ]
+  },
+  {
+    "dia": 20,
+    "porciones": [
+      "Génesis 24",
+      "Job 20",
+      "Salmos 20",
+      "Mateo 28",
+      "Marcos 1"
+    ]
+  },
+  {
+    "dia": 21,
+    "porciones": [
+      "Génesis 25",
+      "Job 21",
+      "Salmos 21",
+      "Marcos 2"
+    ]
+  },
+  {
+    "dia": 22,
+    "porciones": [
+      "Génesis 26",
+      "Génesis 27",
+      "Job 22",
+      "Salmos 22",
+      "Marcos 3"
+    ]
+  },
+  {
+    "dia": 23,
+    "porciones": [
+      "Génesis 28",
+      "Job 23",
+      "Salmos 23",
+      "Marcos 4",
+      "Marcos 5"
+    ]
+  },
+  {
+    "dia": 24,
+    "porciones": [
+      "Génesis 29",
+      "Job 24",
+      "Salmos 24",
+      "Marcos 6"
+    ]
+  },
+  {
+    "dia": 25,
+    "porciones": [
+      "Génesis 30",
+      "Job 25",
+      "Salmos 25",
+      "Marcos 7",
+      "Marcos 8"
+    ]
+  },
+  {
+    "dia": 26,
+    "porciones": [
+      "Génesis 31",
+      "Job 26",
+      "Salmos 26",
+      "Marcos 9"
+    ]
+  },
+  {
+    "dia": 27,
+    "porciones": [
+      "Génesis 32",
+      "Génesis 33",
+      "Job 27",
+      "Salmos 27",
+      "Marcos 10"
+    ]
+  },
+  {
+    "dia": 28,
+    "porciones": [
+      "Génesis 34",
+      "Job 28",
+      "Salmos 28",
+      "Marcos 11",
+      "Marcos 12"
+    ]
+  },
+  {
+    "dia": 29,
+    "porciones": [
+      "Génesis 35",
+      "Job 29",
+      "Salmos 29",
+      "Marcos 13"
+    ]
+  },
+  {
+    "dia": 30,
+    "porciones": [
+      "Génesis 36",
+      "Job 30",
+      "Salmos 30",
+      "Marcos 14",
+      "Marcos 15"
+    ]
+  },
+  {
+    "dia": 31,
+    "porciones": [
+      "Génesis 37",
+      "Job 31",
+      "Salmos 31",
+      "Marcos 16"
+    ]
+  },
+  {
+    "dia": 32,
+    "porciones": [
+      "Génesis 38",
+      "Génesis 39",
+      "Job 32",
+      "Salmos 32",
+      "Lucas 1"
+    ]
+  },
+  {
+    "dia": 33,
+    "porciones": [
+      "Génesis 40",
+      "Job 33",
+      "Salmos 33",
+      "Lucas 2",
+      "Lucas 3"
+    ]
+  },
+  {
+    "dia": 34,
+    "porciones": [
+      "Génesis 41",
+      "Job 34",
+      "Salmos 34",
+      "Lucas 4"
+    ]
+  },
+  {
+    "dia": 35,
+    "porciones": [
+      "Génesis 42",
+      "Job 35",
+      "Salmos 35",
+      "Lucas 5",
+      "Lucas 6"
+    ]
+  },
+  {
+    "dia": 36,
+    "porciones": [
+      "Génesis 43",
+      "Job 36",
+      "Salmos 36",
+      "Lucas 7",
+      "Lucas 8"
+    ]
+  },
+  {
+    "dia": 37,
+    "porciones": [
+      "Génesis 44",
+      "Génesis 45",
+      "Job 37",
+      "Salmos 37",
+      "Lucas 9"
+    ]
+  },
+  {
+    "dia": 38,
+    "porciones": [
+      "Génesis 46",
+      "Job 38",
+      "Salmos 38",
+      "Lucas 10"
+    ]
+  },
+  {
+    "dia": 39,
+    "porciones": [
+      "Génesis 47",
+      "Job 39",
+      "Salmos 39",
+      "Lucas 11",
+      "Lucas 12"
+    ]
+  },
+  {
+    "dia": 40,
+    "porciones": [
+      "Génesis 48",
+      "Job 40",
+      "Salmos 40",
+      "Lucas 13"
+    ]
+  },
+  {
+    "dia": 41,
+    "porciones": [
+      "Génesis 49",
+      "Job 41",
+      "Salmos 41",
+      "Lucas 14",
+      "Lucas 15"
+    ]
+  },
+  {
+    "dia": 42,
+    "porciones": [
+      "Génesis 50",
+      "Éxodo 1",
+      "Job 42",
+      "Salmos 42",
+      "Lucas 16"
+    ]
+  },
+  {
+    "dia": 43,
+    "porciones": [
+      "Éxodo 2",
+      "Proverbios 1",
+      "Salmos 43",
+      "Lucas 17"
+    ]
+  },
+  {
+    "dia": 44,
+    "porciones": [
+      "Éxodo 3",
+      "Proverbios 2",
+      "Salmos 44",
+      "Lucas 18",
+      "Lucas 19"
+    ]
+  },
+  {
+    "dia": 45,
+    "porciones": [
+      "Éxodo 4",
+      "Proverbios 3",
+      "Salmos 45",
+      "Lucas 20"
+    ]
+  },
+  {
+    "dia": 46,
+    "porciones": [
+      "Éxodo 5",
+      "Proverbios 4",
+      "Salmos 46",
+      "Lucas 21",
+      "Lucas 22"
+    ]
+  },
+  {
+    "dia": 47,
+    "porciones": [
+      "Éxodo 6",
+      "Éxodo 7",
+      "Proverbios 5",
+      "Salmos 47",
+      "Lucas 23"
+    ]
+  },
+  {
+    "dia": 48,
+    "porciones": [
+      "Éxodo 8",
+      "Proverbios 6",
+      "Salmos 48",
+      "Lucas 24"
+    ]
+  },
+  {
+    "dia": 49,
+    "porciones": [
+      "Éxodo 9",
+      "Proverbios 7",
+      "Salmos 49",
+      "Juan 1",
+      "Juan 2"
+    ]
+  },
+  {
+    "dia": 50,
+    "porciones": [
+      "Éxodo 10",
+      "Proverbios 8",
+      "Salmos 50",
+      "Juan 3"
+    ]
+  },
+  {
+    "dia": 51,
+    "porciones": [
+      "Éxodo 11",
+      "Proverbios 9",
+      "Salmos 51",
+      "Juan 4",
+      "Juan 5"
+    ]
+  },
+  {
+    "dia": 52,
+    "porciones": [
+      "Éxodo 12",
+      "Éxodo 13",
+      "Proverbios 10",
+      "Salmos 52",
+      "Juan 6"
+    ]
+  },
+  {
+    "dia": 53,
+    "porciones": [
+      "Éxodo 14",
+      "Proverbios 11",
+      "Salmos 53",
+      "Juan 7"
+    ]
+  },
+  {
+    "dia": 54,
+    "porciones": [
+      "Éxodo 15",
+      "Proverbios 12",
+      "Salmos 54",
+      "Juan 8",
+      "Juan 9"
+    ]
+  },
+  {
+    "dia": 55,
+    "porciones": [
+      "Éxodo 16",
+      "Proverbios 13",
+      "Salmos 55",
+      "Juan 10"
+    ]
+  },
+  {
+    "dia": 56,
+    "porciones": [
+      "Éxodo 17",
+      "Proverbios 14",
+      "Salmos 56",
+      "Juan 11",
+      "Juan 12"
+    ]
+  },
+  {
+    "dia": 57,
+    "porciones": [
+      "Éxodo 18",
+      "Proverbios 15",
+      "Salmos 57",
+      "Juan 13"
+    ]
+  },
+  {
+    "dia": 58,
+    "porciones": [
+      "Éxodo 19",
+      "Éxodo 20",
+      "Proverbios 16",
+      "Salmos 58",
+      "Juan 14"
+    ]
+  },
+  {
+    "dia": 59,
+    "porciones": [
+      "Éxodo 21",
+      "Proverbios 17",
+      "Salmos 59",
+      "Juan 15",
+      "Juan 16"
+    ]
+  },
+  {
+    "dia": 60,
+    "porciones": [
+      "Éxodo 22",
+      "Proverbios 18",
+      "Salmos 60",
+      "Juan 17",
+      "Juan 18"
+    ]
+  },
+  {
+    "dia": 61,
+    "porciones": [
+      "Éxodo 23",
+      "Proverbios 19",
+      "Salmos 61",
+      "Juan 19"
+    ]
+  },
+  {
+    "dia": 62,
+    "porciones": [
+      "Éxodo 24",
+      "Proverbios 20",
+      "Salmos 62",
+      "Juan 20",
+      "Juan 21"
+    ]
+  },
+  {
+    "dia": 63,
+    "porciones": [
+      "Éxodo 25",
+      "Éxodo 26",
+      "Proverbios 21",
+      "Salmos 63",
+      "Hechos 1"
+    ]
+  },
+  {
+    "dia": 64,
+    "porciones": [
+      "Éxodo 27",
+      "Proverbios 22",
+      "Salmos 64",
+      "Hechos 2"
+    ]
+  },
+  {
+    "dia": 65,
+    "porciones": [
+      "Éxodo 28",
+      "Proverbios 23",
+      "Salmos 65",
+      "Hechos 3",
+      "Hechos 4"
+    ]
+  },
+  {
+    "dia": 66,
+    "porciones": [
+      "Éxodo 29",
+      "Proverbios 24",
+      "Salmos 66",
+      "Hechos 5"
+    ]
+  },
+  {
+    "dia": 67,
+    "porciones": [
+      "Éxodo 30",
+      "Proverbios 25",
+      "Salmos 67",
+      "Hechos 6",
+      "Hechos 7"
+    ]
+  },
+  {
+    "dia": 68,
+    "porciones": [
+      "Éxodo 31",
+      "Éxodo 32",
+      "Proverbios 26",
+      "Salmos 68",
+      "Hechos 8"
+    ]
+  },
+  {
+    "dia": 69,
+    "porciones": [
+      "Éxodo 33",
+      "Proverbios 27",
+      "Salmos 69",
+      "Hechos 9"
+    ]
+  },
+  {
+    "dia": 70,
+    "porciones": [
+      "Éxodo 34",
+      "Proverbios 28",
+      "Salmos 70",
+      "Hechos 10",
+      "Hechos 11"
+    ]
+  },
+  {
+    "dia": 71,
+    "porciones": [
+      "Éxodo 35",
+      "Proverbios 29",
+      "Salmos 71",
+      "Hechos 12"
+    ]
+  },
+  {
+    "dia": 72,
+    "porciones": [
+      "Éxodo 36",
+      "Proverbios 30",
+      "Salmos 72",
+      "Hechos 13",
+      "Hechos 14"
+    ]
+  },
+  {
+    "dia": 73,
+    "porciones": [
+      "Éxodo 37",
+      "Éxodo 38",
+      "Proverbios 31",
+      "Salmos 73",
+      "Hechos 15"
+    ]
+  },
+  {
+    "dia": 74,
+    "porciones": [
+      "Éxodo 39",
+      "Eclesiastés 1",
+      "Salmos 74",
+      "Hechos 16"
+    ]
+  },
+  {
+    "dia": 75,
+    "porciones": [
+      "Éxodo 40",
+      "Eclesiastés 2",
+      "Salmos 75",
+      "Hechos 17",
+      "Hechos 18"
+    ]
+  },
+  {
+    "dia": 76,
+    "porciones": [
+      "Levítico 1",
+      "Eclesiastés 3",
+      "Salmos 76",
+      "Hechos 19"
+    ]
+  },
+  {
+    "dia": 77,
+    "porciones": [
+      "Levítico 2",
+      "Eclesiastés 4",
+      "Salmos 77",
+      "Hechos 20",
+      "Hechos 21"
+    ]
+  },
+  {
+    "dia": 78,
+    "porciones": [
+      "Levítico 3",
+      "Levítico 4",
+      "Eclesiastés 5",
+      "Salmos 78",
+      "Hechos 22"
+    ]
+  },
+  {
+    "dia": 79,
+    "porciones": [
+      "Levítico 5",
+      "Eclesiastés 6",
+      "Salmos 79",
+      "Hechos 23"
+    ]
+  },
+  {
+    "dia": 80,
+    "porciones": [
+      "Levítico 6",
+      "Eclesiastés 7",
+      "Salmos 80",
+      "Hechos 24",
+      "Hechos 25"
+    ]
+  },
+  {
+    "dia": 81,
+    "porciones": [
+      "Levítico 7",
+      "Eclesiastés 8",
+      "Salmos 81",
+      "Hechos 26",
+      "Hechos 27"
+    ]
+  },
+  {
+    "dia": 82,
+    "porciones": [
+      "Levítico 8",
+      "Eclesiastés 9",
+      "Salmos 82",
+      "Hechos 28"
+    ]
+  },
+  {
+    "dia": 83,
+    "porciones": [
+      "Levítico 9",
+      "Levítico 10",
+      "Eclesiastés 10",
+      "Salmos 83",
+      "Romanos 1"
+    ]
+  },
+  {
+    "dia": 84,
+    "porciones": [
+      "Levítico 11",
+      "Eclesiastés 11",
+      "Salmos 84",
+      "Romanos 2",
+      "Romanos 3"
+    ]
+  },
+  {
+    "dia": 85,
+    "porciones": [
+      "Levítico 12",
+      "Eclesiastés 12",
+      "Salmos 85",
+      "Romanos 4"
+    ]
+  },
+  {
+    "dia": 86,
+    "porciones": [
+      "Levítico 13",
+      "Cantares 1",
+      "Salmos 86",
+      "Romanos 5",
+      "Romanos 6"
+    ]
+  },
+  {
+    "dia": 87,
+    "porciones": [
+      "Levítico 14",
+      "Cantares 2",
+      "Salmos 87",
+      "Romanos 7"
+    ]
+  },
+  {
+    "dia": 88,
+    "porciones": [
+      "Levítico 15",
+      "Levítico 16",
+      "Cantares 3",
+      "Salmos 88",
+      "Romanos 8"
+    ]
+  },
+  {
+    "dia": 89,
+    "porciones": [
+      "Levítico 17",
+      "Cantares 4",
+      "Salmos 89",
+      "Romanos 9",
+      "Romanos 10"
+    ]
+  },
+  {
+    "dia": 90,
+    "porciones": [
+      "Levítico 18",
+      "Cantares 5",
+      "Salmos 90",
+      "Romanos 11"
+    ]
+  },
+  {
+    "dia": 91,
+    "porciones": [
+      "Levítico 19",
+      "Cantares 6",
+      "Salmos 91",
+      "Romanos 12",
+      "Romanos 13"
+    ]
+  },
+  {
+    "dia": 92,
+    "porciones": [
+      "Levítico 20",
+      "Cantares 7",
+      "Salmos 92",
+      "Romanos 14"
+    ]
+  },
+  {
+    "dia": 93,
+    "porciones": [
+      "Levítico 21",
+      "Cantares 8",
+      "Salmos 93",
+      "Romanos 15",
+      "Romanos 16"
+    ]
+  },
+  {
+    "dia": 94,
+    "porciones": [
+      "Levítico 22",
+      "Levítico 23",
+      "Isaías 1",
+      "Salmos 94",
+      "1 Corintios 1"
+    ]
+  },
+  {
+    "dia": 95,
+    "porciones": [
+      "Levítico 24",
+      "Isaías 2",
+      "Salmos 95",
+      "1 Corintios 2"
+    ]
+  },
+  {
+    "dia": 96,
+    "porciones": [
+      "Levítico 25",
+      "Isaías 3",
+      "Salmos 96",
+      "1 Corintios 3",
+      "1 Corintios 4"
+    ]
+  },
+  {
+    "dia": 97,
+    "porciones": [
+      "Levítico 26",
+      "Isaías 4",
+      "Salmos 97",
+      "1 Corintios 5"
+    ]
+  },
+  {
+    "dia": 98,
+    "porciones": [
+      "Levítico 27",
+      "Isaías 5",
+      "Salmos 98",
+      "1 Corintios 6",
+      "1 Corintios 7"
+    ]
+  },
+  {
+    "dia": 99,
+    "porciones": [
+      "Números 1",
+      "Números 2",
+      "Isaías 6",
+      "Salmos 99",
+      "1 Corintios 8"
+    ]
+  },
+  {
+    "dia": 100,
+    "porciones": [
+      "Números 3",
+      "Isaías 7",
+      "Salmos 100",
+      "1 Corintios 9"
+    ]
+  },
+  {
+    "dia": 101,
+    "porciones": [
+      "Números 4",
+      "Isaías 8",
+      "Salmos 101",
+      "1 Corintios 10",
+      "1 Corintios 11"
+    ]
+  },
+  {
+    "dia": 102,
+    "porciones": [
+      "Números 5",
+      "Isaías 9",
+      "Salmos 102",
+      "1 Corintios 12"
+    ]
+  },
+  {
+    "dia": 103,
+    "porciones": [
+      "Números 6",
+      "Isaías 10",
+      "Salmos 103",
+      "1 Corintios 13",
+      "1 Corintios 14"
+    ]
+  },
+  {
+    "dia": 104,
+    "porciones": [
+      "Números 7",
+      "Números 8",
+      "Isaías 11",
+      "Salmos 104",
+      "1 Corintios 15"
+    ]
+  },
+  {
+    "dia": 105,
+    "porciones": [
+      "Números 9",
+      "Isaías 12",
+      "Salmos 105",
+      "1 Corintios 16",
+      "2 Corintios 1"
+    ]
+  },
+  {
+    "dia": 106,
+    "porciones": [
+      "Números 10",
+      "Isaías 13",
+      "Salmos 106",
+      "2 Corintios 2"
+    ]
+  },
+  {
+    "dia": 107,
+    "porciones": [
+      "Números 11",
+      "Isaías 14",
+      "Salmos 107",
+      "2 Corintios 3",
+      "2 Corintios 4"
+    ]
+  },
+  {
+    "dia": 108,
+    "porciones": [
+      "Números 12",
+      "Isaías 15",
+      "Salmos 108",
+      "2 Corintios 5"
+    ]
+  },
+  {
+    "dia": 109,
+    "porciones": [
+      "Números 13",
+      "Números 14",
+      "Isaías 16",
+      "Salmos 109",
+      "2 Corintios 6"
+    ]
+  },
+  {
+    "dia": 110,
+    "porciones": [
+      "Números 15",
+      "Isaías 17",
+      "Salmos 110",
+      "2 Corintios 7",
+      "2 Corintios 8"
+    ]
+  },
+  {
+    "dia": 111,
+    "porciones": [
+      "Números 16",
+      "Isaías 18",
+      "Salmos 111",
+      "2 Corintios 9"
+    ]
+  },
+  {
+    "dia": 112,
+    "porciones": [
+      "Números 17",
+      "Isaías 19",
+      "Salmos 112",
+      "2 Corintios 10",
+      "2 Corintios 11"
+    ]
+  },
+  {
+    "dia": 113,
+    "porciones": [
+      "Números 18",
+      "Isaías 20",
+      "Salmos 113",
+      "2 Corintios 12"
+    ]
+  },
+  {
+    "dia": 114,
+    "porciones": [
+      "Números 19",
+      "Números 20",
+      "Isaías 21",
+      "Salmos 114",
+      "2 Corintios 13"
+    ]
+  },
+  {
+    "dia": 115,
+    "porciones": [
+      "Números 21",
+      "Isaías 22",
+      "Salmos 115",
+      "Gálatas 1",
+      "Gálatas 2"
+    ]
+  },
+  {
+    "dia": 116,
+    "porciones": [
+      "Números 22",
+      "Isaías 23",
+      "Salmos 116",
+      "Gálatas 3"
+    ]
+  },
+  {
+    "dia": 117,
+    "porciones": [
+      "Números 23",
+      "Isaías 24",
+      "Salmos 117",
+      "Gálatas 4",
+      "Gálatas 5"
+    ]
+  },
+  {
+    "dia": 118,
+    "porciones": [
+      "Números 24",
+      "Isaías 25",
+      "Salmos 118",
+      "Gálatas 6"
+    ]
+  },
+  {
+    "dia": 119,
+    "porciones": [
+      "Números 25",
+      "Números 26",
+      "Isaías 26",
+      "Salmos 119",
+      "Efesios 1"
+    ]
+  },
+  {
+    "dia": 120,
+    "porciones": [
+      "Números 27",
+      "Isaías 27",
+      "Salmos 120",
+      "Efesios 2",
+      "Efesios 3"
+    ]
+  },
+  {
+    "dia": 121,
+    "porciones": [
+      "Números 28",
+      "Isaías 28",
+      "Salmos 121",
+      "Efesios 4"
+    ]
+  },
+  {
+    "dia": 122,
+    "porciones": [
+      "Números 29",
+      "Isaías 29",
+      "Salmos 122",
+      "Efesios 5",
+      "Efesios 6"
+    ]
+  },
+  {
+    "dia": 123,
+    "porciones": [
+      "Números 30",
+      "Isaías 30",
+      "Salmos 123",
+      "Filipenses 1"
+    ]
+  },
+  {
+    "dia": 124,
+    "porciones": [
+      "Números 31",
+      "Números 32",
+      "Isaías 31",
+      "Salmos 124",
+      "Filipenses 2"
+    ]
+  },
+  {
+    "dia": 125,
+    "porciones": [
+      "Números 33",
+      "Isaías 32",
+      "Salmos 125",
+      "Filipenses 3",
+      "Filipenses 4"
+    ]
+  },
+  {
+    "dia": 126,
+    "porciones": [
+      "Números 34",
+      "Isaías 33",
+      "Salmos 126",
+      "Colosenses 1"
+    ]
+  },
+  {
+    "dia": 127,
+    "porciones": [
+      "Números 35",
+      "Isaías 34",
+      "Salmos 127",
+      "Colosenses 2",
+      "Colosenses 3"
+    ]
+  },
+  {
+    "dia": 128,
+    "porciones": [
+      "Números 36",
+      "Isaías 35",
+      "Salmos 128",
+      "Colosenses 4",
+      "1 Tesalonicenses 1"
+    ]
+  },
+  {
+    "dia": 129,
+    "porciones": [
+      "Deuteronomio 1",
+      "Isaías 36",
+      "Salmos 129",
+      "1 Tesalonicenses 2"
+    ]
+  },
+  {
+    "dia": 130,
+    "porciones": [
+      "Deuteronomio 2",
+      "Deuteronomio 3",
+      "Isaías 37",
+      "Salmos 130",
+      "1 Tesalonicenses 3"
+    ]
+  },
+  {
+    "dia": 131,
+    "porciones": [
+      "Deuteronomio 4",
+      "Isaías 38",
+      "Salmos 131",
+      "1 Tesalonicenses 4",
+      "1 Tesalonicenses 5"
+    ]
+  },
+  {
+    "dia": 132,
+    "porciones": [
+      "Deuteronomio 5",
+      "Isaías 39",
+      "Salmos 132",
+      "2 Tesalonicenses 1"
+    ]
+  },
+  {
+    "dia": 133,
+    "porciones": [
+      "Deuteronomio 6",
+      "Isaías 40",
+      "Salmos 133",
+      "2 Tesalonicenses 2",
+      "2 Tesalonicenses 3"
+    ]
+  },
+  {
+    "dia": 134,
+    "porciones": [
+      "Deuteronomio 7",
+      "Isaías 41",
+      "Salmos 134",
+      "1 Timoteo 1"
+    ]
+  },
+  {
+    "dia": 135,
+    "porciones": [
+      "Deuteronomio 8",
+      "Deuteronomio 9",
+      "Isaías 42",
+      "Salmos 135",
+      "1 Timoteo 2"
+    ]
+  },
+  {
+    "dia": 136,
+    "porciones": [
+      "Deuteronomio 10",
+      "Isaías 43",
+      "Salmos 136",
+      "1 Timoteo 3",
+      "1 Timoteo 4"
+    ]
+  },
+  {
+    "dia": 137,
+    "porciones": [
+      "Deuteronomio 11",
+      "Isaías 44",
+      "Salmos 137",
+      "1 Timoteo 5"
+    ]
+  },
+  {
+    "dia": 138,
+    "porciones": [
+      "Deuteronomio 12",
+      "Isaías 45",
+      "Salmos 138",
+      "1 Timoteo 6",
+      "2 Timoteo 1"
+    ]
+  },
+  {
+    "dia": 139,
+    "porciones": [
+      "Deuteronomio 13",
+      "Isaías 46",
+      "Salmos 139",
+      "2 Timoteo 2"
+    ]
+  },
+  {
+    "dia": 140,
+    "porciones": [
+      "Deuteronomio 14",
+      "Deuteronomio 15",
+      "Isaías 47",
+      "Salmos 140",
+      "2 Timoteo 3"
+    ]
+  },
+  {
+    "dia": 141,
+    "porciones": [
+      "Deuteronomio 16",
+      "Isaías 48",
+      "Salmos 141",
+      "2 Timoteo 4",
+      "Tito 1"
+    ]
+  },
+  {
+    "dia": 142,
+    "porciones": [
+      "Deuteronomio 17",
+      "Isaías 49",
+      "Salmos 142",
+      "Tito 2"
+    ]
+  },
+  {
+    "dia": 143,
+    "porciones": [
+      "Deuteronomio 18",
+      "Isaías 50",
+      "Salmos 143",
+      "Tito 3",
+      "Filemón 1"
+    ]
+  },
+  {
+    "dia": 144,
+    "porciones": [
+      "Deuteronomio 19",
+      "Isaías 51",
+      "Salmos 144",
+      "Hebreos 1"
+    ]
+  },
+  {
+    "dia": 145,
+    "porciones": [
+      "Deuteronomio 20",
+      "Deuteronomio 21",
+      "Isaías 52",
+      "Salmos 145",
+      "Hebreos 2"
+    ]
+  },
+  {
+    "dia": 146,
+    "porciones": [
+      "Deuteronomio 22",
+      "Isaías 53",
+      "Salmos 146",
+      "Hebreos 3",
+      "Hebreos 4"
+    ]
+  },
+  {
+    "dia": 147,
+    "porciones": [
+      "Deuteronomio 23",
+      "Isaías 54",
+      "Salmos 147",
+      "Hebreos 5"
+    ]
+  },
+  {
+    "dia": 148,
+    "porciones": [
+      "Deuteronomio 24",
+      "Isaías 55",
+      "Salmos 148",
+      "Hebreos 6",
+      "Hebreos 7"
+    ]
+  },
+  {
+    "dia": 149,
+    "porciones": [
+      "Deuteronomio 25",
+      "Isaías 56",
+      "Salmos 149",
+      "Hebreos 8",
+      "Hebreos 9"
+    ]
+  },
+  {
+    "dia": 150,
+    "porciones": [
+      "Deuteronomio 26",
+      "Deuteronomio 27",
+      "Isaías 57",
+      "Salmos 150",
+      "Hebreos 10"
+    ]
+  },
+  {
+    "dia": 151,
+    "porciones": [
+      "Deuteronomio 28",
+      "Isaías 58",
+      "Salmos 1",
+      "Hebreos 11"
+    ]
+  },
+  {
+    "dia": 152,
+    "porciones": [
+      "Deuteronomio 29",
+      "Isaías 59",
+      "Salmos 2",
+      "Hebreos 12",
+      "Hebreos 13"
+    ]
+  },
+  {
+    "dia": 153,
+    "porciones": [
+      "Deuteronomio 30",
+      "Isaías 60",
+      "Salmos 3",
+      "Santiago 1"
+    ]
+  },
+  {
+    "dia": 154,
+    "porciones": [
+      "Deuteronomio 31",
+      "Isaías 61",
+      "Salmos 4",
+      "Santiago 2",
+      "Santiago 3"
+    ]
+  },
+  {
+    "dia": 155,
+    "porciones": [
+      "Deuteronomio 32",
+      "Deuteronomio 33",
+      "Isaías 62",
+      "Salmos 5",
+      "Santiago 4"
+    ]
+  },
+  {
+    "dia": 156,
+    "porciones": [
+      "Deuteronomio 34",
+      "Isaías 63",
+      "Salmos 6",
+      "Santiago 5"
+    ]
+  },
+  {
+    "dia": 157,
+    "porciones": [
+      "Josué 1",
+      "Isaías 64",
+      "Salmos 7",
+      "1 Pedro 1",
+      "1 Pedro 2"
+    ]
+  },
+  {
+    "dia": 158,
+    "porciones": [
+      "Josué 2",
+      "Isaías 65",
+      "Salmos 8",
+      "1 Pedro 3"
+    ]
+  },
+  {
+    "dia": 159,
+    "porciones": [
+      "Josué 3",
+      "Isaías 66",
+      "Salmos 9",
+      "1 Pedro 4",
+      "1 Pedro 5"
+    ]
+  },
+  {
+    "dia": 160,
+    "porciones": [
+      "Josué 4",
+      "Josué 5",
+      "Jeremías 1",
+      "Salmos 10",
+      "2 Pedro 1"
+    ]
+  },
+  {
+    "dia": 161,
+    "porciones": [
+      "Josué 6",
+      "Jeremías 2",
+      "Salmos 11",
+      "2 Pedro 2"
+    ]
+  },
+  {
+    "dia": 162,
+    "porciones": [
+      "Josué 7",
+      "Jeremías 3",
+      "Salmos 12",
+      "2 Pedro 3",
+      "1 Juan 1"
+    ]
+  },
+  {
+    "dia": 163,
+    "porciones": [
+      "Josué 8",
+      "Jeremías 4",
+      "Salmos 13",
+      "1 Juan 2"
+    ]
+  },
+  {
+    "dia": 164,
+    "porciones": [
+      "Josué 9",
+      "Jeremías 5",
+      "Salmos 14",
+      "1 Juan 3",
+      "1 Juan 4"
+    ]
+  },
+  {
+    "dia": 165,
+    "porciones": [
+      "Josué 10",
+      "Jeremías 6",
+      "Salmos 15",
+      "1 Juan 5"
+    ]
+  },
+  {
+    "dia": 166,
+    "porciones": [
+      "Josué 11",
+      "Josué 12",
+      "Jeremías 7",
+      "Salmos 16",
+      "2 Juan 1"
+    ]
+  },
+  {
+    "dia": 167,
+    "porciones": [
+      "Josué 13",
+      "Jeremías 8",
+      "Salmos 17",
+      "3 Juan 1",
+      "Judas 1"
+    ]
+  },
+  {
+    "dia": 168,
+    "porciones": [
+      "Josué 14",
+      "Jeremías 9",
+      "Salmos 18",
+      "Apocalipsis 1"
+    ]
+  },
+  {
+    "dia": 169,
+    "porciones": [
+      "Josué 15",
+      "Jeremías 10",
+      "Salmos 19",
+      "Apocalipsis 2",
+      "Apocalipsis 3"
+    ]
+  },
+  {
+    "dia": 170,
+    "porciones": [
+      "Josué 16",
+      "Jeremías 11",
+      "Salmos 20",
+      "Apocalipsis 4"
+    ]
+  },
+  {
+    "dia": 171,
+    "porciones": [
+      "Josué 17",
+      "Josué 18",
+      "Jeremías 12",
+      "Salmos 21",
+      "Apocalipsis 5"
+    ]
+  },
+  {
+    "dia": 172,
+    "porciones": [
+      "Josué 19",
+      "Jeremías 13",
+      "Salmos 22",
+      "Apocalipsis 6",
+      "Apocalipsis 7"
+    ]
+  },
+  {
+    "dia": 173,
+    "porciones": [
+      "Josué 20",
+      "Jeremías 14",
+      "Salmos 23",
+      "Apocalipsis 8",
+      "Apocalipsis 9"
+    ]
+  },
+  {
+    "dia": 174,
+    "porciones": [
+      "Josué 21",
+      "Jeremías 15",
+      "Salmos 24",
+      "Apocalipsis 10"
+    ]
+  },
+  {
+    "dia": 175,
+    "porciones": [
+      "Josué 22",
+      "Jeremías 16",
+      "Salmos 25",
+      "Apocalipsis 11",
+      "Apocalipsis 12"
+    ]
+  },
+  {
+    "dia": 176,
+    "porciones": [
+      "Josué 23",
+      "Josué 24",
+      "Jeremías 17",
+      "Salmos 26",
+      "Apocalipsis 13"
+    ]
+  },
+  {
+    "dia": 177,
+    "porciones": [
+      "Jueces 1",
+      "Jeremías 18",
+      "Salmos 27",
+      "Apocalipsis 14"
+    ]
+  },
+  {
+    "dia": 178,
+    "porciones": [
+      "Jueces 2",
+      "Jeremías 19",
+      "Salmos 28",
+      "Apocalipsis 15",
+      "Apocalipsis 16"
+    ]
+  },
+  {
+    "dia": 179,
+    "porciones": [
+      "Jueces 3",
+      "Jeremías 20",
+      "Salmos 29",
+      "Apocalipsis 17"
+    ]
+  },
+  {
+    "dia": 180,
+    "porciones": [
+      "Jueces 4",
+      "Jeremías 21",
+      "Salmos 30",
+      "Apocalipsis 18",
+      "Apocalipsis 19"
+    ]
+  },
+  {
+    "dia": 181,
+    "porciones": [
+      "Jueces 5",
+      "Jueces 6",
+      "Jeremías 22",
+      "Salmos 31",
+      "Apocalipsis 20"
+    ]
+  },
+  {
+    "dia": 182,
+    "porciones": [
+      "Jueces 7",
+      "Jeremías 23",
+      "Salmos 32",
+      "Apocalipsis 21"
+    ]
+  },
+  {
+    "dia": 183,
+    "porciones": [
+      "Jueces 8",
+      "Jeremías 24",
+      "Salmos 33",
+      "Apocalipsis 22",
+      "Mateo 1"
+    ]
+  },
+  {
+    "dia": 184,
+    "porciones": [
+      "Jueces 9",
+      "Jeremías 25",
+      "Salmos 34",
+      "Mateo 2"
+    ]
+  },
+  {
+    "dia": 185,
+    "porciones": [
+      "Jueces 10",
+      "Jeremías 26",
+      "Salmos 35",
+      "Mateo 3",
+      "Mateo 4"
+    ]
+  },
+  {
+    "dia": 186,
+    "porciones": [
+      "Jueces 11",
+      "Jueces 12",
+      "Jeremías 27",
+      "Salmos 36",
+      "Mateo 5"
+    ]
+  },
+  {
+    "dia": 187,
+    "porciones": [
+      "Jueces 13",
+      "Jeremías 28",
+      "Salmos 37",
+      "Mateo 6"
+    ]
+  },
+  {
+    "dia": 188,
+    "porciones": [
+      "Jueces 14",
+      "Jeremías 29",
+      "Salmos 38",
+      "Mateo 7",
+      "Mateo 8"
+    ]
+  },
+  {
+    "dia": 189,
+    "porciones": [
+      "Jueces 15",
+      "Jeremías 30",
+      "Salmos 39",
+      "Mateo 9"
+    ]
+  },
+  {
+    "dia": 190,
+    "porciones": [
+      "Jueces 16",
+      "Jeremías 31",
+      "Salmos 40",
+      "Mateo 10",
+      "Mateo 11"
+    ]
+  },
+  {
+    "dia": 191,
+    "porciones": [
+      "Jueces 17",
+      "Jueces 18",
+      "Jeremías 32",
+      "Salmos 41",
+      "Mateo 12"
+    ]
+  },
+  {
+    "dia": 192,
+    "porciones": [
+      "Jueces 19",
+      "Jeremías 33",
+      "Salmos 42",
+      "Mateo 13"
+    ]
+  },
+  {
+    "dia": 193,
+    "porciones": [
+      "Jueces 20",
+      "Jeremías 34",
+      "Salmos 43",
+      "Mateo 14",
+      "Mateo 15"
+    ]
+  },
+  {
+    "dia": 194,
+    "porciones": [
+      "Jueces 21",
+      "Jeremías 35",
+      "Salmos 44",
+      "Mateo 16"
+    ]
+  },
+  {
+    "dia": 195,
+    "porciones": [
+      "Rut 1",
+      "Jeremías 36",
+      "Salmos 45",
+      "Mateo 17",
+      "Mateo 18"
+    ]
+  },
+  {
+    "dia": 196,
+    "porciones": [
+      "Rut 2",
+      "Rut 3",
+      "Jeremías 37",
+      "Salmos 46",
+      "Mateo 19"
+    ]
+  },
+  {
+    "dia": 197,
+    "porciones": [
+      "Rut 4",
+      "Jeremías 38",
+      "Salmos 47",
+      "Mateo 20",
+      "Mateo 21"
+    ]
+  },
+  {
+    "dia": 198,
+    "porciones": [
+      "1 Samuel 1",
+      "Jeremías 39",
+      "Salmos 48",
+      "Mateo 22"
+    ]
+  },
+  {
+    "dia": 199,
+    "porciones": [
+      "1 Samuel 2",
+      "Jeremías 40",
+      "Salmos 49",
+      "Mateo 23",
+      "Mateo 24"
+    ]
+  },
+  {
+    "dia": 200,
+    "porciones": [
+      "1 Samuel 3",
+      "Jeremías 41",
+      "Salmos 50",
+      "Mateo 25"
+    ]
+  },
+  {
+    "dia": 201,
+    "porciones": [
+      "1 Samuel 4",
+      "1 Samuel 5",
+      "Jeremías 42",
+      "Salmos 51",
+      "Mateo 26"
+    ]
+  },
+  {
+    "dia": 202,
+    "porciones": [
+      "1 Samuel 6",
+      "Jeremías 43",
+      "Salmos 52",
+      "Mateo 27",
+      "Mateo 28"
+    ]
+  },
+  {
+    "dia": 203,
+    "porciones": [
+      "1 Samuel 7",
+      "Jeremías 44",
+      "Salmos 53",
+      "Marcos 1"
+    ]
+  },
+  {
+    "dia": 204,
+    "porciones": [
+      "1 Samuel 8",
+      "Jeremías 45",
+      "Salmos 54",
+      "Marcos 2",
+      "Marcos 3"
+    ]
+  },
+  {
+    "dia": 205,
+    "porciones": [
+      "1 Samuel 9",
+      "Jeremías 46",
+      "Salmos 55",
+      "Marcos 4"
+    ]
+  },
+  {
+    "dia": 206,
+    "porciones": [
+      "1 Samuel 10",
+      "Jeremías 47",
+      "Salmos 56",
+      "Marcos 5",
+      "Marcos 6"
+    ]
+  },
+  {
+    "dia": 207,
+    "porciones": [
+      "1 Samuel 11",
+      "1 Samuel 12",
+      "Jeremías 48",
+      "Salmos 57",
+      "Marcos 7"
+    ]
+  },
+  {
+    "dia": 208,
+    "porciones": [
+      "1 Samuel 13",
+      "Jeremías 49",
+      "Salmos 58",
+      "Marcos 8"
+    ]
+  },
+  {
+    "dia": 209,
+    "porciones": [
+      "1 Samuel 14",
+      "Jeremías 50",
+      "Salmos 59",
+      "Marcos 9",
+      "Marcos 10"
+    ]
+  },
+  {
+    "dia": 210,
+    "porciones": [
+      "1 Samuel 15",
+      "Jeremías 51",
+      "Salmos 60",
+      "Marcos 11"
+    ]
+  },
+  {
+    "dia": 211,
+    "porciones": [
+      "1 Samuel 16",
+      "Jeremías 52",
+      "Salmos 61",
+      "Marcos 12",
+      "Marcos 13"
+    ]
+  },
+  {
+    "dia": 212,
+    "porciones": [
+      "1 Samuel 17",
+      "1 Samuel 18",
+      "Lamentaciones 1",
+      "Salmos 62",
+      "Marcos 14"
+    ]
+  },
+  {
+    "dia": 213,
+    "porciones": [
+      "1 Samuel 19",
+      "Lamentaciones 2",
+      "Salmos 63",
+      "Marcos 15"
+    ]
+  },
+  {
+    "dia": 214,
+    "porciones": [
+      "1 Samuel 20",
+      "Lamentaciones 3",
+      "Salmos 64",
+      "Marcos 16",
+      "Lucas 1"
+    ]
+  },
+  {
+    "dia": 215,
+    "porciones": [
+      "1 Samuel 21",
+      "Lamentaciones 4",
+      "Salmos 65",
+      "Lucas 2"
+    ]
+  },
+  {
+    "dia": 216,
+    "porciones": [
+      "1 Samuel 22",
+      "Lamentaciones 5",
+      "Salmos 66",
+      "Lucas 3",
+      "Lucas 4"
+    ]
+  },
+  {
+    "dia": 217,
+    "porciones": [
+      "1 Samuel 23",
+      "1 Samuel 24",
+      "Ezequiel 1",
+      "Salmos 67",
+      "Lucas 5"
+    ]
+  },
+  {
+    "dia": 218,
+    "porciones": [
+      "1 Samuel 25",
+      "Ezequiel 2",
+      "Salmos 68",
+      "Lucas 6"
+    ]
+  },
+  {
+    "dia": 219,
+    "porciones": [
+      "1 Samuel 26",
+      "Ezequiel 3",
+      "Salmos 69",
+      "Lucas 7",
+      "Lucas 8"
+    ]
+  },
+  {
+    "dia": 220,
+    "porciones": [
+      "1 Samuel 27",
+      "Ezequiel 4",
+      "Salmos 70",
+      "Lucas 9",
+      "Lucas 10"
+    ]
+  },
+  {
+    "dia": 221,
+    "porciones": [
+      "1 Samuel 28",
+      "Ezequiel 5",
+      "Salmos 71",
+      "Lucas 11"
+    ]
+  },
+  {
+    "dia": 222,
+    "porciones": [
+      "1 Samuel 29",
+      "1 Samuel 30",
+      "Ezequiel 6",
+      "Salmos 72",
+      "Lucas 12"
+    ]
+  },
+  {
+    "dia": 223,
+    "porciones": [
+      "1 Samuel 31",
+      "Ezequiel 7",
+      "Salmos 73",
+      "Lucas 13",
+      "Lucas 14"
+    ]
+  },
+  {
+    "dia": 224,
+    "porciones": [
+      "2 Samuel 1",
+      "Ezequiel 8",
+      "Salmos 74",
+      "Lucas 15"
+    ]
+  },
+  {
+    "dia": 225,
+    "porciones": [
+      "2 Samuel 2",
+      "Ezequiel 9",
+      "Salmos 75",
+      "Lucas 16",
+      "Lucas 17"
+    ]
+  },
+  {
+    "dia": 226,
+    "porciones": [
+      "2 Samuel 3",
+      "Ezequiel 10",
+      "Salmos 76",
+      "Lucas 18"
+    ]
+  },
+  {
+    "dia": 227,
+    "porciones": [
+      "2 Samuel 4",
+      "2 Samuel 5",
+      "Ezequiel 11",
+      "Salmos 77",
+      "Lucas 19"
+    ]
+  },
+  {
+    "dia": 228,
+    "porciones": [
+      "2 Samuel 6",
+      "Ezequiel 12",
+      "Salmos 78",
+      "Lucas 20",
+      "Lucas 21"
+    ]
+  },
+  {
+    "dia": 229,
+    "porciones": [
+      "2 Samuel 7",
+      "Ezequiel 13",
+      "Salmos 79",
+      "Lucas 22"
+    ]
+  },
+  {
+    "dia": 230,
+    "porciones": [
+      "2 Samuel 8",
+      "Ezequiel 14",
+      "Salmos 80",
+      "Lucas 23",
+      "Lucas 24"
+    ]
+  },
+  {
+    "dia": 231,
+    "porciones": [
+      "2 Samuel 9",
+      "Ezequiel 15",
+      "Salmos 81",
+      "Juan 1"
+    ]
+  },
+  {
+    "dia": 232,
+    "porciones": [
+      "2 Samuel 10",
+      "2 Samuel 11",
+      "Ezequiel 16",
+      "Salmos 82",
+      "Juan 2"
+    ]
+  },
+  {
+    "dia": 233,
+    "porciones": [
+      "2 Samuel 12",
+      "Ezequiel 17",
+      "Salmos 83",
+      "Juan 3",
+      "Juan 4"
+    ]
+  },
+  {
+    "dia": 234,
+    "porciones": [
+      "2 Samuel 13",
+      "Ezequiel 18",
+      "Salmos 84",
+      "Juan 5"
+    ]
+  },
+  {
+    "dia": 235,
+    "porciones": [
+      "2 Samuel 14",
+      "Ezequiel 19",
+      "Salmos 85",
+      "Juan 6",
+      "Juan 7"
+    ]
+  },
+  {
+    "dia": 236,
+    "porciones": [
+      "2 Samuel 15",
+      "Ezequiel 20",
+      "Salmos 86",
+      "Juan 8"
+    ]
+  },
+  {
+    "dia": 237,
+    "porciones": [
+      "2 Samuel 16",
+      "2 Samuel 17",
+      "Ezequiel 21",
+      "Salmos 87",
+      "Juan 9"
+    ]
+  },
+  {
+    "dia": 238,
+    "porciones": [
+      "2 Samuel 18",
+      "Ezequiel 22",
+      "Salmos 88",
+      "Juan 10",
+      "Juan 11"
+    ]
+  },
+  {
+    "dia": 239,
+    "porciones": [
+      "2 Samuel 19",
+      "Ezequiel 23",
+      "Salmos 89",
+      "Juan 12"
+    ]
+  },
+  {
+    "dia": 240,
+    "porciones": [
+      "2 Samuel 20",
+      "Ezequiel 24",
+      "Salmos 90",
+      "Juan 13",
+      "Juan 14"
+    ]
+  },
+  {
+    "dia": 241,
+    "porciones": [
+      "2 Samuel 21",
+      "Ezequiel 25",
+      "Salmos 91",
+      "Juan 15",
+      "Juan 16"
+    ]
+  },
+  {
+    "dia": 242,
+    "porciones": [
+      "2 Samuel 22",
+      "Ezequiel 26",
+      "Salmos 92",
+      "Juan 17"
+    ]
+  },
+  {
+    "dia": 243,
+    "porciones": [
+      "2 Samuel 23",
+      "2 Samuel 24",
+      "Ezequiel 27",
+      "Salmos 93",
+      "Juan 18"
+    ]
+  },
+  {
+    "dia": 244,
+    "porciones": [
+      "1 Reyes 1",
+      "Ezequiel 28",
+      "Salmos 94",
+      "Juan 19",
+      "Juan 20"
+    ]
+  },
+  {
+    "dia": 245,
+    "porciones": [
+      "1 Reyes 2",
+      "Ezequiel 29",
+      "Salmos 95",
+      "Juan 21"
+    ]
+  },
+  {
+    "dia": 246,
+    "porciones": [
+      "1 Reyes 3",
+      "Ezequiel 30",
+      "Salmos 96",
+      "Hechos 1",
+      "Hechos 2"
+    ]
+  },
+  {
+    "dia": 247,
+    "porciones": [
+      "1 Reyes 4",
+      "Ezequiel 31",
+      "Salmos 97",
+      "Hechos 3"
+    ]
+  },
+  {
+    "dia": 248,
+    "porciones": [
+      "1 Reyes 5",
+      "1 Reyes 6",
+      "Ezequiel 32",
+      "Salmos 98",
+      "Hechos 4"
+    ]
+  },
+  {
+    "dia": 249,
+    "porciones": [
+      "1 Reyes 7",
+      "Ezequiel 33",
+      "Salmos 99",
+      "Hechos 5",
+      "Hechos 6"
+    ]
+  },
+  {
+    "dia": 250,
+    "porciones": [
+      "1 Reyes 8",
+      "Ezequiel 34",
+      "Salmos 100",
+      "Hechos 7"
+    ]
+  },
+  {
+    "dia": 251,
+    "porciones": [
+      "1 Reyes 9",
+      "Ezequiel 35",
+      "Salmos 101",
+      "Hechos 8",
+      "Hechos 9"
+    ]
+  },
+  {
+    "dia": 252,
+    "porciones": [
+      "1 Reyes 10",
+      "Ezequiel 36",
+      "Salmos 102",
+      "Hechos 10"
+    ]
+  },
+  {
+    "dia": 253,
+    "porciones": [
+      "1 Reyes 11",
+      "1 Reyes 12",
+      "Ezequiel 37",
+      "Salmos 103",
+      "Hechos 11"
+    ]
+  },
+  {
+    "dia": 254,
+    "porciones": [
+      "1 Reyes 13",
+      "Ezequiel 38",
+      "Salmos 104",
+      "Hechos 12",
+      "Hechos 13"
+    ]
+  },
+  {
+    "dia": 255,
+    "porciones": [
+      "1 Reyes 14",
+      "Ezequiel 39",
+      "Salmos 105",
+      "Hechos 14"
+    ]
+  },
+  {
+    "dia": 256,
+    "porciones": [
+      "1 Reyes 15",
+      "Ezequiel 40",
+      "Salmos 106",
+      "Hechos 15",
+      "Hechos 16"
+    ]
+  },
+  {
+    "dia": 257,
+    "porciones": [
+      "1 Reyes 16",
+      "Ezequiel 41",
+      "Salmos 107",
+      "Hechos 17"
+    ]
+  },
+  {
+    "dia": 258,
+    "porciones": [
+      "1 Reyes 17",
+      "1 Reyes 18",
+      "Ezequiel 42",
+      "Salmos 108",
+      "Hechos 18"
+    ]
+  },
+  {
+    "dia": 259,
+    "porciones": [
+      "1 Reyes 19",
+      "Ezequiel 43",
+      "Salmos 109",
+      "Hechos 19",
+      "Hechos 20"
+    ]
+  },
+  {
+    "dia": 260,
+    "porciones": [
+      "1 Reyes 20",
+      "Ezequiel 44",
+      "Salmos 110",
+      "Hechos 21"
+    ]
+  },
+  {
+    "dia": 261,
+    "porciones": [
+      "1 Reyes 21",
+      "Ezequiel 45",
+      "Salmos 111",
+      "Hechos 22",
+      "Hechos 23"
+    ]
+  },
+  {
+    "dia": 262,
+    "porciones": [
+      "1 Reyes 22",
+      "Ezequiel 46",
+      "Salmos 112",
+      "Hechos 24"
+    ]
+  },
+  {
+    "dia": 263,
+    "porciones": [
+      "2 Reyes 1",
+      "2 Reyes 2",
+      "Ezequiel 47",
+      "Salmos 113",
+      "Hechos 25"
+    ]
+  },
+  {
+    "dia": 264,
+    "porciones": [
+      "2 Reyes 3",
+      "Ezequiel 48",
+      "Salmos 114",
+      "Hechos 26",
+      "Hechos 27"
+    ]
+  },
+  {
+    "dia": 265,
+    "porciones": [
+      "2 Reyes 4",
+      "Daniel 1",
+      "Salmos 115",
+      "Hechos 28",
+      "Romanos 1"
+    ]
+  },
+  {
+    "dia": 266,
+    "porciones": [
+      "2 Reyes 5",
+      "Daniel 2",
+      "Salmos 116",
+      "Romanos 2"
+    ]
+  },
+  {
+    "dia": 267,
+    "porciones": [
+      "2 Reyes 6",
+      "Daniel 3",
+      "Salmos 117",
+      "Romanos 3",
+      "Romanos 4"
+    ]
+  },
+  {
+    "dia": 268,
+    "porciones": [
+      "2 Reyes 7",
+      "2 Reyes 8",
+      "Daniel 4",
+      "Salmos 118",
+      "Romanos 5"
+    ]
+  },
+  {
+    "dia": 269,
+    "porciones": [
+      "2 Reyes 9",
+      "Daniel 5",
+      "Salmos 119",
+      "Romanos 6"
+    ]
+  },
+  {
+    "dia": 270,
+    "porciones": [
+      "2 Reyes 10",
+      "Daniel 6",
+      "Salmos 120",
+      "Romanos 7",
+      "Romanos 8"
+    ]
+  },
+  {
+    "dia": 271,
+    "porciones": [
+      "2 Reyes 11",
+      "Daniel 7",
+      "Salmos 121",
+      "Romanos 9"
+    ]
+  },
+  {
+    "dia": 272,
+    "porciones": [
+      "2 Reyes 12",
+      "Daniel 8",
+      "Salmos 122",
+      "Romanos 10",
+      "Romanos 11"
+    ]
+  },
+  {
+    "dia": 273,
+    "porciones": [
+      "2 Reyes 13",
+      "2 Reyes 14",
+      "Daniel 9",
+      "Salmos 123",
+      "Romanos 12"
+    ]
+  },
+  {
+    "dia": 274,
+    "porciones": [
+      "2 Reyes 15",
+      "Daniel 10",
+      "Salmos 124",
+      "Romanos 13"
+    ]
+  },
+  {
+    "dia": 275,
+    "porciones": [
+      "2 Reyes 16",
+      "Daniel 11",
+      "Salmos 125",
+      "Romanos 14",
+      "Romanos 15"
+    ]
+  },
+  {
+    "dia": 276,
+    "porciones": [
+      "2 Reyes 17",
+      "Daniel 12",
+      "Salmos 126",
+      "Romanos 16"
+    ]
+  },
+  {
+    "dia": 277,
+    "porciones": [
+      "2 Reyes 18",
+      "Oseas 1",
+      "Salmos 127",
+      "1 Corintios 1",
+      "1 Corintios 2"
+    ]
+  },
+  {
+    "dia": 278,
+    "porciones": [
+      "2 Reyes 19",
+      "Oseas 2",
+      "Salmos 128",
+      "1 Corintios 3"
+    ]
+  },
+  {
+    "dia": 279,
+    "porciones": [
+      "2 Reyes 20",
+      "2 Reyes 21",
+      "Oseas 3",
+      "Salmos 129",
+      "1 Corintios 4"
+    ]
+  },
+  {
+    "dia": 280,
+    "porciones": [
+      "2 Reyes 22",
+      "Oseas 4",
+      "Salmos 130",
+      "1 Corintios 5",
+      "1 Corintios 6"
+    ]
+  },
+  {
+    "dia": 281,
+    "porciones": [
+      "2 Reyes 23",
+      "Oseas 5",
+      "Salmos 131",
+      "1 Corintios 7"
+    ]
+  },
+  {
+    "dia": 282,
+    "porciones": [
+      "2 Reyes 24",
+      "Oseas 6",
+      "Salmos 132",
+      "1 Corintios 8",
+      "1 Corintios 9"
+    ]
+  },
+  {
+    "dia": 283,
+    "porciones": [
+      "2 Reyes 25",
+      "Oseas 7",
+      "Salmos 133",
+      "1 Corintios 10"
+    ]
+  },
+  {
+    "dia": 284,
+    "porciones": [
+      "1 Crónicas 1",
+      "1 Crónicas 2",
+      "Oseas 8",
+      "Salmos 134",
+      "1 Corintios 11"
+    ]
+  },
+  {
+    "dia": 285,
+    "porciones": [
+      "1 Crónicas 3",
+      "Oseas 9",
+      "Salmos 135",
+      "1 Corintios 12",
+      "1 Corintios 13"
+    ]
+  },
+  {
+    "dia": 286,
+    "porciones": [
+      "1 Crónicas 4",
+      "Oseas 10",
+      "Salmos 136",
+      "1 Corintios 14"
+    ]
+  },
+  {
+    "dia": 287,
+    "porciones": [
+      "1 Crónicas 5",
+      "Oseas 11",
+      "Salmos 137",
+      "1 Corintios 15",
+      "1 Corintios 16"
+    ]
+  },
+  {
+    "dia": 288,
+    "porciones": [
+      "1 Crónicas 6",
+      "Oseas 12",
+      "Salmos 138",
+      "2 Corintios 1",
+      "2 Corintios 2"
+    ]
+  },
+  {
+    "dia": 289,
+    "porciones": [
+      "1 Crónicas 7",
+      "1 Crónicas 8",
+      "Oseas 13",
+      "Salmos 139",
+      "2 Corintios 3"
+    ]
+  },
+  {
+    "dia": 290,
+    "porciones": [
+      "1 Crónicas 9",
+      "Oseas 14",
+      "Salmos 140",
+      "2 Corintios 4"
+    ]
+  },
+  {
+    "dia": 291,
+    "porciones": [
+      "1 Crónicas 10",
+      "Joel 1",
+      "Salmos 141",
+      "2 Corintios 5",
+      "2 Corintios 6"
+    ]
+  },
+  {
+    "dia": 292,
+    "porciones": [
+      "1 Crónicas 11",
+      "Joel 2",
+      "Salmos 142",
+      "2 Corintios 7"
+    ]
+  },
+  {
+    "dia": 293,
+    "porciones": [
+      "1 Crónicas 12",
+      "Joel 3",
+      "Salmos 143",
+      "2 Corintios 8",
+      "2 Corintios 9"
+    ]
+  },
+  {
+    "dia": 294,
+    "porciones": [
+      "1 Crónicas 13",
+      "1 Crónicas 14",
+      "Amós 1",
+      "Salmos 144",
+      "2 Corintios 10"
+    ]
+  },
+  {
+    "dia": 295,
+    "porciones": [
+      "1 Crónicas 15",
+      "Amós 2",
+      "Salmos 145",
+      "2 Corintios 11"
+    ]
+  },
+  {
+    "dia": 296,
+    "porciones": [
+      "1 Crónicas 16",
+      "Amós 3",
+      "Salmos 146",
+      "2 Corintios 12",
+      "2 Corintios 13"
+    ]
+  },
+  {
+    "dia": 297,
+    "porciones": [
+      "1 Crónicas 17",
+      "Amós 4",
+      "Salmos 147",
+      "Gálatas 1"
+    ]
+  },
+  {
+    "dia": 298,
+    "porciones": [
+      "1 Crónicas 18",
+      "Amós 5",
+      "Salmos 148",
+      "Gálatas 2",
+      "Gálatas 3"
+    ]
+  },
+  {
+    "dia": 299,
+    "porciones": [
+      "1 Crónicas 19",
+      "1 Crónicas 20",
+      "Amós 6",
+      "Salmos 149",
+      "Gálatas 4"
+    ]
+  },
+  {
+    "dia": 300,
+    "porciones": [
+      "1 Crónicas 21",
+      "Amós 7",
+      "Salmos 150",
+      "Gálatas 5"
+    ]
+  },
+  {
+    "dia": 301,
+    "porciones": [
+      "1 Crónicas 22",
+      "Amós 8",
+      "Salmos 1",
+      "Gálatas 6",
+      "Efesios 1"
+    ]
+  },
+  {
+    "dia": 302,
+    "porciones": [
+      "1 Crónicas 23",
+      "Amós 9",
+      "Salmos 8",
+      "Efesios 2"
+    ]
+  },
+  {
+    "dia": 303,
+    "porciones": [
+      "1 Crónicas 24",
+      "Abdías 1",
+      "Salmos 15",
+      "Efesios 3",
+      "Efesios 4"
+    ]
+  },
+  {
+    "dia": 304,
+    "porciones": [
+      "1 Crónicas 25",
+      "1 Crónicas 26",
+      "Jonás 1",
+      "Salmos 16",
+      "Efesios 5"
+    ]
+  },
+  {
+    "dia": 305,
+    "porciones": [
+      "1 Crónicas 27",
+      "Jonás 2",
+      "Salmos 19",
+      "Efesios 6"
+    ]
+  },
+  {
+    "dia": 306,
+    "porciones": [
+      "1 Crónicas 28",
+      "Jonás 3",
+      "Salmos 23",
+      "Filipenses 1",
+      "Filipenses 2"
+    ]
+  },
+  {
+    "dia": 307,
+    "porciones": [
+      "1 Crónicas 29",
+      "Jonás 4",
+      "Salmos 27",
+      "Filipenses 3"
+    ]
+  },
+  {
+    "dia": 308,
+    "porciones": [
+      "2 Crónicas 1",
+      "Miqueas 1",
+      "Salmos 32",
+      "Filipenses 4",
+      "Colosenses 1"
+    ]
+  },
+  {
+    "dia": 309,
+    "porciones": [
+      "2 Crónicas 2",
+      "2 Crónicas 3",
+      "Miqueas 2",
+      "Salmos 34",
+      "Colosenses 2"
+    ]
+  },
+  {
+    "dia": 310,
+    "porciones": [
+      "2 Crónicas 4",
+      "Miqueas 3",
+      "Salmos 37",
+      "Colosenses 3",
+      "Colosenses 4"
+    ]
+  },
+  {
+    "dia": 311,
+    "porciones": [
+      "2 Crónicas 5",
+      "Miqueas 4",
+      "Salmos 40",
+      "1 Tesalonicenses 1"
+    ]
+  },
+  {
+    "dia": 312,
+    "porciones": [
+      "2 Crónicas 6",
+      "Miqueas 5",
+      "Salmos 42",
+      "1 Tesalonicenses 2",
+      "1 Tesalonicenses 3"
+    ]
+  },
+  {
+    "dia": 313,
+    "porciones": [
+      "2 Crónicas 7",
+      "Miqueas 6",
+      "Salmos 46",
+      "1 Tesalonicenses 4"
+    ]
+  },
+  {
+    "dia": 314,
+    "porciones": [
+      "2 Crónicas 8",
+      "Miqueas 7",
+      "Salmos 51",
+      "1 Tesalonicenses 5",
+      "2 Tesalonicenses 1"
+    ]
+  },
+  {
+    "dia": 315,
+    "porciones": [
+      "2 Crónicas 9",
+      "2 Crónicas 10",
+      "Nahúm 1",
+      "Salmos 63",
+      "2 Tesalonicenses 2"
+    ]
+  },
+  {
+    "dia": 316,
+    "porciones": [
+      "2 Crónicas 11",
+      "Nahúm 2",
+      "Salmos 67",
+      "2 Tesalonicenses 3"
+    ]
+  },
+  {
+    "dia": 317,
+    "porciones": [
+      "2 Crónicas 12",
+      "Nahúm 3",
+      "Salmos 84",
+      "1 Timoteo 1",
+      "1 Timoteo 2"
+    ]
+  },
+  {
+    "dia": 318,
+    "porciones": [
+      "2 Crónicas 13",
+      "Habacuc 1",
+      "Salmos 86",
+      "1 Timoteo 3"
+    ]
+  },
+  {
+    "dia": 319,
+    "porciones": [
+      "2 Crónicas 14",
+      "Habacuc 2",
+      "Salmos 90",
+      "1 Timoteo 4",
+      "1 Timoteo 5"
+    ]
+  },
+  {
+    "dia": 320,
+    "porciones": [
+      "2 Crónicas 15",
+      "2 Crónicas 16",
+      "Habacuc 3",
+      "Salmos 91",
+      "1 Timoteo 6"
+    ]
+  },
+  {
+    "dia": 321,
+    "porciones": [
+      "2 Crónicas 17",
+      "Sofonías 1",
+      "Salmos 95",
+      "2 Timoteo 1"
+    ]
+  },
+  {
+    "dia": 322,
+    "porciones": [
+      "2 Crónicas 18",
+      "Sofonías 2",
+      "Salmos 96",
+      "2 Timoteo 2",
+      "2 Timoteo 3"
+    ]
+  },
+  {
+    "dia": 323,
+    "porciones": [
+      "2 Crónicas 19",
+      "Sofonías 3",
+      "Salmos 100",
+      "2 Timoteo 4"
+    ]
+  },
+  {
+    "dia": 324,
+    "porciones": [
+      "2 Crónicas 20",
+      "Hageo 1",
+      "Salmos 103",
+      "Tito 1",
+      "Tito 2"
+    ]
+  },
+  {
+    "dia": 325,
+    "porciones": [
+      "2 Crónicas 21",
+      "2 Crónicas 22",
+      "Hageo 2",
+      "Salmos 107",
+      "Tito 3"
+    ]
+  },
+  {
+    "dia": 326,
+    "porciones": [
+      "2 Crónicas 23",
+      "Zacarías 1",
+      "Salmos 110",
+      "Filemón 1"
+    ]
+  },
+  {
+    "dia": 327,
+    "porciones": [
+      "2 Crónicas 24",
+      "Zacarías 2",
+      "Salmos 116",
+      "Hebreos 1",
+      "Hebreos 2"
+    ]
+  },
+  {
+    "dia": 328,
+    "porciones": [
+      "2 Crónicas 25",
+      "Zacarías 3",
+      "Salmos 117",
+      "Hebreos 3"
+    ]
+  },
+  {
+    "dia": 329,
+    "porciones": [
+      "2 Crónicas 26",
+      "Zacarías 4",
+      "Salmos 118",
+      "Hebreos 4",
+      "Hebreos 5"
+    ]
+  },
+  {
+    "dia": 330,
+    "porciones": [
+      "2 Crónicas 27",
+      "2 Crónicas 28",
+      "Zacarías 5",
+      "Salmos 119",
+      "Hebreos 6"
+    ]
+  },
+  {
+    "dia": 331,
+    "porciones": [
+      "2 Crónicas 29",
+      "Zacarías 6",
+      "Salmos 121",
+      "Hebreos 7"
+    ]
+  },
+  {
+    "dia": 332,
+    "porciones": [
+      "2 Crónicas 30",
+      "Zacarías 7",
+      "Salmos 122",
+      "Hebreos 8",
+      "Hebreos 9"
+    ]
+  },
+  {
+    "dia": 333,
+    "porciones": [
+      "2 Crónicas 31",
+      "Zacarías 8",
+      "Salmos 127",
+      "Hebreos 10",
+      "Hebreos 11"
+    ]
+  },
+  {
+    "dia": 334,
+    "porciones": [
+      "2 Crónicas 32",
+      "Zacarías 9",
+      "Salmos 128",
+      "Hebreos 12"
+    ]
+  },
+  {
+    "dia": 335,
+    "porciones": [
+      "2 Crónicas 33",
+      "2 Crónicas 34",
+      "Zacarías 10",
+      "Salmos 130",
+      "Hebreos 13"
+    ]
+  },
+  {
+    "dia": 336,
+    "porciones": [
+      "2 Crónicas 35",
+      "Zacarías 11",
+      "Salmos 133",
+      "Santiago 1",
+      "Santiago 2"
+    ]
+  },
+  {
+    "dia": 337,
+    "porciones": [
+      "2 Crónicas 36",
+      "Zacarías 12",
+      "Salmos 136",
+      "Santiago 3"
+    ]
+  },
+  {
+    "dia": 338,
+    "porciones": [
+      "Esdras 1",
+      "Zacarías 13",
+      "Salmos 139",
+      "Santiago 4",
+      "Santiago 5"
+    ]
+  },
+  {
+    "dia": 339,
+    "porciones": [
+      "Esdras 2",
+      "Zacarías 14",
+      "Salmos 143",
+      "1 Pedro 1"
+    ]
+  },
+  {
+    "dia": 340,
+    "porciones": [
+      "Esdras 3",
+      "Esdras 4",
+      "Malaquías 1",
+      "Salmos 145",
+      "1 Pedro 2"
+    ]
+  },
+  {
+    "dia": 341,
+    "porciones": [
+      "Esdras 5",
+      "Malaquías 2",
+      "Salmos 146",
+      "1 Pedro 3",
+      "1 Pedro 4"
+    ]
+  },
+  {
+    "dia": 342,
+    "porciones": [
+      "Esdras 6",
+      "Malaquías 3",
+      "Salmos 147",
+      "1 Pedro 5"
+    ]
+  },
+  {
+    "dia": 343,
+    "porciones": [
+      "Esdras 7",
+      "Malaquías 4",
+      "Salmos 148",
+      "2 Pedro 1",
+      "2 Pedro 2"
+    ]
+  },
+  {
+    "dia": 344,
+    "porciones": [
+      "Esdras 8",
+      "Job 1",
+      "Salmos 149",
+      "2 Pedro 3"
+    ]
+  },
+  {
+    "dia": 345,
+    "porciones": [
+      "Esdras 9",
+      "Esdras 10",
+      "Job 19",
+      "Salmos 150",
+      "1 Juan 1"
+    ]
+  },
+  {
+    "dia": 346,
+    "porciones": [
+      "Nehemías 1",
+      "Job 28",
+      "Salmos 1",
+      "1 Juan 2",
+      "1 Juan 3"
+    ]
+  },
+  {
+    "dia": 347,
+    "porciones": [
+      "Nehemías 2",
+      "Job 38",
+      "Salmos 23",
+      "1 Juan 4"
+    ]
+  },
+  {
+    "dia": 348,
+    "porciones": [
+      "Nehemías 3",
+      "Job 42",
+      "Salmos 27",
+      "1 Juan 5",
+      "2 Juan 1"
+    ]
+  },
+  {
+    "dia": 349,
+    "porciones": [
+      "Nehemías 4",
+      "Proverbios 3",
+      "Salmos 46",
+      "3 Juan 1"
+    ]
+  },
+  {
+    "dia": 350,
+    "porciones": [
+      "Nehemías 5",
+      "Proverbios 31",
+      "Salmos 51",
+      "Judas 1",
+      "Apocalipsis 1"
+    ]
+  },
+  {
+    "dia": 351,
+    "porciones": [
+      "Nehemías 6",
+      "Nehemías 7",
+      "Eclesiastés 3",
+      "Salmos 91",
+      "Apocalipsis 2"
+    ]
+  },
+  {
+    "dia": 352,
+    "porciones": [
+      "Nehemías 8",
+      "Eclesiastés 12",
+      "Salmos 103",
+      "Apocalipsis 3"
+    ]
+  },
+  {
+    "dia": 353,
+    "porciones": [
+      "Nehemías 9",
+      "Cantares 2",
+      "Salmos 119",
+      "Apocalipsis 4",
+      "Apocalipsis 5"
+    ]
+  },
+  {
+    "dia": 354,
+    "porciones": [
+      "Nehemías 10",
+      "Isaías 40",
+      "Salmos 139",
+      "Apocalipsis 6"
+    ]
+  },
+  {
+    "dia": 355,
+    "porciones": [
+      "Nehemías 11",
+      "Isaías 53",
+      "Salmos 150",
+      "Apocalipsis 7",
+      "Apocalipsis 8"
+    ]
+  },
+  {
+    "dia": 356,
+    "porciones": [
+      "Nehemías 12",
+      "Nehemías 13",
+      "Isaías 55",
+      "Salmos 8",
+      "Apocalipsis 9"
+    ]
+  },
+  {
+    "dia": 357,
+    "porciones": [
+      "Ester 1",
+      "Jeremías 29",
+      "Salmos 42",
+      "Apocalipsis 10",
+      "Apocalipsis 11"
+    ]
+  },
+  {
+    "dia": 358,
+    "porciones": [
+      "Ester 2",
+      "Jeremías 31",
+      "Salmos 63",
+      "Apocalipsis 12"
+    ]
+  },
+  {
+    "dia": 359,
+    "porciones": [
+      "Ester 3",
+      "Lamentaciones 3",
+      "Salmos 84",
+      "Apocalipsis 13",
+      "Apocalipsis 14"
+    ]
+  },
+  {
+    "dia": 360,
+    "porciones": [
+      "Ester 4",
+      "Ezequiel 36",
+      "Salmos 90",
+      "Apocalipsis 15"
+    ]
+  },
+  {
+    "dia": 361,
+    "porciones": [
+      "Ester 5",
+      "Ester 6",
+      "Daniel 3",
+      "Salmos 100",
+      "Apocalipsis 16"
+    ]
+  },
+  {
+    "dia": 362,
+    "porciones": [
+      "Ester 7",
+      "Daniel 7",
+      "Salmos 121",
+      "Apocalipsis 17",
+      "Apocalipsis 18"
+    ]
+  },
+  {
+    "dia": 363,
+    "porciones": [
+      "Ester 8",
+      "Jonás 2",
+      "Salmos 130",
+      "Apocalipsis 19"
+    ]
+  },
+  {
+    "dia": 364,
+    "porciones": [
+      "Ester 9",
+      "Miqueas 6",
+      "Salmos 145",
+      "Apocalipsis 20",
+      "Apocalipsis 21"
+    ]
+  },
+  {
+    "dia": 365,
+    "porciones": [
+      "Ester 10",
+      "Malaquías 3",
+      "Salmos 148",
+      "Apocalipsis 22"
+    ]
+  }
+]
