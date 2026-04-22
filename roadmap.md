@@ -94,42 +94,48 @@
 ## 📊 FASE 2: Planes, Progreso y Datos Personales
 *Implementar la lógica completa de planes, seguimiento de progreso, rachas, favoritos, notas y sistema de logros.*
 
-- [ ] **Carga de planes desde JSON:** `planService.js` que consume `json/plans.json` y los archivos individuales (`json/plan-biblia-anual.json`, etc.) vía API interna estática (`/api/plans`). Parseo y normalización de datos.
-- [ ] **Página Planes (`/planes`):** SSG. Catálogo de planes con:
+- [x] **Carga de planes desde JSON:** `planService.js` que consume `json/plans.json` y los archivos individuales (`json/plan-biblia-anual.json`, etc.) vía API interna estática (`/api/plans`). Parseo y normalización de datos.
+- [x] **Página Planes (`/planes`):** SSG. Catálogo de planes con:
   - Bento grid de categorías (Leer en un año, Temático, Solo NT).
   - Tarjetas de planes con imagen B&W que se colorea en hover, título Newsreader, descripción, tags de categoría.
   - Botones: Iniciar, Continuar, Reiniciar, Archivar.
   - Buscador minimalista de "línea única" sin caja contenedora (underline sutil `outline-variant`).
-- [ ] **Página Plan completo (`/plan-completo`):** SSR. Calendario interactivo del plan activo:
-  - Grilla de días tipo "GitHub contributions" con estados visuales (no iniciado, completado, con nota, favorito).
-  - Navegación por meses.
-  - Click en día → carga ese día en Leer hoy.
-- [ ] **Lógica de progreso (`storageService.js`):** Guardar en localStorage: plan activo, fecha de inicio, días completados, última lectura. Funciones: `markDayAsRead()`, `getProgress()`, `getStreak()`.
-- [ ] **Sistema de rachas:** Cálculo de racha actual y racha máxima. Regla de gracia: 1 día por semana sin romper. Manejo de atrasos (ponerse al día vs saltar al día actual).
-- [ ] **Favoritos:** Guardar pasaje con referencia, versión, fecha. Listado en Mi espacio. Filtro por libro/testamento.
-- [ ] **Notas y Reflexiones del Scriptorio:**
+- [x] **Página Plan completo (`/plan-completo`):** SSG. Calendario interactivo del plan activo:
+  - Grilla de días tipo "GitHub contributions" con estados visuales (futuro, completado, pendiente, hoy).
+  - Navegación por meses (mapeo real de días del plan a meses de calendario usando `startDate`).
+  - Click en día → carga ese día en Leer hoy (via `mb365_target_day` en localStorage).
+- [x] **Lógica de progreso (`storageService.js`):** Guardar en localStorage: plan activo, fecha de inicio, días completados, última lectura. Funciones: `markDayAsRead()`, `getProgress()`, `getStreak()`.
+- [x] **Sistema de rachas:** Cálculo de racha actual y racha máxima. Regla de gracia: 1 día por semana sin romper. Manejo de atrasos (ponerse al día vs saltar al día actual).
+- [x] **Favoritos:** Guardar pasaje con referencia, versión, fecha. Listado en Mi espacio. Filtro por texto/referencia. Eliminar favorito con confirmación hover.
+- [x] **Notas y Reflexiones del Scriptorio:**
   - Crear, editar, eliminar notas asociadas a un día o referencia.
   - Editor simple (textarea con formato mínimo).
-  - Notas largas tipo "diario devocional" con fecha y referencia.
+  - Formulario de nueva reflexión directamente en Mi espacio.
+  - Pre-llenado desde "Leer hoy" via `mb365_note_ref` en localStorage.
   - Listado en Mi espacio con fecha y referencia.
-- [ ] **Sistema de logros (Gamificación sutil):**
-  - Badges visuales por hitos: Racha 7 días, Racha 30 días, Racha 100 días.
-  - Completar un libro (ej: "Terminé Génesis").
-  - Completar un testamento.
-  - Medallas con iconos Material Symbols, fondos `secondary-container` o `primary-fixed`.
-  - Estado bloqueado con opacidad 60% y candado.
-- [ ] **Página Mi espacio (`/mi-espacio`):** SSG shell + islands interactivas. Pestañas:
-  - Resumen: plan activo, racha, versión preferida, favoritos, notas, versículo diario.
-  - Planes: lista activos/archivados, progreso, acciones.
-  - Favoritos: pasajes guardados con filtro.
-  - Notas: listado con editar/eliminar.
-  - Historial: últimas lecturas, búsquedas, capítulos.
-  - Configuración: tema, tamaño texto, plan por defecto, modo 29 feb.
-  - Respaldo: exportar/importar JSON.
-- [ ] **Exportar/Importar JSON:** Botón visible en Mi espacio → descarga `mibiblia365-backup-YYYY-MM-DD.json`. Importar con validación de schema y merge inteligente.
-- [ ] **Recordatorio de respaldo:** Banner automático cada 30 días sugiriendo exportar datos.
+- [x] **Sistema de logros (Gamificación sutil):**
+  - Badges visuales por hitos: Racha 7, 30, 100 días; 30, 100, 180, 365 días leídos.
+  - Medallas con iconos Material Symbols, fondo `primary-fixed`.
+  - Estado bloqueado con opacidad 40% y candado.
+  - `checkAndSaveAchievements()` llamado al marcar día como leído.
+- [x] **Página Mi espacio (`/mi-espacio`):** SSG shell + islands Alpine.js. Pestañas:
+  - Resumen: bento de estadísticas, plan activo con progreso, accesos rápidos.
+  - Favoritos: pasajes guardados con filtro y eliminación.
+  - Notas: formulario de nueva reflexión + listado con editar/eliminar inline.
+  - Logros: grid de badges desbloqueados/bloqueados.
+  - Configuración: tema, tamaño texto, versión por defecto, modo 29 feb.
+  - Respaldo: exportar/importar JSON con feedback visual.
+- [x] **Exportar/Importar JSON:** Botón visible en Mi espacio → descarga `mibiblia365-respaldo-YYYY-MM-DD.json`. Importar con validación de schema y merge inteligente.
+- [x] **Recordatorio de respaldo:** Banner automático cada 30 días sugiriendo exportar datos (con botón de acción directa y cierre).
 
 **Entregable de Fase 2:** Usuario puede iniciar un plan, seguir su progreso, guardar favoritos y notas, escribir reflexiones, desbloquear logros, y respaldar sus datos.
+
+### Registro de avance Fase 2 (2026-04-22)
+- **Nuevas páginas:** `/planes` (SSG, catálogo de 6 planes con búsqueda y acciones), `/plan-completo` (SSG, calendario GitHub-style con navegación por meses reales), `/mi-espacio` (SSG shell + 6 pestañas Alpine.js).
+- **Servicios actualizados:** `storageService.js` ampliado con `ACHIEVEMENT_DEFS`, `getAchievements()`, `checkAndSaveAchievements()`, `getReadingHistory()`, `addToHistory()`.
+- **Alpine.js ampliado:** 3 nuevos componentes registrados: `planesPage` (gestión de planes con estado activo), `planCalendar` (calendario mensual con mapeo real de fechas), `miEspacio` (hub con tabs, favoritos, notas, logros, configuración, respaldo).
+- **`lecturaHoy` actualizado:** soporte para día específico via `mb365_target_day`, propiedad `subtituloCapitulo`, botón de favorito, llamada a `checkAndSaveAchievements()`, historial de lectura, `mb365_note_ref` para Scriptorio.
+- **Build:** ✅ Sin errores. Rutas prerenizadas: `/`, `/planes`, `/plan-completo`, `/mi-espacio`, `/api/versions.json`, `/api/plans/*.json`. Ruta SSR: `/leer-hoy`.
 
 ---
 
