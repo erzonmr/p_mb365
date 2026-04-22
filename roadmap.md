@@ -183,11 +183,11 @@
   - CLS (Cumulative Layout Shift) < 0.1.
   - INP (Interaction to Next Paint) < 200ms.
   - Lighthouse Performance ≥ 95 en todas las páginas SSG.
-- [ ] **Optimización de fuentes:** Cargar Newsreader y Manrope con `&display=swap` y preconnect a `fonts.googleapis.com` y `fonts.gstatic.com`. Evaluar self-hosting para CSP futuro.
+- [x] **Optimización de fuentes:** Cargar Newsreader y Manrope con `&display=swap` y preconnect a `fonts.googleapis.com` y `fonts.gstatic.com`. Evaluar self-hosting para CSP futuro.
 - [ ] **Optimización de imágenes:** Usar componente `<Image />` de Astro para portadas de planes y Open Graph images. Formato WebP/AVIF automático, lazy loading, tamaños responsivos.
-- [ ] **Preconnect y DNS-prefetch:** `docs-bible-api.netlify.app` en el `<head>` global.
-- [ ] **CSP automático (Astro 6):** Activar `csp: true` en `astro.config.mjs`. Astro 6 genera hashes automáticos para inline scripts y styles. Revisar que no bloquee scripts de tema o localStorage.
-- [ ] **Headers de seguridad en Vercel:** Configurar `vercel.json` con:
+- [x] **Preconnect y DNS-prefetch:** `docs-bible-api.netlify.app` en el `<head>` global.
+- [x] **CSP automático (Astro 6):** Activar `csp: true` en `astro.config.mjs`. Astro 6 genera hashes automáticos para inline scripts y styles. Revisar que no bloquee scripts de tema o localStorage.
+- [x] **Headers de seguridad en Vercel:** Configurar `vercel.json` con:
   - `X-Frame-Options: DENY`
   - `X-Content-Type-Options: nosniff`
   - `Referrer-Policy: strict-origin-when-cross-origin`
@@ -200,14 +200,30 @@
   - Ajustar tipografía y márgenes según viewport.
   - Sidebar en desktop, bottom nav en móvil.
   - Hamburger menu en tablet.
-- [ ] **Modo lectura nocturna refinado:**
+- [x] **Modo lectura nocturna refinado:**
   - Ajustes finos de paleta oscura (fondo `#1c1c19`, texto `#f0ede8`, acentos `#a8c878`).
   - Transición suave entre temas (300ms).
   - Respetar `prefers-color-scheme` en primera visita.
   - Nav inferior y toast PWA adaptados al modo oscuro (si aplica).
-- [ ] **Contemplación semanal:** Implementar sección rotativa en Inicio con quotes de padres de la iglesia/santos, usando la estética del prototipo (fondo `on-background` `#1c1c19`, texto `surface` `#fcf9f4`, icono de comillas grande en `primary` opacidad 20%).
+- [x] **Contemplación semanal:** Implementar sección rotativa en Inicio con quotes de padres de la iglesia/santos, usando la estética del prototipo (fondo `on-background` `#1c1c19`, texto `surface` `#fcf9f4`, icono de comillas grande en `primary` opacidad 20%).
 
 **Entregable de Fase 4:** Lighthouse ≥ 95 en todas las páginas. Sitio seguro, accesible y fluido en todos los dispositivos. Fidelidad visual al prototipo validada.
+
+### Verificación de estado Fase 4 (2026-04-22)
+- **Conclusión:** Fase 4 **no está totalmente superada** aún; está en estado **parcial**.
+- **Implementado y verificado en código:**
+  - Fuentes Google con `display=swap` + `preconnect` (`fonts.googleapis.com` y `fonts.gstatic.com`) en layout global.
+  - `preconnect` + `dns-prefetch` a `docs-bible-api.netlify.app` en `<head>` global.
+  - CSP activa con `csp: true` en Astro 6.
+  - Headers de seguridad en `vercel.json` (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`).
+  - Modo oscuro refinado con paleta solicitada, transición de 300ms y respeto de `prefers-color-scheme` en primera visita.
+  - Sección de **Contemplación Semanal** implementada en Inicio y rotación semanal de citas.
+- **Pendiente para cerrar Fase 4:**
+  - Medición formal de Core Web Vitals / Lighthouse ≥ 95 en todas las páginas.
+  - Auditoría a11y formal con axe-core (aunque ya hay avance fuerte en `aria-label` y targets de 44px).
+  - Validación responsive final en dispositivos reales (incluye decisión final de navegación tablet/hamburger).
+  - Optimización de imágenes con `<Image />` queda pendiente; actualmente el MVP usa iconografía/vector y no tiene portadas raster en tarjetas.
+- **Corrección aplicada en este roadmap:** checkboxes actualizados para reflejar el estado real implementado vs. pendiente.
 
 ---
 
