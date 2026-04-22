@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/postcss';
 
 export default defineConfig({
   adapter: vercel(),
+  csp: true,
   integrations: [alpinejs({ entrypoint: '/src/alpine/index.js' })],
   vite: {
     css: {

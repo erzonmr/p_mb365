@@ -82,10 +82,10 @@
 
 /* --- Modo Oscuro: Override de tokens vía clase .dark --- */
 .dark {
-  --color-primary: #b6d088;
+  --color-primary: #a8c878;
   --color-primary-container: #364e14;
   --color-primary-fixed: #d2eca2;
-  --color-primary-fixed-dim: #b6d088;
+  --color-primary-fixed-dim: #a8c878;
   --color-on-primary: #1e3400;
   --color-on-primary-container: #d2eca2;
   --color-inverse-primary: #4b6026;
@@ -106,10 +106,10 @@
   --color-surface-container-highest: #393932;
 
   --color-background: #1c1c19;
-  --color-on-background: #e6e3de;
-  --color-on-surface: #e6e3de;
+  --color-on-background: #f0ede8;
+  --color-on-surface: #f0ede8;
   --color-on-surface-variant: #c8c7ba;
-  --color-inverse-surface: #e6e3de;
+  --color-inverse-surface: #f0ede8;
   --color-inverse-on-surface: #31302d;
 
   --color-outline: #928f82;
