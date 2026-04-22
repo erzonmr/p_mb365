@@ -147,12 +147,12 @@
   - Navegación capítulo anterior/siguiente.
   - URL limpia y compartible.
   - Estética idéntica a Leer hoy (Newsreader para texto, Manrope para UI).
-- [ ] **SEO por capítulo (SSR realista):**
+- [x] **SEO por capítulo (SSR realista):**
   - Meta-tags (título, descripción, Open Graph) generados desde **nuestros datos JSON** (nombre del libro, capítulo, versículo de referencia).
   - Esto garantiza que si la API falla, los meta-tags siguen siendo correctos para compartir.
   - El texto bíblico se renderiza vía SSR si la API responde, o vía hidratación en cliente si falla.
-- [ ] **Sitemap dinámico:** `sitemap.xml` generado en build con rutas estáticas. Para rutas dinámicas de Biblia, incluir al menos los 66 libros × 1 capítulo inicial (ej: `/biblia/genesis/1`) para que Google descubra la estructura.
-- [ ] **Página Buscar (`/buscar`):** SSR.
+- [x] **Sitemap dinámico:** `sitemap.xml` generado en build con rutas estáticas. Para rutas dinámicas de Biblia, incluir al menos los 66 libros × 1 capítulo inicial (ej: `/biblia/genesis/1`) para que Google descubra la estructura.
+- [x] **Página Buscar (`/buscar`):** SSR.
   - Campo de búsqueda con debounce (250ms).
   - Selector de versión.
   - Filtros por testamento/libro.
@@ -160,10 +160,18 @@
   - Acceso directo al pasaje.
   - Guardar favorito desde resultados.
   - Diseño minimalista: input sin caja contenedora, underline sutil `outline-variant` que cambia a verde oliva al enfocar.
-- [ ] **Página Acerca (`/acerca`) y FAQ (`/preguntas-frecuentes`):** SSG. Contenido estático con buena estructura semántica para SEO.
-- [ ] **View Transitions sutiles:** Integrar `<ViewTransitions />` de Astro para transiciones `fade` entre páginas. Deben ser imperceptibles en términos de performance (no bloquear la navegación).
+- [x] **Página Acerca (`/acerca`) y FAQ (`/preguntas-frecuentes`):** SSG. Contenido estático con buena estructura semántica para SEO.
+- [x] **View Transitions sutiles:** Integrar en layout global el router de transiciones de Astro para `fade` entre páginas sin bloquear la navegación.
 
 **Entregable de Fase 3:** Usuario puede leer cualquier capítulo de la Biblia, buscar palabras, y compartir URLs con preview rica en redes sociales.
+
+### Registro de avance Fase 3 (2026-04-22)
+- **Nuevas rutas SSR:** `/biblia/[libro]/[capitulo]` (capítulos con SSR + fallback de hidratación) y `/buscar` (debounce, filtros, paginación y guardado a favoritos).
+- **SEO por capítulo:** título/description/OG derivados del catálogo local de libros y capítulo, independiente de disponibilidad de API externa.
+- **Sitemap dinámico:** endpoint `src/pages/sitemap.xml.js` ahora incluye rutas estáticas y seed dinámico de 66 rutas de Biblia (`/biblia/<libro>/1`).
+- **Contenido SEO estático:** nuevas páginas `/acerca` y `/preguntas-frecuentes`.
+- **Transiciones:** layout global actualizado con `ClientRouter` de `astro:transitions`.
+- **Nota técnica buscador:** implementación MVP para esta fase; explora capítulos iniciales por libro filtrado para mantener tiempos de respuesta estables en SSR/Edge.
 
 ---
 

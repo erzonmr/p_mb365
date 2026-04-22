@@ -1,0 +1,119 @@
+---
+export const prerender = false;
+
+import Layout from '../../../layouts/Layout.astro';
+import { getChapter } from '../../../lib/bibleService.js';
+import { getBookBySlug, chapterReference } from '../../../lib/bibleCatalog.js';
+
+const { libro, capitulo } = Astro.params;
+const chapter = Number.parseInt(capitulo || '', 10);
+const book = getBookBySlug(libro || '');
+
+if (!book || Number.isNaN(chapter) || chapter < 1 || chapter > book.chapters) {
+  return Astro.redirect('/buscar', 302);
+}
+
+const reference = chapterReference(book.slug, chapter);
+
+let chapterData = null;
+let chapterError = '';
+
+try {
+  chapterData = await getChapter(reference, 'rv1960');
+} catch (err) {
+  chapterError = err?.message || 'No fue posible cargar el texto en el servidor.';
+}
+
+const seoDescription = `Lee ${book.name} ${chapter} en línea con Mi Biblia 365. Texto bíblico, navegación por capítulos y lectura contemplativa.`;
+---
+
+<Layout
+  title={`${book.name} ${chapter}`}
+  description={seoDescription}
+  ogTitle={`${book.name} ${chapter} · Mi Biblia 365`}
+  ogDescription={seoDescription}
+  currentPage="leer"
+  cdnCache={600}
+>
+  <section
+    x-data="bibliaReader"
+    data-book-slug={book.slug}
+    data-book-name={book.name}
+    data-current-chapter={chapter}
+    data-total-chapters={book.chapters}
+    data-reference={reference}
+    class="max-w-3xl mx-auto px-6 md:px-10 py-8"
+  >
+    <header class="mb-8">
+      <p class="manrope-caps text-xs text-secondary mb-2">Biblia libre</p>
+      <h1 class="font-body text-5xl md:text-6xl italic text-on-surface leading-none" x-text="title">{reference}</h1>
+      <p class="font-label text-xs uppercase tracking-[0.2em] text-secondary mt-3">Capítulo <span x-text="chapter">{chapter}</span></p>
+    </header>
+
+    <div class="grid md:grid-cols-3 gap-3 mb-8">
+      <label class="flex flex-col gap-2">
+        <span class="manrope-caps text-[10px] text-secondary">Testamento</span>
+        <select x-model="testament" x-on:change="onTestamentChange" class="bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <option value="at">Antiguo Testamento</option>
+          <option value="nt">Nuevo Testamento</option>
+        </select>
+      </label>
+      <label class="flex flex-col gap-2">
+        <span class="manrope-caps text-[10px] text-secondary">Libro</span>
+        <select x-model="selectedBookSlug" x-on:change="onBookChange" class="bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <template x-for="bookItem in filteredBooks" :key="bookItem.slug">
+            <option :value="bookItem.slug" x-text="bookItem.name"></option>
+          </template>
+        </select>
+      </label>
+      <label class="flex flex-col gap-2">
+        <span class="manrope-caps text-[10px] text-secondary">Capítulo</span>
+        <select x-model.number="chapter" x-on:change="goToSelection" class="bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <template x-for="num in chapterOptions" :key="num">
+            <option :value="num" x-text="num"></option>
+          </template>
+        </select>
+      </label>
+    </div>
+
+    <div class="flex items-center justify-between gap-3 mb-8">
+      <a
+        class="px-4 py-2 rounded-xl font-label text-sm bg-surface-container hover:bg-surface-container-high transition-colors"
+        :class="!prevLink ? 'pointer-events-none opacity-30' : ''"
+        :href="prevLink || '#'">
+        ← Capítulo anterior
+      </a>
+      <a
+        class="px-4 py-2 rounded-xl font-label text-sm bg-surface-container hover:bg-surface-container-high transition-colors"
+        :class="!nextLink ? 'pointer-events-none opacity-30' : ''"
+        :href="nextLink || '#'">
+        Capítulo siguiente →
+      </a>
+    </div>
+
+    {chapterData ? (
+      <article class="space-y-5 text-xl leading-[1.8] font-body text-on-surface" aria-label={`Texto bíblico de ${reference}`}>
+        {chapterData.verses.map((verse) => (
+          <p>
+            <sup class="font-label text-xs font-bold text-primary mr-1 align-super">{verse.number}</sup>
+            {verse.text}
+          </p>
+        ))}
+      </article>
+    ) : (
+      <div class="bg-surface-container-low border border-outline-variant/20 rounded-2xl p-6">
+        <p class="font-body italic text-on-surface-variant mb-3">No se pudo renderizar el capítulo en SSR.</p>
+        <p class="font-label text-sm text-secondary" x-text="errorMessage">{chapterError}</p>
+        <button x-on:click="loadChapter()" class="mt-4 btn-primary px-5 py-2 rounded-xl font-label text-sm">Intentar hidratación</button>
+        <article class="mt-6 space-y-4 text-lg leading-[1.75]" x-show="verses.length">
+          <template x-for="verse in verses" :key="verse.number">
+            <p>
+              <sup class="font-label text-xs font-bold text-primary mr-1 align-super" x-text="verse.number"></sup>
+              <span x-text="verse.text"></span>
+            </p>
+          </template>
+        </article>
+      </div>
+    )}
+  </section>
+</Layout>

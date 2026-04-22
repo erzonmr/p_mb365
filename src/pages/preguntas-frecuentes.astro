@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    q: '¿Necesito crear una cuenta?',
+    a: 'No. Mi Biblia 365 funciona sin registro. Tus datos se guardan localmente en tu navegador.',
+  },
+  {
+    q: '¿Puedo cambiar de versión bíblica?',
+    a: 'Sí. Puedes elegir la versión desde Leer hoy, Biblia libre y el buscador.',
+  },
+  {
+    q: '¿Qué pasa si cambio de dispositivo?',
+    a: 'Usa el respaldo JSON en Mi espacio para exportar e importar tus datos personales.',
+  },
+  {
+    q: '¿La aplicación funciona sin conexión?',
+    a: 'La interfaz carga, pero el texto bíblico depende de conexión a las APIs externas.',
+  },
+];
+---
+
+<Layout
+  title="Preguntas frecuentes"
+  description="Respuestas rápidas sobre lectura, respaldo de datos y uso general de Mi Biblia 365."
+>
+  <section class="max-w-3xl mx-auto px-6 md:px-10 py-10">
+    <h1 class="font-body text-5xl italic text-on-surface mb-8">Preguntas frecuentes</h1>
+    <div class="space-y-4">
+      {faqs.map((item) => (
+        <details class="bg-surface-container-low rounded-2xl p-5 border border-outline-variant/20">
+          <summary class="font-label text-base text-on-surface cursor-pointer">{item.q}</summary>
+          <p class="mt-3 font-body text-on-surface-variant leading-relaxed">{item.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</Layout>

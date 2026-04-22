@@ -1,0 +1,87 @@
+---
+export const prerender = false;
+
+import Layout from '../layouts/Layout.astro';
+import { BIBLE_BOOKS } from '../lib/bibleCatalog.js';
+---
+
+<Layout
+  title="Buscar"
+  description="Busca palabras y expresiones en la Biblia, filtra por testamento o libro, y abre el pasaje directamente."
+  currentPage="buscar"
+  cdnCache={120}
+>
+  <section x-data="buscarBiblia" class="max-w-4xl mx-auto px-6 md:px-10 py-8">
+    <header class="mb-10">
+      <p class="manrope-caps text-xs text-secondary mb-2">Buscador bíblico</p>
+      <h1 class="font-body text-5xl md:text-6xl italic text-on-surface leading-none">Buscar en las Escrituras</h1>
+    </header>
+
+    <div class="grid md:grid-cols-4 gap-4 items-end mb-8">
+      <label class="md:col-span-2">
+        <span class="manrope-caps text-[10px] text-secondary">Texto</span>
+        <input
+          x-model="query"
+          x-on:input="onInput"
+          type="search"
+          placeholder="Ej: amor, fe, esperanza"
+          class="w-full bg-transparent border-b border-outline-variant/40 focus:border-primary py-2 outline-none font-body text-lg"
+        />
+      </label>
+      <label>
+        <span class="manrope-caps text-[10px] text-secondary">Versión</span>
+        <select x-model="versionId" class="w-full bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <template x-for="v in versions" :key="v.id"><option :value="v.id" x-text="v.label"></option></template>
+        </select>
+      </label>
+      <label>
+        <span class="manrope-caps text-[10px] text-secondary">Testamento</span>
+        <select x-model="testament" class="w-full bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <option value="">Todos</option>
+          <option value="at">Antiguo</option>
+          <option value="nt">Nuevo</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="mb-8">
+      <label>
+        <span class="manrope-caps text-[10px] text-secondary">Libro</span>
+        <select x-model="bookSlug" class="w-full md:w-80 bg-surface-container px-3 py-2 rounded-xl font-label text-sm">
+          <option value="">Todos los libros</option>
+          <template x-for="book in filteredBooks" :key="book.slug">
+            <option :value="book.slug" x-text="book.name"></option>
+          </template>
+        </select>
+      </label>
+    </div>
+
+    <div x-show="loading" class="space-y-3">
+      <div class="h-4 bg-surface-container-high rounded animate-pulse"></div>
+      <div class="h-4 bg-surface-container-high rounded animate-pulse"></div>
+      <div class="h-4 bg-surface-container-high rounded animate-pulse"></div>
+    </div>
+
+    <p x-show="!loading && !results.length && query.length >= 3" class="font-body italic text-on-surface-variant">No encontramos resultados con esos filtros.</p>
+
+    <div x-show="errorMessage" class="mb-6 p-4 rounded-xl bg-surface-container-low text-sm font-label text-secondary" x-text="errorMessage"></div>
+
+    <div class="space-y-4" x-show="results.length">
+      <template x-for="item in paginatedResults" :key="item.id">
+        <article class="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/20">
+          <div class="flex items-start justify-between gap-4">
+            <a :href="item.url" class="font-label text-sm text-primary hover:underline" x-text="item.reference"></a>
+            <button x-on:click="saveFavorite(item)" class="material-symbols-outlined text-secondary hover:text-primary">bookmark_add</button>
+          </div>
+          <p class="mt-2 font-body text-on-surface" x-text="item.text"></p>
+        </article>
+      </template>
+    </div>
+
+    <div x-show="totalPages > 1" class="mt-8 flex items-center gap-3">
+      <button x-on:click="prevPage" :disabled="page === 1" class="px-3 py-2 rounded-lg bg-surface-container disabled:opacity-40">Anterior</button>
+      <span class="font-label text-sm text-secondary">Página <span x-text="page"></span> de <span x-text="totalPages"></span></span>
+      <button x-on:click="nextPage" :disabled="page === totalPages" class="px-3 py-2 rounded-lg bg-surface-container disabled:opacity-40">Siguiente</button>
+    </div>
+  </section>
+</Layout>
