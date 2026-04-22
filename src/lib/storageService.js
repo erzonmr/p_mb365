@@ -255,6 +255,65 @@ export function getNoteForReference(reference) {
   return getNotes().find((n) => n.reference === reference) || null;
 }
 
+// ─── Historial de Lectura ────────────────────────────────────────────────────
+
+const HISTORY_KEY = 'mb365_history';
+
+export function getReadingHistory() {
+  return safeGet(HISTORY_KEY, []);
+}
+
+export function addToHistory(planDay, reference) {
+  const history = getReadingHistory();
+  const entry = { planDay, reference, readAt: new Date().toISOString() };
+  const updated = [entry, ...history.filter((h) => h.reference !== reference)].slice(0, 50);
+  safeSet(HISTORY_KEY, updated);
+}
+
+// ─── Logros ──────────────────────────────────────────────────────────────────
+
+export const ACHIEVEMENT_DEFS = [
+  { id: 'streak_7',   label: '7 días seguidos',   desc: 'Primera semana de racha',     icon: 'local_fire_department', tier: 'bronze' },
+  { id: 'streak_30',  label: 'Racha de 30 días',  desc: 'Un mes de lectura constante', icon: 'whatshot',              tier: 'silver' },
+  { id: 'streak_100', label: 'Racha de 100 días', desc: 'Fidelidad extraordinaria',    icon: 'stars',                 tier: 'gold' },
+  { id: 'days_30',    label: '30 días leídos',    desc: 'Primer mes completado',        icon: 'workspace_premium',     tier: 'bronze' },
+  { id: 'days_100',   label: '100 días leídos',   desc: 'Cien capítulos recorridos',    icon: 'military_tech',         tier: 'silver' },
+  { id: 'days_180',   label: 'Medio año',         desc: '180 días de lectura fiel',    icon: 'trophy',                tier: 'silver' },
+  { id: 'days_365',   label: 'Biblia completa',   desc: 'La Biblia en un año',          icon: 'auto_stories',          tier: 'gold' },
+];
+
+export function getAchievements() {
+  return safeGet(KEYS.ACHIEVEMENTS, []);
+}
+
+export function checkAndSaveAchievements() {
+  const current = getAchievements();
+  const currentIds = new Set(current.map((a) => a.id));
+  const streakData = getStreak();
+  const { completed } = getProgress();
+  const maxStreak = Math.max(streakData.current, streakData.max);
+
+  const checks = [
+    { id: 'streak_7',   unlocked: maxStreak >= 7 },
+    { id: 'streak_30',  unlocked: maxStreak >= 30 },
+    { id: 'streak_100', unlocked: maxStreak >= 100 },
+    { id: 'days_30',    unlocked: completed >= 30 },
+    { id: 'days_100',   unlocked: completed >= 100 },
+    { id: 'days_180',   unlocked: completed >= 180 },
+    { id: 'days_365',   unlocked: completed >= 365 },
+  ];
+
+  const newly = checks
+    .filter(({ id, unlocked }) => unlocked && !currentIds.has(id))
+    .map(({ id }) => ({ id, unlockedAt: new Date().toISOString() }));
+
+  if (newly.length > 0) {
+    safeSet(KEYS.ACHIEVEMENTS, [...current, ...newly]);
+  }
+
+  return newly.map((a) => a.id);
+}
+
 // ─── Exportar / Importar ─────────────────────────────────────────────────────
 
 /**

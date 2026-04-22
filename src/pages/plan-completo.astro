@@ -1,0 +1,188 @@
+---
+// plan-completo.astro — Calendario completo del plan activo (SSG)
+// Grilla de días tipo "GitHub contributions" con estados visuales.
+// Alpine.js carga datos del plan activo desde localStorage.
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mi Plan Completo"
+  description="Visualiza el calendario completo de tu plan de lectura bíblica y navega a cualquier día."
+  currentPage="planes"
+>
+  <div class="max-w-4xl mx-auto px-6 md:px-10 py-8" x-data="planCalendar">
+
+    <!-- Esqueleto de carga -->
+    <div x-show="loading" class="space-y-6" aria-label="Cargando calendario">
+      <div class="h-4 w-40 bg-surface-container-high rounded animate-pulse"></div>
+      <div class="h-10 w-64 bg-surface-container-high rounded animate-pulse"></div>
+      <div class="h-2 w-full bg-surface-container-high rounded-full animate-pulse mt-4"></div>
+      <div class="grid grid-cols-7 gap-1.5 mt-6">
+        {Array.from({ length: 35 }).map((_, i) => (
+          <div class="aspect-square rounded bg-surface-container-high animate-pulse" style={`animation-delay: ${i * 20}ms`}></div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Sin plan activo -->
+    <div x-show="!loading && !hasPlan" x-cloak class="text-center py-20">
+      <span class="material-symbols-outlined text-5xl text-outline-variant block mb-6" aria-hidden="true">calendar_month</span>
+      <h1 class="font-body text-2xl italic text-on-surface mb-3">Sin plan activo</h1>
+      <p class="font-label text-sm text-on-surface-variant mb-8 max-w-xs mx-auto leading-relaxed">
+        Inicia un plan de lectura para ver tu calendario de progreso.
+      </p>
+      <a
+        href="/planes"
+        class="inline-block btn-primary px-6 py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+      >
+        Ver planes disponibles
+      </a>
+    </div>
+
+    <!-- Contenido principal: calendario -->
+    <div x-show="!loading && hasPlan" x-cloak>
+
+      <!-- Encabezado del plan -->
+      <header class="mb-8">
+        <span class="manrope-caps text-xs text-secondary">Calendario del Plan</span>
+        <h1
+          class="font-body text-3xl md:text-4xl italic text-on-surface mt-1 tracking-tight"
+          x-text="planName"
+        ></h1>
+
+        <!-- Barra de progreso global -->
+        <div class="mt-5 space-y-2">
+          <div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+            <div
+              class="h-full bg-primary rounded-full transition-all duration-700"
+              :style="'width: ' + progress.percentage + '%'"
+              role="progressbar"
+              :aria-valuenow="progress.percentage"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <div class="flex justify-between">
+            <span class="manrope-caps text-[9px] text-secondary" x-text="progress.percentage + '% completado'"></span>
+            <span class="manrope-caps text-[9px] text-secondary" x-text="progress.completed + ' de ' + progress.total + ' días'"></span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Leyenda de estados -->
+      <div class="flex items-center gap-5 mb-8 flex-wrap">
+        <div class="flex items-center gap-1.5">
+          <div class="w-3.5 h-3.5 rounded-sm bg-primary/80"></div>
+          <span class="manrope-caps text-[9px] text-secondary">Completado</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-3.5 h-3.5 rounded-sm bg-secondary ring-2 ring-secondary ring-offset-1 ring-offset-surface"></div>
+          <span class="manrope-caps text-[9px] text-secondary">Hoy</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-3.5 h-3.5 rounded-sm bg-error/25"></div>
+          <span class="manrope-caps text-[9px] text-secondary">Pendiente</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <div class="w-3.5 h-3.5 rounded-sm bg-surface-container-highest"></div>
+          <span class="manrope-caps text-[9px] text-secondary">Futuro</span>
+        </div>
+      </div>
+
+      <!-- Navegación entre meses -->
+      <div class="flex items-center justify-between mb-5">
+        <button
+          @click="prevMonth()"
+          :disabled="selectedMonthIdx === 0"
+          class="p-2 rounded-lg hover:bg-surface-container transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
+          aria-label="Mes anterior"
+        >
+          <span class="material-symbols-outlined text-on-surface-variant" aria-hidden="true">chevron_left</span>
+        </button>
+
+        <h2
+          class="font-body text-xl italic text-on-surface capitalize"
+          x-text="currentMonth ? currentMonth.name : ''"
+        ></h2>
+
+        <button
+          @click="nextMonth()"
+          :disabled="selectedMonthIdx >= months.length - 1"
+          class="p-2 rounded-lg hover:bg-surface-container transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
+          aria-label="Mes siguiente"
+        >
+          <span class="material-symbols-outlined text-on-surface-variant" aria-hidden="true">chevron_right</span>
+        </button>
+      </div>
+
+      <!-- Encabezados de días de la semana -->
+      <div class="grid grid-cols-7 gap-1.5 mb-2" aria-hidden="true">
+        {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((d) => (
+          <div class="text-center manrope-caps text-[9px] text-secondary py-1">{d}</div>
+        ))}
+      </div>
+
+      <!-- Grilla del mes actual -->
+      <template x-if="currentMonth">
+        <div
+          class="grid grid-cols-7 gap-1.5"
+          role="grid"
+          :aria-label="'Calendario de ' + currentMonth.name"
+        >
+          <!-- Relleno inicial para alinear al día de la semana correcto -->
+          <template x-for="i in currentMonth.paddingBefore" :key="'pad-' + i">
+            <div class="aspect-square" role="gridcell" aria-hidden="true"></div>
+          </template>
+
+          <!-- Botones de cada día -->
+          <template x-for="day in currentMonth.days" :key="day.planDay">
+            <button
+              @click="goToDay(day.planDay)"
+              :title="'Día ' + day.planDay + ' del plan'"
+              :aria-label="'Ir al día ' + day.planDay + ' del plan'"
+              role="gridcell"
+              :class="{
+                'bg-primary/80 hover:bg-primary text-on-primary font-bold': getDayState(day.planDay) === 'completed',
+                'bg-secondary text-on-secondary ring-2 ring-secondary ring-offset-1 ring-offset-surface font-bold': getDayState(day.planDay) === 'current',
+                'bg-error/20 hover:bg-error/35 text-error': getDayState(day.planDay) === 'missed',
+                'bg-surface-container-highest hover:bg-surface-container-high text-on-surface-variant': getDayState(day.planDay) === 'future',
+              }"
+              class="aspect-square rounded text-[10px] font-label transition-all duration-150 hover:scale-110 flex items-center justify-center cursor-pointer"
+              x-text="day.planDay"
+            ></button>
+          </template>
+        </div>
+      </template>
+
+      <!-- Indicador de navegación entre meses -->
+      <div class="flex justify-center gap-1.5 mt-6" aria-label="Posición en el plan">
+        <template x-for="(month, idx) in months" :key="idx">
+          <button
+            @click="selectedMonthIdx = idx"
+            :class="selectedMonthIdx === idx ? 'bg-primary w-4' : 'bg-surface-container-highest hover:bg-secondary/40 w-1.5'"
+            class="h-1.5 rounded-full transition-all duration-300"
+            :aria-label="'Ir a ' + month.name"
+            :aria-current="selectedMonthIdx === idx ? 'true' : undefined"
+          ></button>
+        </template>
+      </div>
+
+      <!-- Acciones del plan -->
+      <div class="mt-10 flex flex-col sm:flex-row gap-3">
+        <a
+          href="/leer-hoy"
+          class="btn-primary px-6 py-3 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity text-center"
+        >
+          Leer hoy — Día <span x-text="currentDay"></span>
+        </a>
+        <a
+          href="/planes"
+          class="px-6 py-3 rounded-xl font-label text-sm text-on-surface-variant bg-surface-container hover:bg-surface-container-high transition-colors text-center"
+        >
+          Cambiar de plan
+        </a>
+      </div>
+
+    </div>
+  </div>
+</Layout>

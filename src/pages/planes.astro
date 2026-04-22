@@ -1,0 +1,192 @@
+---
+// planes.astro — Catálogo de Planes de Lectura (SSG)
+import Layout from '../layouts/Layout.astro';
+
+const PLANES = [
+  {
+    id: 'plan_anual',
+    nombre: 'Biblia Anual',
+    descripcion: 'Lee la Biblia completa en un año con porciones diarias del Antiguo y Nuevo Testamento.',
+    dias: 365,
+    categoria: 'Anual',
+    icon: 'menu_book',
+    tags: ['365 días', 'AT + NT', 'Completo'],
+  },
+  {
+    id: 'plan_cronologico',
+    nombre: 'Plan Cronológico',
+    descripcion: 'Lee los eventos bíblicos en el orden histórico en que ocurrieron, de la Creación al Apocalipsis.',
+    dias: 365,
+    categoria: 'Anual',
+    icon: 'history_edu',
+    tags: ['365 días', 'Cronológico', 'Histórico'],
+  },
+  {
+    id: 'plan_canonico',
+    nombre: 'Plan Canónico',
+    descripcion: 'Recorre los 66 libros en su orden canónico tradicional, de Génesis a Apocalipsis.',
+    dias: 365,
+    categoria: 'Anual',
+    icon: 'import_contacts',
+    tags: ['365 días', 'Canónico', 'Tradicional'],
+  },
+  {
+    id: 'plan_combinado',
+    nombre: 'Plan Combinado',
+    descripcion: 'Cada día alterna porciones del Antiguo y el Nuevo Testamento para una lectura equilibrada.',
+    dias: 365,
+    categoria: 'Anual',
+    icon: 'compare_arrows',
+    tags: ['365 días', 'AT + NT', 'Equilibrado'],
+  },
+  {
+    id: 'plan_trimestral',
+    nombre: 'NT en 90 Días',
+    descripcion: 'Lee el Nuevo Testamento completo en tres meses, aproximadamente tres capítulos al día.',
+    dias: 90,
+    categoria: 'Trimestral',
+    icon: 'bolt',
+    tags: ['90 días', 'Solo NT', 'Intensivo'],
+  },
+  {
+    id: 'plan_180_nt_salmos',
+    nombre: 'NT + Salmos 180 Días',
+    descripcion: 'El Nuevo Testamento y los Salmos en seis meses, ideal para quien comienza su camino de lectura.',
+    dias: 180,
+    categoria: 'Semestral',
+    icon: 'spa',
+    tags: ['180 días', 'NT + Salmos', 'Contemplativo'],
+  },
+];
+---
+
+<Layout
+  title="Planes de Lectura"
+  description="Elige tu camino de lectura bíblica. Planes anuales, semestrales y trimestrales para leer la Biblia paso a paso con Mi Biblia 365."
+  currentPage="planes"
+>
+  <div class="max-w-5xl mx-auto px-6 md:px-10 py-8" x-data="planesPage">
+
+    <!-- Encabezado -->
+    <header class="mb-10">
+      <span class="manrope-caps text-xs text-secondary">Los Caminos</span>
+      <h1 class="font-body text-4xl md:text-5xl italic text-on-surface mt-1 tracking-tight leading-tight">
+        Planes de Lectura
+      </h1>
+      <p class="font-label text-sm text-on-surface-variant mt-3 leading-relaxed">
+        Elige el camino que mejor se adapte a tu ritmo y disponibilidad.
+      </p>
+    </header>
+
+    <!-- Buscador minimalista (sin caja contenedora, underline sutil) -->
+    <div class="mb-10">
+      <label for="plan-search" class="sr-only">Buscar plan de lectura</label>
+      <input
+        id="plan-search"
+        type="text"
+        x-model="searchQuery"
+        placeholder="Buscar plan..."
+        class="w-full md:w-80 bg-transparent font-label text-sm text-on-surface pb-2 outline-none border-b border-outline-variant/40 focus:border-primary placeholder:text-on-surface-variant/40 transition-colors duration-200"
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+
+    <!-- Grilla de planes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {PLANES.map((plan) => (
+        <article
+          class="bg-surface-container rounded-2xl overflow-hidden flex flex-col hover:bg-surface-container-high transition-colors duration-300 group"
+          x-show={`matchSearch('${plan.nombre}', '${plan.descripcion}', '${plan.categoria}')`}
+        >
+          <!-- Cabecera de la tarjeta -->
+          <div class="p-6 flex-1">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-surface-container-high group-hover:bg-primary-fixed/40 flex items-center justify-center transition-colors duration-300">
+                <span class="material-symbols-outlined text-2xl text-primary" aria-hidden="true">{plan.icon}</span>
+              </div>
+              <span class="manrope-caps text-[9px] text-secondary bg-surface-container-high px-2.5 py-1 rounded-full">
+                {plan.categoria}
+              </span>
+            </div>
+
+            <h2 class="font-body text-xl font-bold italic text-on-surface mb-2">{plan.nombre}</h2>
+            <p class="font-label text-sm text-on-surface-variant leading-relaxed mb-4">{plan.descripcion}</p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5">
+              {plan.tags.map((tag) => (
+                <span class="manrope-caps text-[9px] text-secondary bg-surface-container-highest px-2 py-0.5 rounded-full">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Acciones -->
+          <div class="px-6 pb-6 pt-2">
+
+            <!-- Esqueleto mientras Alpine carga -->
+            <div x-show="!initialized" class="h-10 bg-surface-container-high rounded-xl animate-pulse"></div>
+
+            <!-- Plan activo: Continuar + Calendario + Reiniciar -->
+            <div x-show={`initialized && activePlanId === '${plan.id}'`} x-cloak class="flex gap-2">
+              <a
+                href="/leer-hoy"
+                class="flex-1 btn-primary text-center py-2.5 rounded-xl font-label text-sm font-semibold shadow-ambient hover:opacity-90 transition-opacity"
+              >
+                Continuar
+              </a>
+              <a
+                href="/plan-completo"
+                class="px-3 py-2.5 bg-surface-container-high rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors flex items-center"
+                title="Ver calendario del plan"
+                aria-label="Ver calendario del plan"
+              >
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">calendar_month</span>
+              </a>
+              <button
+                @click={`confirmRestart === '${plan.id}' ? restartPlan('${plan.id}', ${plan.dias}) : (confirmRestart = '${plan.id}')`}
+                :class={`{ 'text-error bg-error-container/20': confirmRestart === '${plan.id}', 'text-on-surface-variant bg-surface-container-high': confirmRestart !== '${plan.id}' }`}
+                class="px-3 py-2.5 rounded-xl hover:bg-surface-container-highest transition-colors flex items-center"
+                :title={`confirmRestart === '${plan.id}' ? 'Confirmar reinicio' : 'Reiniciar plan desde el día 1'`}
+                :aria-label={`confirmRestart === '${plan.id}' ? 'Confirmar reinicio del plan' : 'Reiniciar plan'`}
+              >
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">restart_alt</span>
+              </button>
+            </div>
+
+            <!-- Otro plan activo o sin plan: Iniciar -->
+            <button
+              x-show={`initialized && activePlanId !== '${plan.id}'`}
+              x-cloak
+              @click={`startPlan('${plan.id}', ${plan.dias})`}
+              class="w-full py-2.5 rounded-xl font-label text-sm font-semibold border border-outline-variant/30 text-on-surface hover:bg-surface-container-high hover:border-primary/50 transition-all duration-200"
+            >
+              Iniciar plan
+            </button>
+
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Sin resultados -->
+    <div
+      x-show="searchQuery.trim() && initialized"
+      x-cloak
+      class="text-center py-16"
+      style="display: none;"
+    >
+      <template x-if="searchQuery.trim()">
+        <div>
+          <span class="material-symbols-outlined text-4xl text-outline-variant block mb-4" aria-hidden="true">search_off</span>
+          <p class="font-body text-lg italic text-on-surface-variant">
+            No se encontró ningún plan con «<span x-text="searchQuery"></span>».
+          </p>
+        </div>
+      </template>
+    </div>
+
+  </div>
+</Layout>
