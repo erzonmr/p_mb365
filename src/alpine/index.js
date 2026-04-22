@@ -717,4 +717,174 @@ export default (Alpine) => {
       return names[planId] || planId;
     },
   }));
+
+  // ─── Biblia libre (/biblia/[libro]/[capitulo]) ──────────────────────────────
+  Alpine.data('bibliaReader', () => ({
+    testament: 'at',
+    books: [],
+    filteredBooks: [],
+    selectedBookSlug: '',
+    chapter: 1,
+    totalChapters: 1,
+    title: '',
+    verses: [],
+    errorMessage: '',
+
+    init() {
+      import('../lib/bibleCatalog.js').then(({ BIBLE_BOOKS, getBookBySlug }) => {
+        this.books = BIBLE_BOOKS;
+        this.selectedBookSlug = this.$el.dataset.bookSlug;
+        this.chapter = Number.parseInt(this.$el.dataset.currentChapter || '1', 10);
+        this.title = this.$el.dataset.reference;
+
+        const currentBook = getBookBySlug(this.selectedBookSlug);
+        this.totalChapters = currentBook?.chapters || 1;
+        this.testament = currentBook?.testament || 'at';
+        this.filteredBooks = this.books.filter((book) => book.testament === this.testament);
+      });
+    },
+
+    get chapterOptions() {
+      return Array.from({ length: this.totalChapters }, (_, idx) => idx + 1);
+    },
+
+    get prevLink() {
+      return this.chapter > 1 ? `/biblia/${this.selectedBookSlug}/${this.chapter - 1}` : '';
+    },
+
+    get nextLink() {
+      return this.chapter < this.totalChapters ? `/biblia/${this.selectedBookSlug}/${this.chapter + 1}` : '';
+    },
+
+    onTestamentChange() {
+      this.filteredBooks = this.books.filter((book) => book.testament === this.testament);
+      this.selectedBookSlug = this.filteredBooks[0]?.slug || this.selectedBookSlug;
+      this.onBookChange();
+    },
+
+    onBookChange() {
+      const currentBook = this.books.find((book) => book.slug === this.selectedBookSlug);
+      this.totalChapters = currentBook?.chapters || 1;
+      if (this.chapter > this.totalChapters) this.chapter = 1;
+      this.goToSelection();
+    },
+
+    goToSelection() {
+      window.location.href = `/biblia/${this.selectedBookSlug}/${this.chapter}`;
+    },
+
+    async loadChapter() {
+      try {
+        const { getChapter } = await import('../lib/bibleService.js');
+        const book = this.books.find((item) => item.slug === this.selectedBookSlug);
+        const reference = `${book.name} ${this.chapter}`;
+        this.title = reference;
+        const data = await getChapter(reference, 'rv1960');
+        this.verses = data.verses || [];
+        this.errorMessage = '';
+      } catch (error) {
+        this.errorMessage = error?.message || 'No fue posible cargar el capítulo.';
+      }
+    },
+  }));
+
+  // ─── Buscar Biblia (/buscar) ─────────────────────────────────────────────────
+  Alpine.data('buscarBiblia', () => ({
+    query: '',
+    versions: [],
+    versionId: 'rv1960',
+    testament: '',
+    bookSlug: '',
+    books: [],
+    loading: false,
+    results: [],
+    errorMessage: '',
+    page: 1,
+    totalPages: 1,
+    _debounceHandle: null,
+
+    async init() {
+      const [{ BIBLE_BOOKS }, storage] = await Promise.all([
+        import('../lib/bibleCatalog.js'),
+        import('../lib/storageService.js'),
+      ]);
+      this.books = BIBLE_BOOKS;
+      this.versionId = storage.getPreferredVersion();
+
+      const res = await fetch('/api/versions.json');
+      this.versions = res.ok ? await res.json() : [];
+    },
+
+    get filteredBooks() {
+      if (!this.testament) return this.books;
+      return this.books.filter((book) => book.testament === this.testament);
+    },
+
+    get paginatedResults() {
+      return this.results;
+    },
+
+    onInput() {
+      clearTimeout(this._debounceHandle);
+      this._debounceHandle = setTimeout(() => {
+        this.page = 1;
+        this.search();
+      }, 250);
+    },
+
+    async search() {
+      if (this.query.trim().length < 3) {
+        this.results = [];
+        this.errorMessage = '';
+        return;
+      }
+
+      this.loading = true;
+      this.errorMessage = '';
+      try {
+        const params = new URLSearchParams({
+          q: this.query,
+          version: this.versionId,
+          page: String(this.page),
+        });
+        if (this.testament) params.set('testament', this.testament);
+        if (this.bookSlug) params.set('book', this.bookSlug);
+
+        const res = await fetch(`/api/search.json?${params.toString()}`);
+        const data = await res.json();
+        this.results = data.results || [];
+        this.totalPages = data.totalPages || 1;
+        if (data.notice) {
+          this.errorMessage = data.notice;
+        }
+        if (!res.ok && data.error) {
+          this.errorMessage = data.error;
+        }
+      } catch {
+        this.errorMessage = 'No fue posible consultar el buscador en este momento.';
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    prevPage() {
+      if (this.page > 1) {
+        this.page -= 1;
+        this.search();
+      }
+    },
+
+    nextPage() {
+      if (this.page < this.totalPages) {
+        this.page += 1;
+        this.search();
+      }
+    },
+
+    async saveFavorite(item) {
+      const { addFavorite } = await import('../lib/storageService.js');
+      addFavorite(item.reference, this.versionId, item.text);
+    },
+  }));
+
 };

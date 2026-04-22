@@ -8,6 +8,7 @@ import Sidebar from '../components/Sidebar.astro';
 import BottomNav from '../components/BottomNav.astro';
 import Footer from '../components/Footer.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
 
 interface Props {
@@ -44,6 +45,7 @@ if (cdnCache > 0 && Astro.response) {
 <html lang="es" class="light">
   <head>
     <meta charset="utf-8" />
+    <ClientRouter />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Anti-FOUC: inicializa tema ANTES del primer render -->
