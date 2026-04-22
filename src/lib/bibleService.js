@@ -8,7 +8,7 @@
 
 const PRIMARY_BASE = 'https://docs-bible-api.netlify.app/.netlify/functions/api';
 const FALLBACK_BASE = 'https://api.scripture.api.bible/v1';
-const API_BIBLE_KEY = 'lKDNAnTqVMi4Mc32rwonP';
+const API_BIBLE_KEY = import.meta.env.API_BIBLE_KEY || '';
 
 /** IDs de versiones en la API.Bible (fallback) */
 const FALLBACK_BIBLE_IDS = {
@@ -78,6 +78,10 @@ async function fetchFromPrimary(reference, version) {
  * @returns {Promise<{verses: Array, reference: string, version: string}>}
  */
 async function fetchFromFallback(reference, bibleId) {
+  if (!API_BIBLE_KEY) {
+    throw new Error('API fallback no disponible: falta la variable API_BIBLE_KEY');
+  }
+
   // La API.Bible requiere un chapterId con formato "JHN.3"
   // Intentamos resolver la referencia a un chapterId
   const chapterId = resolveChapterId(reference);

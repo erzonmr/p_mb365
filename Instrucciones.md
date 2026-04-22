@@ -33,13 +33,16 @@ La clave actual es `lKDNAnTqVMi4Mc32rwonP`. Si deja de responder:
 
 ---
 
-## Fase 5 (Deployment — tareas futuras)
+## Fase 5 (Deployment — tareas manuales)
 
 ### 4) Conectar repo a Vercel
 1. Ir a [vercel.com](https://vercel.com) → New Project → Import from GitHub
 2. Seleccionar repositorio `erzonmr/p_mb365`
 3. Framework preset: **Astro**
-4. Agregar variable de entorno: `API_BIBLE_KEY=lKDNAnTqVMi4Mc32rwonP`
+4. En **Environment Variables**, agregar:
+   - `API_BIBLE_KEY=<tu_clave_real_de_scripture_api_bible>`
+   - `PUBLIC_APP_URL=https://www.mibiblia365.com`
+5. Confirmar que el proyecto compila con Astro 6 sin `output: "hybrid"` (deprecado) y con adapter de Vercel activo para SSR en rutas dinámicas.
 
 ### 5) Configurar dominio en GoDaddy
 Después de conectar en Vercel:
@@ -47,6 +50,8 @@ Después de conectar en Vercel:
 2. En GoDaddy DNS:
    - Registro `A`: `@` → IP de Vercel (aparece en el panel)
    - Registro `CNAME`: `www` → `cname.vercel-dns.com`
+3. Verificar que la redirección canónica quede `mibiblia365.com` → `www.mibiblia365.com`.
+4. Esperar propagación DNS y comprobar SSL activo en Vercel (estado “Valid Configuration”).
 
 ---
 

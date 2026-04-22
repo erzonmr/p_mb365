@@ -13,6 +13,8 @@ Plataforma web responsive para lectura bíblica anual con enfoque editorial cont
 
 - `brief.md`: visión de producto y decisiones marco.
 - `roadmap.md`: hoja de ruta por fases.
+- `Instrucciones.md`: checklist manual por fase (incluye deployment de Fase 5).
+- `.env.example`: variables de entorno requeridas para producción.
 - `prototipo/`: prototipos visuales y sistema de diseño base.
 - `json/`: datasets de planes de lectura, versículos diarios y catálogos.
 - `scripts/fase0/`: validaciones técnicas iniciales (APIs y JSON).
@@ -28,4 +30,4 @@ node scripts/fase0/validate-json.mjs > reports/fase0-json-validation.json
 
 ## Próximo paso sugerido
 
-Inicializar proyecto Astro 6 real (con `npm create astro@latest`) y conectar la configuración documentada en `ARCHITECTURE.md`.
+Ejecutar tareas manuales de Fase 5 en Vercel/GoDaddy para publicar en dominio propio (`www.mibiblia365.com`).
