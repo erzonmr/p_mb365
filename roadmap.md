@@ -215,8 +215,8 @@
 *Poner la aplicación en producción con dominio propio.*
 
 - [ ] **Conexión de Repositorio:** Vincular el repo de GitHub a Vercel. Configurar deploy automático en push a `main`.
-- [ ] **Variables de Entorno:** Configurar en Vercel: `API_BIBLE_KEY` (para la API de respaldo), `PUBLIC_APP_URL`.
-- [ ] **SSR en Vercel:** Asegurar que `@astrojs/vercel` adapter esté configurado para `output: 'hybrid'` (SSG por defecto, SSR explícito en rutas dinámicas).
+- [x] **Variables de Entorno (código listo):** Proyecto preparado para leer `API_BIBLE_KEY` y `PUBLIC_APP_URL` desde entorno (`.env.example` + consumo en código). Falta carga final en dashboard de Vercel.
+- [x] **SSR en Vercel:** `@astrojs/vercel` configurado en Astro 6 (sin `output: 'hybrid'`, ya retirado); SSR se habilita por ruta dinámica cuando corresponde.
 - [ ] **Cache en Vercel Edge:** Verificar que los headers `Cache-Control` de las rutas SSR funcionan correctamente en Vercel Edge Network. Monitorear hit rate en dashboard.
 - [ ] **Configuración de DNS (GoDaddy):**
   - En Vercel: Añadir dominios `mibiblia365.com` y `www.mibiblia365.com`.
@@ -225,6 +225,12 @@
 - [ ] **Certificado SSL:** Verificar generación automática de certificado HTTPS por Vercel.
 
 **Entregable de Fase 5:** Sitio accesible en `https://www.mibiblia365.com` con deploy continuo.
+
+### Registro de avance Fase 5 (2026-04-22)
+- Validada configuración SSR para Astro 6 + Vercel (sin `output: 'hybrid'`, opción retirada en esta versión).
+- La API de respaldo dejó de usar clave hardcodeada y ahora depende de `API_BIBLE_KEY` por entorno.
+- Se agregó `.env.example` con variables requeridas para producción (`API_BIBLE_KEY`, `PUBLIC_APP_URL`).
+- Se actualizó `Instrucciones.md` con checklist manual de conexión Vercel + DNS GoDaddy + validación SSL/canonical.
 
 ---
 
