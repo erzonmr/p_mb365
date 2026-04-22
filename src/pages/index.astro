@@ -5,9 +5,11 @@
 
 import Layout from '../layouts/Layout.astro';
 import { getVersiculoHoy, getTemaDelMes } from '../lib/versiculoDiario.js';
+import { getContemplacionSemanal } from '../lib/contemplacionSemanal.js';
 
 const versiculoHoy = getVersiculoHoy();
 const temaDelMes = getTemaDelMes(new Date().getMonth() + 1);
+const contemplacion = getContemplacionSemanal();
 const metaDesc = `Lee la Biblia hoy con Mi Biblia 365. ${versiculoHoy.highlight} — ${versiculoHoy.reference}.`;
 ---
 
@@ -204,6 +206,18 @@ const metaDesc = `Lee la Biblia hoy con Mi Biblia 365. ${versiculoHoy.highlight}
         </div>
       </div>
     </div>
+
+    <!-- === Contemplación Semanal === -->
+    <section class="mt-12 mb-8 bg-[#1c1c19] rounded-xl p-8 md:p-12 text-[#fcf9f4] relative overflow-hidden flex flex-col items-center text-center">
+      <span class="material-symbols-outlined text-[120px] text-primary/20 absolute -top-4 -left-4 select-none pointer-events-none" aria-hidden="true">format_quote</span>
+      <span class="manrope-caps text-[10px] text-primary-fixed mb-6 tracking-widest uppercase z-10">Contemplación Semanal</span>
+      <blockquote class="font-body text-2xl md:text-3xl italic leading-relaxed max-w-3xl mb-6 z-10">
+        «{contemplacion.text}»
+      </blockquote>
+      <cite class="manrope-caps text-xs text-secondary-fixed not-italic z-10">
+        — {contemplacion.author}
+      </cite>
+    </section>
 
   </div>
 </Layout>
