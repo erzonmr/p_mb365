@@ -19,7 +19,7 @@ let chapterData = null;
 let chapterError = '';
 
 try {
-  chapterData = await getChapter(reference, 'rv1960');
+  chapterData = await getChapter(reference, '');
 } catch (err) {
   chapterError = err?.message || 'No fue posible cargar el texto en el servidor.';
 }

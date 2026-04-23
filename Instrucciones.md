@@ -24,12 +24,12 @@ Crear y agregar en `public/`:
 
 Hasta que estén disponibles, el build compila sin error pero el favicon y OG image no se mostrarán correctamente.
 
-### 2) Verificar/renovar clave de API.Bible
-La clave actual es `lKDNAnTqVMi4Mc32rwonP`. Si deja de responder:
-1. Registrarse en [scripture.api.bible](https://scripture.api.bible)
-2. Generar nueva clave API
-3. Actualizar en `src/lib/bibleService.js` (línea con `API_BIBLE_KEY`)
-4. En producción Vercel: agregar variable de entorno `API_BIBLE_KEY`
+### 2) Verificar conectividad de Free Use Bible API
+La app usa exclusivamente [Free Use Bible API](https://bible.helloao.org/docs/).
+Si hay fallos de lectura:
+1. Validar disponibilidad de `https://bible.helloao.org/api/available_translations.json`
+2. Ejecutar `npm run validate:apis` para revisar estado y latencia
+3. Confirmar que la red/entorno permita salida HTTPS a `bible.helloao.org`
 
 ---
 
@@ -40,7 +40,6 @@ La clave actual es `lKDNAnTqVMi4Mc32rwonP`. Si deja de responder:
 2. Seleccionar repositorio `erzonmr/p_mb365`
 3. Framework preset: **Astro**
 4. En **Environment Variables**, agregar:
-   - `API_BIBLE_KEY=<tu_clave_real_de_scripture_api_bible>`
    - `PUBLIC_APP_URL=https://www.mibiblia365.com`
 5. Confirmar que el proyecto compila con Astro 6 sin `output: "hybrid"` (deprecado) y con adapter de Vercel activo para SSR en rutas dinámicas.
 

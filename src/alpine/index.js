@@ -152,8 +152,8 @@ export default (Alpine) => {
     versiculos: [],
     cargandoTexto: false,
     diaCompletado: false,
-    versionId: 'rv1960',
-    versionLabel: 'RVR60',
+    versionId: '',
+    versionLabel: 'BIBLIA',
     versiones: [],
     fontSize: 'md',
     scrollProgress: 0,
@@ -174,11 +174,15 @@ export default (Alpine) => {
     async init() {
       try {
         const versionsRes = await fetch('/api/versions.json');
-        this.versiones = versionsRes.ok ? await versionsRes.json() : [];
+        const versionsPayload = versionsRes.ok ? await versionsRes.json() : [];
+        this.versiones = Array.isArray(versionsPayload)
+          ? versionsPayload
+          : (versionsPayload.versions || []);
 
-        const { getConfig, getActivePlan, calculateCurrentDay, markDayAsRead, isFavorite } = await import('../lib/storageService.js');
+        const { getConfig, getActivePlan, calculateCurrentDay, markDayAsRead, setPreferredVersion } = await import('../lib/storageService.js');
         const config = getConfig();
-        this.versionId = config.preferredVersion || 'rv1960';
+        this.versionId = config.preferredVersion || this.versiones[0]?.id || '';
+        if (this.versionId !== config.preferredVersion && this.versionId) setPreferredVersion(this.versionId);
         this.fontSize = config.fontSize || 'md';
         this._markDayAsRead = markDayAsRead;
         this.versionLabel = this._getVersionLabel(this.versionId);
@@ -332,14 +336,10 @@ export default (Alpine) => {
     },
 
     _getVersionLabel(id) {
-      const labels = {
-        'rv1960': 'RVR60', 'rv1995': 'RVR95', 'nvi': 'NVI',
-        'dhh': 'DHH', 'pdt': 'PDT',
-        '826f63861180e056-01': 'NTV',
-        'ce11b813f9a27e20-01': 'NBLA',
-        'e3f420b9665abaeb-01': 'LBLA',
-      };
-      return labels[id] || id.toUpperCase().slice(0, 6);
+      const version = this.versiones.find((v) => v.id === id);
+      if (version?.shortLabel) return version.shortLabel;
+      if (version?.label) return version.label.slice(0, 14);
+      return id ? id.toUpperCase().slice(0, 8) : 'BIBLIA';
     },
 
     _initScrollTracking() {
@@ -532,8 +532,9 @@ export default (Alpine) => {
     allAchievements: [],
 
     // Configuración
-    config: { theme: 'system', fontSize: 'md', preferredVersion: 'rv1960', feb29Mode: 'grace' },
-    preferredVersion: 'rv1960',
+    config: { theme: 'system', fontSize: 'md', preferredVersion: '', feb29Mode: 'grace' },
+    preferredVersion: '',
+    versions: [],
 
     // Respaldo
     backupStatus: '',
@@ -558,7 +559,24 @@ export default (Alpine) => {
       this.favorites = storage.getFavorites();
       this.notes = storage.getNotes();
       this.config = storage.getConfig();
-      this.preferredVersion = this.config.preferredVersion || 'rv1960';
+
+      try {
+        const versionsRes = await fetch('/api/versions.json');
+        const versionsPayload = versionsRes.ok ? await versionsRes.json() : [];
+        this.versions = Array.isArray(versionsPayload)
+          ? versionsPayload
+          : (versionsPayload.versions || []);
+      } catch {
+        this.versions = [];
+      }
+
+      this.preferredVersion = this.config.preferredVersion || this.versions[0]?.id || '';
+      if (this.preferredVersion !== this.config.preferredVersion) {
+        storage.setPreferredVersion(this.preferredVersion);
+        this.config.preferredVersion = this.preferredVersion;
+      }
+
+      this._syncVersionSelect();
 
       storage.checkAndSaveAchievements();
       const unlockedIds = new Set(storage.getAchievements().map((a) => a.id));
@@ -578,6 +596,17 @@ export default (Alpine) => {
           this.newNoteRef = noteRef;
         }
       } catch {}
+    },
+
+
+    _syncVersionSelect() {
+      const select = this.$refs?.versionSelect;
+      if (!select) return;
+
+      select.innerHTML = this.versions.length
+        ? this.versions.map((v) => `<option value="${v.id}">${v.label}</option>`).join('')
+        : '<option value="">Sin traducciones disponibles</option>';
+      select.value = this.preferredVersion || this.versions[0]?.id || '';
     },
 
     setTab(tab) {
@@ -665,6 +694,7 @@ export default (Alpine) => {
     async changeVersion(version) {
       await this.saveConfig({ preferredVersion: version });
       this.preferredVersion = version;
+      this._syncVersionSelect();
     },
 
     exportData() {
@@ -779,7 +809,7 @@ export default (Alpine) => {
         const book = this.books.find((item) => item.slug === this.selectedBookSlug);
         const reference = `${book.name} ${this.chapter}`;
         this.title = reference;
-        const data = await getChapter(reference, 'rv1960');
+        const data = await getChapter(reference, '');
         this.verses = data.verses || [];
         this.errorMessage = '';
       } catch (error) {
@@ -792,7 +822,7 @@ export default (Alpine) => {
   Alpine.data('buscarBiblia', () => ({
     query: '',
     versions: [],
-    versionId: 'rv1960',
+    versionId: '',
     testament: '',
     bookSlug: '',
     books: [],
@@ -809,10 +839,14 @@ export default (Alpine) => {
         import('../lib/storageService.js'),
       ]);
       this.books = BIBLE_BOOKS;
-      this.versionId = storage.getPreferredVersion();
+      const storedVersion = storage.getPreferredVersion();
 
       const res = await fetch('/api/versions.json');
-      this.versions = res.ok ? await res.json() : [];
+      const payload = res.ok ? await res.json() : [];
+      this.versions = Array.isArray(payload) ? payload : (payload.versions || []);
+      this.versionId = this.versions.some((v) => v.id === storedVersion)
+        ? storedVersion
+        : (this.versions[0]?.id || '');
     },
 
     get filteredBooks() {
