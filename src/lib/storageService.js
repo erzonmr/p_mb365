@@ -20,7 +20,7 @@ const KEYS = {
 const DEFAULT_CONFIG = {
   theme: 'system',        // 'light' | 'dark' | 'system'
   fontSize: 'md',         // 'sm' | 'md' | 'lg' | 'xl'
-  preferredVersion: 'rv1960',
+  preferredVersion: '',
   feb29Mode: 'grace',     // 'grace' | 'skip'
 };
 

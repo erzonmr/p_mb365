@@ -3,7 +3,7 @@
     "name": "Versículos diarios - Mi Biblia 365",
     "version": "1.0.0",
     "totalDays": 366,
-    "defaultVersion": "rv1960",
+    "defaultVersion": "",
     "textSource": "api",
     "notes": "Este archivo solo incluye referencias y metadatos. El texto del versículo se obtiene mediante API."
   },

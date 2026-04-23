@@ -3,16 +3,6 @@
 // Pestañas: Resumen, Favoritos, Notas, Logros, Configuración, Respaldo.
 import Layout from '../layouts/Layout.astro';
 
-const VERSIONS = [
-  { id: 'rv1960',                label: 'Reina Valera 1960' },
-  { id: 'rv1995',                label: 'Reina Valera 1995' },
-  { id: 'nvi',                   label: 'Nueva Versión Internacional' },
-  { id: 'dhh',                   label: 'Dios Habla Hoy' },
-  { id: 'pdt',                   label: 'Palabra de Dios para Todos' },
-  { id: '826f63861180e056-01',   label: 'Nueva Traducción Viviente' },
-  { id: 'ce11b813f9a27e20-01',   label: 'Nueva Biblia de las Américas' },
-  { id: 'e3f420b9665abaeb-01',   label: 'La Biblia de las Américas' },
-];
 ---
 
 <Layout
@@ -471,10 +461,9 @@ const VERSIONS = [
           @change="changeVersion($event.target.value)"
           class="bg-surface-container font-label text-sm text-on-surface px-4 py-2.5 rounded-xl outline-none border border-outline-variant/20 focus:border-primary/50 transition-colors cursor-pointer max-w-xs w-full"
           aria-label="Seleccionar versión bíblica por defecto"
+          x-ref="versionSelect"
         >
-          {VERSIONS.map((v) => (
-            <option value={v.id}>{v.label}</option>
-          ))}
+          <option value="">Cargando traducciones…</option>
         </select>
       </div>
 

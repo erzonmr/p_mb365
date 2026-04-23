@@ -9,7 +9,7 @@ function escapeRegex(text) {
 
 export async function GET({ url }) {
   const q = (url.searchParams.get('q') || '').trim();
-  const version = (url.searchParams.get('version') || 'rv1960').trim();
+  const version = (url.searchParams.get('version') || '').trim();
   const testament = (url.searchParams.get('testament') || '').trim();
   const bookSlug = (url.searchParams.get('book') || '').trim();
   const page = Math.max(Number.parseInt(url.searchParams.get('page') || '1', 10), 1);
@@ -47,7 +47,7 @@ export async function GET({ url }) {
             reference: `${book.name} ${chapter}:${verse.number}`,
             text: verse.text,
             url: `/biblia/${book.slug}/${chapter}`,
-            version,
+            version: chapterData.version,
           });
         }
       }

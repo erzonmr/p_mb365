@@ -22,9 +22,8 @@ Fecha de validación: 2026-04-21.
 ### 3) Capa de datos bíblicos
 
 Se adopta una capa `bibleService.js` con:
-- Proveedor principal: `docs-bible-api.netlify.app`.
-- Proveedor respaldo: `api.scripture.api.bible`.
-- Timeout de 3s + reintento con proveedor alterno.
+- Proveedor único: `bible.helloao.org` (Free Use Bible API).
+- Timeout de 5s + caché de sesión en memoria.
 - Caché en tres capas:
   1. RAM (Map en sesión).
   2. CDN (headers SSR en Vercel Edge).

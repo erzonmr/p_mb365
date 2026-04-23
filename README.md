@@ -24,7 +24,7 @@ Plataforma web responsive para lectura bíblica anual con enfoque editorial cont
 ## Validaciones de Fase 0
 
 ```bash
-node scripts/fase0/validate-apis.mjs > reports/fase0-api-validation.json
+node scripts/fase0/validate-apis.mjs > reports/fase0-api-validation.json  # Free Use Bible API
 node scripts/fase0/validate-json.mjs > reports/fase0-json-validation.json
 ```
 
